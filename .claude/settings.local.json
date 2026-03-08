@@ -10,7 +10,9 @@
       "Bash(node:*)",
       "Bash(tail:*)",
       "Bash(head:*)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "Bash(git add:*)",
+      "Bash(git push:*)"
     ]
   }
 }
