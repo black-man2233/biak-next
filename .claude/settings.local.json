@@ -14,7 +14,17 @@
       "Bash(git add:*)",
       "Bash(git push:*)",
       "WebFetch(domain:biak.bamwesa.org)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(ss:*)",
+      "Bash(docker ps:*)",
+      "Bash(grep:*)",
+      "Bash(docker compose:*)",
+      "Bash(docker inspect:*)",
+      "Bash(curl:*)",
+      "Bash(docker volume:*)",
+      "Bash(df:*)",
+      "Bash(docker container:*)",
+      "Bash(docker system:*)"
     ]
   }
 }

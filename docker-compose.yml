@@ -5,8 +5,8 @@ services:
       - "8003:3000"
     environment:
       DATABASE_URL: file:/app/data/biak.db
-      NEXTAUTH_SECRET: a5a139c812e629ccba6f59a06c9d1d7c84ce6b3efb8870449c75765864158409
-      NEXTAUTH_URL: https://biak.bamwesa.org
+      SESSION_SECRET: a5a139c812e629ccba6f59a06c9d1d7c84ce6b3efb8870449c75765864158409
+      ADMIN_PASSWORD: admin123
     volumes:
       - db_data:/app/data
     restart: unless-stopped
