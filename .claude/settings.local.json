@@ -13,7 +13,8 @@
       "Bash(ls:*)",
       "Bash(git add:*)",
       "Bash(git push:*)",
-      "WebFetch(domain:biak.bamwesa.org)"
+      "WebFetch(domain:biak.bamwesa.org)",
+      "Bash(git commit:*)"
     ]
   }
 }
