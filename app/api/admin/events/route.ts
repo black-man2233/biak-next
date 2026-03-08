@@ -29,6 +29,7 @@ export async function POST(req: NextRequest) {
       endTime: body.endTime || null,
       isRecurring: body.isRecurring || false,
       recurringDay: body.recurringDay || null,
+      imageUrl: body.imageUrl || null,
     },
   });
   return NextResponse.json(event, { status: 201 });

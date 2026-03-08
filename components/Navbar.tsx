@@ -4,7 +4,8 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Church } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 const navLinks = [
   { href: "/", label: "Hjem" },
@@ -42,18 +43,22 @@ export function Navbar() {
             : "bg-transparent"
         }`}
       >
-        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 sm:h-20 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center shadow-lg shadow-blue-500/30 group-hover:shadow-blue-500/50 transition-shadow">
-                <Church className="w-5 h-5 text-white" />
-              </div>
-              <div className="absolute inset-0 rounded-xl bg-blue-500/20 animate-ping opacity-0 group-hover:opacity-100" />
+            <div className="relative flex-shrink-0">
+              <Image
+                src="/biak-logo.svg"
+                alt="BIAK Logo"
+                width={32}
+                height={39}
+                className="drop-shadow-[0_0_8px_rgba(0,255,255,0.4)] group-hover:drop-shadow-[0_0_12px_rgba(0,255,255,0.6)] transition-all"
+                unoptimized
+              />
             </div>
             <div>
               <span className="text-xl font-bold text-white tracking-tight">BIAK</span>
-              <p className="text-xs text-blue-300 leading-none hidden sm:block">Brønderslev Int. Kirke</p>
+              <p className="text-xs text-cyan-300 leading-none hidden sm:block">Brønderslev Int. Kirke</p>
             </div>
           </Link>
 
@@ -84,6 +89,7 @@ export function Navbar() {
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="md:hidden w-10 h-10 flex items-center justify-center rounded-lg glass text-white"
+            aria-label="Toggle menu"
           >
             {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
@@ -97,7 +103,7 @@ export function Navbar() {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="fixed inset-x-0 top-20 z-40 md:hidden glass border-t border-white/10 shadow-2xl"
+            className="fixed inset-x-0 top-[72px] z-40 md:hidden glass border-t border-white/10 shadow-2xl"
           >
             <div className="px-4 py-6 flex flex-col gap-2">
               {navLinks.map((link, i) => (

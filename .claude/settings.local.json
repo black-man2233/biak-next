@@ -12,7 +12,8 @@
       "Bash(head:*)",
       "Bash(ls:*)",
       "Bash(git add:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "WebFetch(domain:biak.bamwesa.org)"
     ]
   }
 }

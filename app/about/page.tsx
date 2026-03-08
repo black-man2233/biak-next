@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Heart, Zap, Users, Globe, BookOpen, Shield, Star, Cross } from "lucide-react";
+import { Heart, Zap, Users, Globe, BookOpen, Shield, Star } from "lucide-react";
 import Link from "next/link";
 
 const beliefs = [

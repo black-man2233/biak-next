@@ -24,6 +24,7 @@ export async function PUT(req: NextRequest, { params }: { params: Promise<{ id: 
       endTime: body.endTime || null,
       isRecurring: body.isRecurring || false,
       recurringDay: body.recurringDay || null,
+      imageUrl: body.imageUrl || null,
     },
   });
   return NextResponse.json(event);
