@@ -24,6 +24,9 @@
         <NuxtLink to="/admin/announcements" class="admin-sidebar-link" :class="{ active: route.path === '/admin/announcements' }">
           <Bell class="w-4 h-4" /> Meddelelser
         </NuxtLink>
+        <NuxtLink to="/admin/church-info" class="admin-sidebar-link" :class="{ active: route.path === '/admin/church-info' }">
+          <Image class="w-4 h-4" /> Kirkeindhold
+        </NuxtLink>
         <NuxtLink to="/admin/settings" class="admin-sidebar-link" :class="{ active: route.path === '/admin/settings' }">
           <Settings class="w-4 h-4" /> Indstillinger
         </NuxtLink>
@@ -54,7 +57,7 @@
 </template>
 
 <script setup lang="ts">
-import { LayoutDashboard, Calendar, Mic, Bell, Settings, LogOut, ExternalLink } from 'lucide-vue-next'
+import { LayoutDashboard, Calendar, Mic, Bell, Settings, LogOut, ExternalLink, Image } from 'lucide-vue-next'
 
 const route = useRoute()
 

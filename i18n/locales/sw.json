@@ -88,7 +88,6 @@
   "pastors": {
     "sectionLabel": "Uongozi",
     "title": "Kutana na",
-    "titleAccent": "Wachungaji Wetu",
     "martin": {
       "role": "Mchungaji Mkuu",
       "bio": "Martin ana shahada ya theolojia kutoka Harvest Bible College nchini Australia. Anaongoza jumuiya kwa hekima na upendo wa kina kwa Mungu na watu."
@@ -98,7 +97,8 @@
       "bio": "Ruth anaongoza kikundi cha wanawake na timu ya ibada. Kwa moyo wake wa ibada, yeye ni sehemu muhimu na inayopendwa ya BIAK."
     },
     "quote": "Tunataka kuhamasisha watu kupata uzoefu na Mungu na kumfuata Yesu — katika jumuiya iliyojaa nguvu na upendo wa Mungu.",
-    "quoteAuthor": "Martin & Ruth Mutale"
+    "quoteAuthor": "Mchungaji Martin Mutale",
+    "titleAccent": "Mchungaji"
   },
   "cta": {
     "sectionLabel": "Kuja ukutane nasi",
@@ -121,8 +121,12 @@
     "story3": "Ibada zetu zinafanyika kwa Kideni, Kiingereza, Kiswahili na Kihispania — kwa sababu tunataka kila mtu aweze kukutana na Mungu kwa lugha yake ya mama.",
     "stat1": "Mataifa",
     "stat2": "Lugha",
-    "stat3": "Upendo",
-    "stat4": "Wachungaji",
+    "nationsLabel": "Mataifa katika Kanisa Letu",
+    "langsLabel": "Lugha Tunazozungumza",
+    "langDaServices": "Ibada ya Jumapili · Mafunzo ya Biblia",
+    "langEnServices": "Mikutano yote",
+    "langSwServices": "Ibada ya Jumapili",
+    "langEsServices": "Ibada ya Jumapili",
     "beliefsLabel": "Imani",
     "beliefsTitle": "Tunachokiamini",
     "beliefsTitleAccent": "",
@@ -142,7 +146,14 @@
     "empty": "Hakuna mahubiri yaliyopatikana.",
     "noVideo": "Hakuna video",
     "watchVideo": "Tazama video",
-    "unknownSpeaker": "Mhubiri asiyejulikana"
+    "unknownSpeaker": "Mhubiri asiyejulikana",
+    "titleHome": "Mahubiri ya",
+    "titleAccentHome": "Hivi Karibuni",
+    "viewAll": "Angalia mahubiri yote",
+    "noSermonsHome": "Hakuna mahubiri yaliyopo kwa sasa."
+  },
+  "announcements": {
+    "title": "Matangazo ya Sasa"
   },
   "youth": {
     "sectionLabel": "Vijana",

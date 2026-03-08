@@ -88,7 +88,6 @@
   "pastors": {
     "sectionLabel": "Leadership",
     "title": "Meet Our",
-    "titleAccent": "Pastors",
     "martin": {
       "role": "Senior Pastor",
       "bio": "Martin holds a theology degree from Harvest Bible College in Australia. He leads the congregation with wisdom and deep love for God and people."
@@ -98,7 +97,8 @@
       "bio": "Ruth leads the women's group and worship team. With her heart for worship, she is a beloved and central part of BIAK."
     },
     "quote": "We want to inspire people to experience God and follow Jesus — in a community full of God's power and love.",
-    "quoteAuthor": "Martin & Ruth Mutale"
+    "quoteAuthor": "Pastor Martin Mutale",
+    "titleAccent": "Pastor"
   },
   "cta": {
     "sectionLabel": "Come and meet us",
@@ -121,8 +121,12 @@
     "story3": "Our services are held in Danish, English, Swahili and Spanish — because we want everyone to meet God in their own mother tongue.",
     "stat1": "Nationalities",
     "stat2": "Languages",
-    "stat3": "Love",
-    "stat4": "Pastors",
+    "nationsLabel": "Nationalities in Our Church",
+    "langsLabel": "Languages We Speak",
+    "langDaServices": "Sunday service · Bible study",
+    "langEnServices": "All meetings",
+    "langSwServices": "Sunday service",
+    "langEsServices": "Sunday service",
     "beliefsLabel": "Beliefs",
     "beliefsTitle": "What We",
     "beliefsTitleAccent": "Believe",
@@ -142,7 +146,14 @@
     "empty": "No sermons found.",
     "noVideo": "No video",
     "watchVideo": "Watch video",
-    "unknownSpeaker": "Unknown speaker"
+    "unknownSpeaker": "Unknown speaker",
+    "titleHome": "Latest",
+    "titleAccentHome": "Sermons",
+    "viewAll": "View all sermons",
+    "noSermonsHome": "No sermons available yet."
+  },
+  "announcements": {
+    "title": "Current Announcements"
   },
   "youth": {
     "sectionLabel": "Youth",

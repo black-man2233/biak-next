@@ -88,7 +88,6 @@
   "pastors": {
     "sectionLabel": "Lederskab",
     "title": "Mød Vores",
-    "titleAccent": "Pastorer",
     "martin": {
       "role": "Sognepastor",
       "bio": "Martin har en kandidatgrad i teologi fra Harvest Bible College i Australien. Han leder menigheden med visdom og dyb kærlighed til Gud og mennesker."
@@ -98,7 +97,8 @@
       "bio": "Ruth leder kvindegruppen og tilbedelsesholdet. Med sit hjerte for tilbedelse er hun en elsket og central del af BIAK."
     },
     "quote": "Vi ønsker at inspirere mennesker til at opleve Gud og efterligne Jesus — i et fællesskab, der er fuld af Guds kraft og kærlighed.",
-    "quoteAuthor": "Martin & Ruth Mutale"
+    "quoteAuthor": "Pastor Martin Mutale",
+    "titleAccent": "Pastor"
   },
   "cta": {
     "sectionLabel": "Kom og mød os",
@@ -121,8 +121,12 @@
     "story3": "Vores gudstjenester afholdes på dansk, engelsk, swahili og spansk — fordi vi ønsker, at alle kan møde Gud på deres eget modersmål.",
     "stat1": "Nationaliteter",
     "stat2": "Sprog",
-    "stat3": "Kærlighed",
-    "stat4": "Pastorer",
+    "nationsLabel": "Nationaliteter i Menigheden",
+    "langsLabel": "Sprog vi Taler",
+    "langDaServices": "Gudstjeneste · Bibelundervisning",
+    "langEnServices": "Alle møder",
+    "langSwServices": "Gudstjeneste",
+    "langEsServices": "Gudstjeneste",
     "beliefsLabel": "Trossyn",
     "beliefsTitle": "Hvad Vi",
     "beliefsTitleAccent": "Tror På",
@@ -142,7 +146,11 @@
     "empty": "Ingen prædikener fundet.",
     "noVideo": "Ingen video",
     "watchVideo": "Se video",
-    "unknownSpeaker": "Ukendt taler"
+    "unknownSpeaker": "Ukendt taler",
+    "titleHome": "Seneste",
+    "titleAccentHome": "Prædikener",
+    "viewAll": "Se alle prædikener",
+    "noSermonsHome": "Ingen prædikener tilgængelige endnu."
   },
   "youth": {
     "sectionLabel": "Ungdom",
@@ -165,6 +173,9 @@
     "f2": { "title": "Fællesskab", "desc": "Venner for livet" },
     "f3": { "title": "Undervisning", "desc": "Bibelbaseret undervisning" },
     "f4": { "title": "Aktiviteter", "desc": "Sjov, sport og events" }
+  },
+  "announcements": {
+    "title": "Aktuelle Meddelelser"
   },
   "contact": {
     "sectionLabel": "Kontakt",

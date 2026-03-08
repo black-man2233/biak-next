@@ -88,7 +88,6 @@
   "pastors": {
     "sectionLabel": "Leadership",
     "title": "Rencontrez Nos",
-    "titleAccent": "Pasteurs",
     "martin": {
       "role": "Pasteur Principal",
       "bio": "Martin est titulaire d'un diplôme en théologie du Harvest Bible College en Australie. Il dirige la congrégation avec sagesse et un profond amour pour Dieu et les personnes."
@@ -98,7 +97,8 @@
       "bio": "Ruth dirige le groupe des femmes et l'équipe d'adoration. Avec son cœur pour l'adoration, elle est une partie aimée et centrale de BIAK."
     },
     "quote": "Nous voulons inspirer les gens à vivre une expérience avec Dieu et à suivre Jésus — dans une communauté pleine de la puissance et de l'amour de Dieu.",
-    "quoteAuthor": "Martin & Ruth Mutale"
+    "quoteAuthor": "Pasteur Martin Mutale",
+    "titleAccent": "Pasteur"
   },
   "cta": {
     "sectionLabel": "Venez nous rencontrer",
@@ -121,8 +121,12 @@
     "story3": "Nos cultes se déroulent en danois, anglais, swahili et espagnol — parce que nous souhaitons que chacun puisse rencontrer Dieu dans sa propre langue maternelle.",
     "stat1": "Nationalités",
     "stat2": "Langues",
-    "stat3": "Amour",
-    "stat4": "Pasteurs",
+    "nationsLabel": "Nationalités dans Notre Église",
+    "langsLabel": "Langues Parlées",
+    "langDaServices": "Culte du dimanche · Étude biblique",
+    "langEnServices": "Toutes les réunions",
+    "langSwServices": "Culte du dimanche",
+    "langEsServices": "Culte du dimanche",
     "beliefsLabel": "Croyances",
     "beliefsTitle": "Ce Que Nous",
     "beliefsTitleAccent": "Croyons",
@@ -142,7 +146,14 @@
     "empty": "Aucun sermon trouvé.",
     "noVideo": "Aucune vidéo",
     "watchVideo": "Regarder la vidéo",
-    "unknownSpeaker": "Prédicateur inconnu"
+    "unknownSpeaker": "Prédicateur inconnu",
+    "titleHome": "Derniers",
+    "titleAccentHome": "Sermons",
+    "viewAll": "Voir tous les sermons",
+    "noSermonsHome": "Aucun sermon disponible pour le moment."
+  },
+  "announcements": {
+    "title": "Annonces Actuelles"
   },
   "youth": {
     "sectionLabel": "Jeunesse",

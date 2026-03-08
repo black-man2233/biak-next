@@ -8,29 +8,25 @@
         </h2>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-10">
-        <div
-          v-for="(p, i) in pastors"
-          :key="p.name"
-          :ref="el => cardEls[i] = el as Element"
-          :class="['reveal card p-7 flex gap-5 group', cardVisible[i] && 'visible', `delay-${i * 150 + 100}`]"
-        >
+      <!-- Single pastor card — centered -->
+      <div class="max-w-lg mx-auto mb-10">
+        <div ref="cardEl" :class="['reveal card p-8 flex gap-6 group', cardVisible && 'visible delay-100']">
           <div class="flex-shrink-0">
-            <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-2xl font-serif font-bold text-white shadow-md"
-              :style="`background: linear-gradient(135deg, ${p.gradFrom}, ${p.gradTo})`">
-              {{ p.initial }}
+            <div class="w-20 h-20 rounded-2xl flex items-center justify-center text-3xl font-serif font-bold text-white shadow-md"
+              style="background: linear-gradient(135deg, var(--primary), var(--primary-dark))">
+              M
             </div>
           </div>
           <div class="min-w-0">
-            <h3 class="font-serif font-bold text-lg leading-tight transition-colors group-hover:opacity-80" style="color:var(--text)">{{ p.name }}</h3>
-            <p class="text-xs font-semibold mt-1 mb-3 uppercase tracking-wide" style="color:var(--accent)">{{ $t(p.roleKey) }}</p>
-            <p class="text-sm leading-relaxed" style="color:var(--text-mid)">{{ $t(p.bioKey) }}</p>
+            <h3 class="font-serif font-bold text-xl leading-tight" style="color:var(--text)">Pastor Martin Mutale</h3>
+            <p class="text-xs font-semibold mt-1 mb-3 uppercase tracking-wide" style="color:var(--accent)">{{ $t('pastors.martin.role') }}</p>
+            <p class="text-sm leading-relaxed" style="color:var(--text-mid)">{{ $t('pastors.martin.bio') }}</p>
           </div>
         </div>
       </div>
 
       <!-- Quote -->
-      <div ref="quoteEl" :class="['reveal max-w-4xl mx-auto', quoteVisible && 'visible delay-300']">
+      <div ref="quoteEl" :class="['reveal max-w-lg mx-auto', quoteVisible && 'visible delay-300']">
         <div class="card p-8 md:p-10 text-center relative overflow-hidden">
           <div class="absolute top-0 left-0 right-0 h-1" style="background: linear-gradient(90deg, transparent, var(--accent), transparent)" />
           <p class="font-serif text-5xl leading-none mb-4 select-none" style="color:var(--border-mid)">&ldquo;</p>
@@ -49,24 +45,16 @@
 </template>
 
 <script setup lang="ts">
-const { t } = useI18n()
-
-const pastors = [
-  { initial: 'M', name: 'Pastor Martin Mutale', roleKey: 'pastors.martin.role', bioKey: 'pastors.martin.bio', gradFrom: 'var(--primary)', gradTo: 'var(--primary-dark)' },
-  { initial: 'R', name: 'Pastor Ruth Mutale', roleKey: 'pastors.ruth.role', bioKey: 'pastors.ruth.bio', gradFrom: 'var(--accent)', gradTo: 'var(--primary)' },
-]
-
 const { el: headerEl, isVisible: headerVisible } = useReveal()
 const { el: quoteEl, isVisible: quoteVisible } = useReveal()
-const cardEls = ref<Element[]>([])
-const cardVisible = ref([false, false])
+
+const cardEl = ref<Element | null>(null)
+const cardVisible = ref(false)
 onMounted(() => {
-  cardEls.value.forEach((el, i) => {
-    if (!el) return
-    const obs = new IntersectionObserver(([e]) => {
-      if (e.isIntersecting) { cardVisible.value[i] = true; obs.disconnect() }
-    }, { threshold: 0.1 })
-    obs.observe(el)
-  })
+  if (!cardEl.value) return
+  const obs = new IntersectionObserver(([e]) => {
+    if (e.isIntersecting) { cardVisible.value = true; obs.disconnect() }
+  }, { threshold: 0.1 })
+  obs.observe(cardEl.value)
 })
 </script>

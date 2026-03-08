@@ -2,6 +2,7 @@
   <NuxtLayout>
     <NuxtPage />
   </NuxtLayout>
+  <YouthFx />
 </template>
 
 <script setup lang="ts">

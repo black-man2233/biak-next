@@ -25,7 +25,10 @@
       "Bash(df:*)",
       "Bash(docker container:*)",
       "Bash(docker system:*)",
-      "WebFetch(domain:www.biak.dk)"
+      "WebFetch(domain:www.biak.dk)",
+      "Bash(git pull:*)",
+      "Bash(wc:*)",
+      "Bash(npm ls:*)"
     ]
   }
 }

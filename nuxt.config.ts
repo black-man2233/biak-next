@@ -6,14 +6,15 @@ export default defineNuxtConfig({
 
   i18n: {
     defaultLocale: 'da',
-    langDir: 'locales',
+    langDir: 'locales/',
     lazy: true,
     strategy: 'no_prefix',
+    bundle: { optimizeTranslationDirective: false },
     locales: [
-      { code: 'da', name: 'Dansk',    file: 'da.json', iso: 'da-DK' },
-      { code: 'en', name: 'English',  file: 'en.json', iso: 'en-US' },
-      { code: 'fr', name: 'Français', file: 'fr.json', iso: 'fr-FR' },
-      { code: 'sw', name: 'Swahili',  file: 'sw.json', iso: 'sw-KE' },
+      { code: 'da', name: 'Dansk',    file: 'da.json', language: 'da-DK' },
+      { code: 'en', name: 'English',  file: 'en.json', language: 'en-US' },
+      { code: 'fr', name: 'Français', file: 'fr.json', language: 'fr-FR' },
+      { code: 'sw', name: 'Swahili',  file: 'sw.json', language: 'sw-KE' },
     ],
   },
 
