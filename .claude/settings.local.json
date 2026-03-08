@@ -24,7 +24,8 @@
       "Bash(docker volume:*)",
       "Bash(df:*)",
       "Bash(docker container:*)",
-      "Bash(docker system:*)"
+      "Bash(docker system:*)",
+      "WebFetch(domain:www.biak.dk)"
     ]
   }
 }

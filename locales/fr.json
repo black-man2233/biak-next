@@ -1,0 +1,227 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À Propos",
+    "events": "Événements",
+    "youth": "Jeunesse",
+    "sermons": "Sermons",
+    "contact": "Contact",
+    "upcomingEvents": "Événements à venir"
+  },
+  "hero": {
+    "badge": "Culte du Dimanche · 10h30",
+    "title": "Vivez l'Amour de",
+    "titleAccent": "Dieu",
+    "subtitle2": "& Sa Puissance",
+    "desc": "Une communauté chrétienne vivante à Brønderslev avec des personnes du monde entier. Danois, anglais, swahili et espagnol — vous êtes toujours le bienvenu.",
+    "ctaLearn": "En Savoir Plus",
+    "ctaLive": "Regarder en Direct",
+    "stat1Label": "Nationalités",
+    "stat2Label": "Langues",
+    "stat3Label": "Amour",
+    "scroll": "Défiler"
+  },
+  "services": {
+    "sectionLabel": "Cultes & Réunions",
+    "title": "Rejoignez-Nous",
+    "titleAccent": "Cette Semaine",
+    "subtitle": "Nous nous réunissons régulièrement — tout le monde est le bienvenu quelle que soit sa situation",
+    "primaryBadge": "Principal",
+    "sunday": {
+      "day": "Dimanche",
+      "title": "Culte du Dimanche",
+      "desc": "Adoration, prière et prédication. Interprétation en danois, anglais, swahili et espagnol.",
+      "f1": "Musique Live", "f2": "Enseignement Biblique", "f3": "Prière"
+    },
+    "wednesday": {
+      "day": "Mercredi",
+      "title": "Prière & Étude Biblique",
+      "desc": "Réunion de mi-semaine axée sur la prière et l'approfondissement de la Bible.",
+      "f1": "Prière", "f2": "Étude Biblique"
+    },
+    "friday": {
+      "day": "Vendredi",
+      "title": "Réunion Jeunesse",
+      "desc": "Réunion mensuelle avec du plaisir, de l'adoration et une forte communauté pour les jeunes.",
+      "f1": "Musique", "f2": "Activités"
+    },
+    "livestream": "Vous ne pouvez pas venir en personne ? Regardez-nous en direct sur Facebook — chaque dimanche à 10h30",
+    "livestreamBtn": "Aller sur Facebook"
+  },
+  "mission": {
+    "sectionLabel": "Notre Mission",
+    "title": "Révéler l'Amour de Dieu &",
+    "titleAccent": "Démontrer Sa Puissance",
+    "verse": "Marc 12:30 — Aimez le Seigneur votre Dieu de tout votre cœur",
+    "values": {
+      "love": { "title": "L'Amour de Dieu", "desc": "Nous croyons en un Dieu qui aime tout le monde quelle que soit son histoire." },
+      "power": { "title": "Sa Puissance", "desc": "Nous vivons et proclamons la puissance de Dieu — guérisons et miracles." },
+      "intl": { "title": "International", "desc": "Des personnes de plus de 10 nationalités. 4 langues dans nos cultes." },
+      "connected": { "title": "Vies Connectées", "desc": "Nous connectons les personnes à Dieu et entre elles dans leur vocation." }
+    },
+    "visionLabel": "Notre Vision",
+    "vision": {
+      "v1": { "label": "Connecter", "desc": "Les personnes avec Dieu et entre elles" },
+      "v2": { "label": "Équiper", "desc": "Pour vivre dans leur vocation divine" },
+      "v3": { "label": "Atteindre", "desc": "Localement et mondialement avec l'évangile" }
+    }
+  },
+  "events": {
+    "sectionLabel": "Calendrier",
+    "title": "Prochains",
+    "titleAccent": "Événements",
+    "viewAll": "Voir tous les événements",
+    "empty": "Aucun événement à venir pour le moment.",
+    "heroTitle": "Prochains",
+    "heroDesc": "Rejoignez-nous pour les cultes, la prière, les réunions jeunesse et bien plus encore.",
+    "filterAll": "Tous",
+    "filterService": "Culte",
+    "filterPrayer": "Prière",
+    "filterYouth": "Jeunesse",
+    "filterGeneral": "Général",
+    "noEvents": "Aucun événement trouvé dans cette catégorie.",
+    "catService": "Culte",
+    "catPrayer": "Prière",
+    "catYouth": "Jeunesse",
+    "catGeneral": "Général"
+  },
+  "pastors": {
+    "sectionLabel": "Leadership",
+    "title": "Rencontrez Nos",
+    "titleAccent": "Pasteurs",
+    "martin": {
+      "role": "Pasteur Principal",
+      "bio": "Martin est titulaire d'un diplôme en théologie du Harvest Bible College en Australie. Il dirige la congrégation avec sagesse et un profond amour pour Dieu et les personnes."
+    },
+    "ruth": {
+      "role": "Pasteure & Responsable des Femmes",
+      "bio": "Ruth dirige le groupe des femmes et l'équipe d'adoration. Avec son cœur pour l'adoration, elle est une partie aimée et centrale de BIAK."
+    },
+    "quote": "Nous voulons inspirer les gens à vivre une expérience avec Dieu et à suivre Jésus — dans une communauté pleine de la puissance et de l'amour de Dieu.",
+    "quoteAuthor": "Martin & Ruth Mutale"
+  },
+  "cta": {
+    "sectionLabel": "Venez nous rencontrer",
+    "title": "Prêt à",
+    "titleAccent": "Rencontrer Dieu?",
+    "desc": "Que vous soyez curieux, en recherche ou déjà croyant — vous êtes toujours le bienvenu. Venez nous rejoindre un dimanche.",
+    "btnContact": "Nous Contacter",
+    "btnEvents": "Voir Tous les Événements"
+  },
+  "about": {
+    "sectionLabel": "À Propos",
+    "heroTitle": "Une Église Vivante",
+    "heroTitleAccent": "Enracinée dans la Foi",
+    "heroDesc": "BIAK — Bethany International Apostolic Kingdom — est une église chrétienne internationale à Brønderslev, Danemark, fondée par les pasteurs Martin et Ruth Mutale.",
+    "storyLabel": "Notre Histoire",
+    "storyTitle": "Fondée dans la Foi &",
+    "storyTitleAccent": "l'Amour",
+    "story1": "BIAK a été fondée avec une vision de créer un foyer pour tous — quelle que soit la nationalité, l'origine ou le passé. L'église rassemble des personnes de plus de 10 nations sous un même toit à Brønderslev.",
+    "story2": "Nous croyons que l'église est plus qu'un bâtiment — c'est une communauté de croyants qui désirent vivre une expérience avec Dieu et suivre Jésus au quotidien.",
+    "story3": "Nos cultes se déroulent en danois, anglais, swahili et espagnol — parce que nous souhaitons que chacun puisse rencontrer Dieu dans sa propre langue maternelle.",
+    "stat1": "Nationalités",
+    "stat2": "Langues",
+    "stat3": "Amour",
+    "stat4": "Pasteurs",
+    "beliefsLabel": "Croyances",
+    "beliefsTitle": "Ce Que Nous",
+    "beliefsTitleAccent": "Croyons",
+    "b1": { "title": "Autorité Biblique", "desc": "Nous croyons que la Bible est la Parole inspirée et infaillible de Dieu — notre guide pour la foi et la vie." },
+    "b2": { "title": "Salut par la Grâce", "desc": "Le salut est le don de Dieu à tous ceux qui croient — non quelque chose que nous méritons, mais quelque chose que nous recevons." },
+    "b3": { "title": "Puissance du Saint-Esprit", "desc": "Nous croyons en l'œuvre active du Saint-Esprit aujourd'hui — avec des signes, des prodiges et des dons spirituels." },
+    "b4": { "title": "Corps du Christ", "desc": "L'église n'est pas un bâtiment mais une communauté — le Corps du Christ sur terre." },
+    "b5": { "title": "Retour de Jésus", "desc": "Nous vivons dans l'attente du retour visible et physique de Jésus pour établir son royaume." },
+    "b6": { "title": "Mission & Évangile", "desc": "Nous sommes appelés à partager l'évangile localement et mondialement — à toutes les nations." }
+  },
+  "sermons": {
+    "sectionLabel": "Sermons",
+    "heroTitle": "Écoutez & Apprenez —",
+    "heroTitleAccent": "La Parole de Dieu",
+    "heroDesc": "Sermons, enseignements et messages de nos cultes et réunions.",
+    "search": "Rechercher des sermons…",
+    "empty": "Aucun sermon trouvé.",
+    "noVideo": "Aucune vidéo",
+    "watchVideo": "Regarder la vidéo",
+    "unknownSpeaker": "Prédicateur inconnu"
+  },
+  "youth": {
+    "sectionLabel": "Jeunesse",
+    "heroTitle": "Des Jeunes avec",
+    "heroTitleAccent": "du Feu dans le Cœur",
+    "heroDesc": "BIAK Jeunesse est un endroit pour les jeunes pour se rencontrer, bâtir une communauté, adorer et grandir dans la foi.",
+    "ctaJoin": "Venez Nous Rencontrer",
+    "infoLabel": "À Propos de BIAK Jeunesse",
+    "infoTitle": "Un Endroit Où Vous",
+    "infoTitleAccent": "Appartenez",
+    "info1": "Nous nous réunissons une fois par mois pour notre réunion jeunesse — avec de l'adoration, de l'enseignement, du plaisir et une forte communauté. Vous n'avez pas besoin d'expérience avec le christianisme. Vous êtes le bienvenu tel que vous êtes.",
+    "info2": "Le groupe de jeunesse est dirigé par de jeunes leaders dévoués sous la direction de la pasteure Ruth Mutale, qui est passionnée par le désir de voir les jeunes grandir dans leur foi et leur identité.",
+    "when": "Quand",
+    "whenVal": "Réunions mensuelles le vendredi",
+    "time": "Heure",
+    "timeVal": "18h00 – 20h00",
+    "place": "Lieu",
+    "placeVal": "Kirkevej 10, Brønderslev",
+    "f1": { "title": "Adoration", "desc": "Musique live et louanges" },
+    "f2": { "title": "Communauté", "desc": "Amis pour la vie" },
+    "f3": { "title": "Enseignement", "desc": "Enseignement basé sur la Bible" },
+    "f4": { "title": "Activités", "desc": "Plaisir, sport et événements" }
+  },
+  "contact": {
+    "sectionLabel": "Contact",
+    "heroTitle": "Nous Sommes",
+    "heroTitleAccent": "À Votre Écoute",
+    "heroDesc": "Des questions, besoin de prière ou juste envie de dire bonjour ? Écrivez-nous.",
+    "infoLabel": "Nous Trouver",
+    "infoTitle": "Informations de",
+    "infoTitleAccent": "Contact",
+    "phone": "Téléphone",
+    "email": "Email",
+    "address": "Adresse",
+    "addressVal": "Kirkevej 10, 9700 Brønderslev",
+    "facebook": "Facebook",
+    "meetingLabel": "Horaires des Réunions",
+    "t1": { "day": "Dimanche", "time": "10h30 – 12h30" },
+    "t2": { "day": "Mercredi", "time": "18h30 – 20h00" },
+    "t3": { "day": "Vendredi (mensuel)", "time": "18h00 – 20h00" },
+    "formTitle": "Envoyer un Message",
+    "name": "Nom",
+    "namePlaceholder": "Votre nom",
+    "emailPlaceholder": "votre@email.fr",
+    "subject": "Sujet",
+    "subjectPlaceholder": "De quoi s'agit-il ?",
+    "message": "Message",
+    "messagePlaceholder": "Écrivez votre message ici…",
+    "send": "Envoyer le Message",
+    "sending": "Envoi…",
+    "success": "Merci pour votre message ! Nous vous répondrons dans les plus brefs délais.",
+    "error": "Une erreur est survenue. Veuillez réessayer."
+  },
+  "admin": {
+    "login": {
+      "title": "Se Connecter",
+      "password": "Mot de passe",
+      "submit": "Se Connecter",
+      "submitting": "Connexion…",
+      "error": "Mot de passe incorrect. Veuillez réessayer."
+    },
+    "dashboard": { "title": "Tableau de Bord", "subtitle": "Bienvenue dans le panneau d'administration BIAK", "eventsLabel": "Événements", "sermonsLabel": "Sermons", "announcementsLabel": "Annonces", "settingsLabel": "Paramètres", "seedBtn": "Créer des Événements Récurrents", "seedSuccess": "Événements créés!", "seedError": "Erreur lors de la création des événements." },
+    "events": { "title": "Événements", "subtitle": "Créer et gérer les événements à venir", "newBtn": "Nouvel Événement", "editTitle": "Modifier l'Événement", "createTitle": "Nouvel Événement", "titleField": "Titre", "desc": "Description", "date": "Date", "category": "Catégorie", "startTime": "Heure de début", "endTime": "Heure de fin", "location": "Lieu", "imageUrl": "URL de l'image", "update": "Mettre à jour", "create": "Créer", "confirmDelete": "Êtes-vous sûr de vouloir supprimer cet événement ?" },
+    "sermons": { "title": "Sermons", "subtitle": "Gérer les sermons et les messages", "newBtn": "Nouveau Sermon", "speaker": "Prédicateur", "speakerPlaceholder": "Pasteur Martin Mutale", "videoUrl": "URL Vidéo", "imageUrl": "URL Image", "editTitle": "Modifier le Sermon", "createTitle": "Nouveau Sermon", "update": "Mettre à jour", "create": "Créer", "confirmDelete": "Supprimer ce sermon ?" },
+    "announcements": { "title": "Annonces", "subtitle": "Annonces actuelles pour la congrégation", "newBtn": "Nouvelle Annonce", "content": "Contenu", "active": "Actif (affiché sur le site)", "activeLabel": "Actif", "inactiveLabel": "Inactif", "editTitle": "Modifier", "createTitle": "Nouvelle", "update": "Mettre à jour", "create": "Créer", "confirmDelete": "Supprimer cette annonce ?" },
+    "settings": { "title": "Paramètres", "subtitle": "Paramètres de l'église et du système", "security": "Session & Sécurité", "securityDesc": "Vous êtes connecté en tant qu'administrateur. Votre session est chiffrée et sécurisée.", "logout": "Se Déconnecter", "churchInfo": "Infos Église", "links": "Liens Rapides", "openSite": "Ouvrir le site", "fbPage": "Page Facebook" },
+    "common": { "cancel": "Annuler", "saving": "Enregistrement…", "delete": "Supprimer", "edit": "Modifier", "noItems": "Aucun pour le moment.", "error": "Une erreur est survenue." }
+  },
+  "common": {
+    "loading": "Chargement…",
+    "noResults": "Aucun résultat trouvé.",
+    "theme": { "light": "Clair", "dark": "Sombre", "youth": "Jeunesse" },
+    "lang": { "da": "Dansk", "en": "English", "fr": "Français", "sw": "Swahili" }
+  },
+  "footer": {
+    "desc": "Une communauté chrétienne vivante à Brønderslev avec des personnes du monde entier.",
+    "navTitle": "Navigation",
+    "contactTitle": "Contact",
+    "copyright": "BIAK — Bethany International Apostolic Kingdom",
+    "backToTop": "Haut"
+  }
+}

@@ -1,0 +1,221 @@
+{
+  "nav": {
+    "home": "Nyumbani",
+    "about": "Kuhusu Sisi",
+    "events": "Matukio",
+    "youth": "Vijana",
+    "sermons": "Mahubiri",
+    "contact": "Wasiliana",
+    "upcomingEvents": "Matukio Yanayokuja"
+  },
+  "hero": {
+    "badge": "Ibada ya Jumapili · Saa 4:30",
+    "title": "Pata Upendo wa",
+    "titleAccent": "Mungu",
+    "subtitle2": "& Nguvu Zake",
+    "desc": "Jumuiya ya Kikristo yenye nguvu huko Brønderslev na watu kutoka duniani kote. Kideni, Kiingereza, Kiswahili na Kihispania — karibu wakati wowote.",
+    "ctaLearn": "Jifunze Kuhusu Sisi",
+    "ctaLive": "Tazama Moja kwa Moja",
+    "stat1Label": "Mataifa",
+    "stat2Label": "Lugha",
+    "stat3Label": "Upendo",
+    "scroll": "Tembeza"
+  },
+  "services": {
+    "sectionLabel": "Ibada & Mikutano",
+    "title": "Jiunge Nasi",
+    "titleAccent": "Wiki Hii",
+    "subtitle": "Tunakusanyika mara kwa mara — kila mtu anakaribika bila kujali asili yake",
+    "primaryBadge": "Kuu",
+    "sunday": {
+      "day": "Jumapili",
+      "title": "Ibada ya Jumapili",
+      "desc": "Ibada, sala na mhubiri. Tafsiri kwa Kideni, Kiingereza, Kiswahili na Kihispania.",
+      "f1": "Muziki wa Moja kwa Moja", "f2": "Mafundisho ya Biblia", "f3": "Sala"
+    },
+    "wednesday": {
+      "day": "Jumatano",
+      "title": "Sala & Mafunzo ya Biblia",
+      "desc": "Mkutano wa katikati ya wiki unaozingatia sala na kusoma Biblia kwa kina.",
+      "f1": "Sala", "f2": "Mafunzo ya Biblia"
+    },
+    "friday": {
+      "day": "Ijumaa",
+      "title": "Mkutano wa Vijana",
+      "desc": "Mkutano wa kila mwezi na burudani, ibada na ushirikiano mkubwa kwa vijana.",
+      "f1": "Muziki", "f2": "Shughuli"
+    },
+    "livestream": "Huwezi kuja kibinafsi? Tutazame moja kwa moja kwenye Facebook — kila Jumapili saa 4:30",
+    "livestreamBtn": "Nenda Facebook"
+  },
+  "mission": {
+    "sectionLabel": "Dhumuni Letu",
+    "title": "Kudhihirisha Upendo wa Mungu &",
+    "titleAccent": "Kuonyesha Nguvu Zake",
+    "verse": "Marko 12:30 — Mpende Bwana Mungu wako kwa moyo wako wote",
+    "values": {
+      "love": { "title": "Upendo wa Mungu", "desc": "Tunaamini Mungu anayempenda kila mtu bila kujali historia yake." },
+      "power": { "title": "Nguvu Zake", "desc": "Tunapata na kutangaza nguvu za Mungu — uponyaji na miujiza." },
+      "intl": { "title": "Kimataifa", "desc": "Watu kutoka zaidi ya mataifa 10. Lugha 4 katika ibada zetu." },
+      "connected": { "title": "Maisha Yanayounganika", "desc": "Tunaunganisha watu na Mungu na wao kwa wao katika wito wao." }
+    },
+    "visionLabel": "Maono Yetu",
+    "vision": {
+      "v1": { "label": "Unganisha", "desc": "Watu na Mungu na wao kwa wao" },
+      "v2": { "label": "Wapa Nguvu", "desc": "Kuishi katika wito wao wa Kimungu" },
+      "v3": { "label": "Fikia", "desc": "Ndani na nje ya nchi kwa injili" }
+    }
+  },
+  "events": {
+    "sectionLabel": "Kalenda",
+    "title": "Matukio",
+    "titleAccent": "Yanayokuja",
+    "viewAll": "Angalia matukio yote",
+    "empty": "Hakuna matukio yanayokuja kwa sasa.",
+    "heroTitle": "Matukio",
+    "heroDesc": "Jiunge nasi kwa ibada, sala, mikutano ya vijana na zaidi.",
+    "filterAll": "Yote",
+    "filterService": "Ibada",
+    "filterPrayer": "Sala",
+    "filterYouth": "Vijana",
+    "filterGeneral": "Jumla",
+    "noEvents": "Hakuna matukio yaliyopatikana katika jamii hii.",
+    "catService": "Ibada",
+    "catPrayer": "Sala",
+    "catYouth": "Vijana",
+    "catGeneral": "Jumla"
+  },
+  "pastors": {
+    "sectionLabel": "Uongozi",
+    "title": "Kutana na",
+    "titleAccent": "Wachungaji Wetu",
+    "martin": {
+      "role": "Mchungaji Mkuu",
+      "bio": "Martin ana shahada ya theolojia kutoka Harvest Bible College nchini Australia. Anaongoza jumuiya kwa hekima na upendo wa kina kwa Mungu na watu."
+    },
+    "ruth": {
+      "role": "Mchungaji & Kiongozi wa Wanawake",
+      "bio": "Ruth anaongoza kikundi cha wanawake na timu ya ibada. Kwa moyo wake wa ibada, yeye ni sehemu muhimu na inayopendwa ya BIAK."
+    },
+    "quote": "Tunataka kuhamasisha watu kupata uzoefu na Mungu na kumfuata Yesu — katika jumuiya iliyojaa nguvu na upendo wa Mungu.",
+    "quoteAuthor": "Martin & Ruth Mutale"
+  },
+  "cta": {
+    "sectionLabel": "Kuja ukutane nasi",
+    "title": "Uko Tayari",
+    "titleAccent": "Kukutana na Mungu?",
+    "desc": "Iwe una udadisi, unatafuta au tayari unaamini — karibu wakati wowote. Kuja ukutane nasi Jumapili.",
+    "btnContact": "Wasiliana Nasi",
+    "btnEvents": "Angalia Matukio Yote"
+  },
+  "about": {
+    "sectionLabel": "Kuhusu Sisi",
+    "heroTitle": "Kanisa Lenye Uhai",
+    "heroTitleAccent": "Lililojengwa juu ya Imani",
+    "heroDesc": "BIAK — Bethany International Apostolic Kingdom — ni kanisa la Kikristo la kimataifa huko Brønderslev, Denmark, lililoundwa na Wachungaji Martin na Ruth Mutale.",
+    "storyLabel": "Historia Yetu",
+    "storyTitle": "Ilianzishwa katika Imani &",
+    "storyTitleAccent": "Upendo",
+    "story1": "BIAK ilianzishwa na maono ya kuunda nyumba kwa kila mtu — bila kujali utaifa, asili au historia. Kanisa linaunganisha watu kutoka zaidi ya mataifa 10 chini ya paa moja huko Brønderslev.",
+    "story2": "Tunaamini kwamba kanisa ni zaidi ya jengo — ni jumuiya ya waamini wanaotamani kupata uzoefu na Mungu na kumfuata Yesu katika maisha ya kila siku.",
+    "story3": "Ibada zetu zinafanyika kwa Kideni, Kiingereza, Kiswahili na Kihispania — kwa sababu tunataka kila mtu aweze kukutana na Mungu kwa lugha yake ya mama.",
+    "stat1": "Mataifa",
+    "stat2": "Lugha",
+    "stat3": "Upendo",
+    "stat4": "Wachungaji",
+    "beliefsLabel": "Imani",
+    "beliefsTitle": "Tunachokiamini",
+    "beliefsTitleAccent": "",
+    "b1": { "title": "Mamlaka ya Biblia", "desc": "Tunaamini Biblia ni Neno la Mungu lililotokana na msukumo wake na lisilo na makosa — kiongozi chetu cha imani na maisha." },
+    "b2": { "title": "Wokovu kwa Neema", "desc": "Wokovu ni zawadi ya Mungu kwa wote wanaomwamini — si kitu tunachostahili, bali tunachopokea." },
+    "b3": { "title": "Nguvu za Roho Mtakatifu", "desc": "Tunaamini katika kazi ya Roho Mtakatifu leo — na ishara, miujiza na karama za kiroho." },
+    "b4": { "title": "Mwili wa Kristo", "desc": "Kanisa si jengo bali jumuiya — Mwili wa Kristo duniani." },
+    "b5": { "title": "Kurudi kwa Yesu", "desc": "Tunaishi kwa kutazamia kurudi kwa Yesu kwa kuonekana, kimwili kuanzisha ufalme wake." },
+    "b6": { "title": "Dhamira & Injili", "desc": "Tumeitwa kushiriki injili ndani na nje ya nchi — kwa mataifa yote." }
+  },
+  "sermons": {
+    "sectionLabel": "Mahubiri",
+    "heroTitle": "Sikiliza & Jifunze —",
+    "heroTitleAccent": "Neno la Mungu",
+    "heroDesc": "Mahubiri, mafundisho na hotuba kutoka kwa ibada na mikutano yetu.",
+    "search": "Tafuta mahubiri…",
+    "empty": "Hakuna mahubiri yaliyopatikana.",
+    "noVideo": "Hakuna video",
+    "watchVideo": "Tazama video",
+    "unknownSpeaker": "Mhubiri asiyejulikana"
+  },
+  "youth": {
+    "sectionLabel": "Vijana",
+    "heroTitle": "Vijana wenye",
+    "heroTitleAccent": "Moto Moyoni",
+    "heroDesc": "BIAK Vijana ni mahali pa vijana kukutana, kujenga jumuiya, kuabudu na kukua katika imani.",
+    "ctaJoin": "Kuja Ukutane Nasi",
+    "infoLabel": "Kuhusu BIAK Vijana",
+    "infoTitle": "Mahali Unapohisi",
+    "infoTitleAccent": "Unakuwa",
+    "info1": "Tunakutana mara moja kwa mwezi kwa mkutano wa vijana — na ibada, mafundisho, burudani na ushirikiano mkubwa. Huhitaji uzoefu na Ukristo. Unakaribika jinsi ulivyo.",
+    "info2": "Kundi la vijana linaongozwa na viongozi vijana waliojitoa chini ya uongozi wa Mchungaji Ruth Mutale, ambaye ana shauku ya kuona vijana wakua katika imani na utambulisho wao.",
+    "when": "Lini",
+    "whenVal": "Mikutano ya kila mwezi Ijumaa",
+    "time": "Wakati",
+    "timeVal": "18:00 – 20:00",
+    "place": "Mahali",
+    "placeVal": "Kirkevej 10, Brønderslev",
+    "f1": { "title": "Ibada", "desc": "Muziki wa moja kwa moja na sifa" },
+    "f2": { "title": "Jumuiya", "desc": "Marafiki wa maisha yote" },
+    "f3": { "title": "Mafundisho", "desc": "Mafundisho yanayotegemea Biblia" },
+    "f4": { "title": "Shughuli", "desc": "Burudani, michezo na matukio" }
+  },
+  "contact": {
+    "sectionLabel": "Wasiliana",
+    "heroTitle": "Tungependa",
+    "heroTitleAccent": "Kusikia Kutoka Kwako",
+    "heroDesc": "Una maswali, unahitaji sala au unataka kusema habari? Tuandikia.",
+    "infoLabel": "Tupate",
+    "infoTitle": "Maelezo ya",
+    "infoTitleAccent": "Mawasiliano",
+    "phone": "Simu",
+    "email": "Barua pepe",
+    "address": "Anwani",
+    "addressVal": "Kirkevej 10, 9700 Brønderslev",
+    "facebook": "Facebook",
+    "meetingLabel": "Nyakati za Mikutano",
+    "t1": { "day": "Jumapili", "time": "10:30 – 12:30" },
+    "t2": { "day": "Jumatano", "time": "18:30 – 20:00" },
+    "t3": { "day": "Ijumaa (kila mwezi)", "time": "18:00 – 20:00" },
+    "formTitle": "Tuma Ujumbe",
+    "name": "Jina",
+    "namePlaceholder": "Jina lako",
+    "emailPlaceholder": "yako@barua.com",
+    "subject": "Mada",
+    "subjectPlaceholder": "Inhusu nini?",
+    "message": "Ujumbe",
+    "messagePlaceholder": "Andika ujumbe wako hapa…",
+    "send": "Tuma Ujumbe",
+    "sending": "Inatuma…",
+    "success": "Asante kwa ujumbe wako! Tutajibu haraka iwezekanavyo.",
+    "error": "Kitu fulani kilienda vibaya. Tafadhali jaribu tena."
+  },
+  "admin": {
+    "login": { "title": "Ingia", "password": "Nenosiri", "submit": "Ingia", "submitting": "Inaingia…", "error": "Nenosiri si sahihi. Tafadhali jaribu tena." },
+    "dashboard": { "title": "Dashibodi", "subtitle": "Karibu kwenye paneli ya utawala ya BIAK", "eventsLabel": "Matukio", "sermonsLabel": "Mahubiri", "announcementsLabel": "Matangazo", "settingsLabel": "Mipangilio", "seedBtn": "Unda Matukio ya Mara kwa Mara", "seedSuccess": "Matukio yameundwa!", "seedError": "Hitilafu katika kuunda matukio." },
+    "events": { "title": "Matukio", "subtitle": "Unda na usimamie matukio yanayokuja", "newBtn": "Tukio Jipya", "editTitle": "Hariri Tukio", "createTitle": "Tukio Jipya", "titleField": "Kichwa", "desc": "Maelezo", "date": "Tarehe", "category": "Aina", "startTime": "Muda wa kuanza", "endTime": "Muda wa kumalizia", "location": "Mahali", "imageUrl": "URL ya Picha", "update": "Sasisha", "create": "Unda", "confirmDelete": "Je, una uhakika unataka kufuta tukio hili?" },
+    "sermons": { "title": "Mahubiri", "subtitle": "Simamia mahubiri na hotuba", "newBtn": "Hotuba Mpya", "speaker": "Mhubiri", "speakerPlaceholder": "Mchungaji Martin Mutale", "videoUrl": "URL ya Video", "imageUrl": "URL ya Picha", "editTitle": "Hariri Hotuba", "createTitle": "Hotuba Mpya", "update": "Sasisha", "create": "Unda", "confirmDelete": "Futa hotuba hii?" },
+    "announcements": { "title": "Matangazo", "subtitle": "Matangazo ya sasa kwa mkutano", "newBtn": "Tangazo Jipya", "content": "Maudhui", "active": "Inafanya kazi (inaonyeshwa kwenye tovuti)", "activeLabel": "Inafanya kazi", "inactiveLabel": "Haifanyi kazi", "editTitle": "Hariri", "createTitle": "Mpya", "update": "Sasisha", "create": "Unda", "confirmDelete": "Futa tangazo hili?" },
+    "settings": { "title": "Mipangilio", "subtitle": "Mipangilio ya kanisa na mfumo", "security": "Kikao & Usalama", "securityDesc": "Umeingia kama msimamizi. Kikao chako kimesimbwa kwa njia fiche na kiko salama.", "logout": "Toka", "churchInfo": "Maelezo ya Kanisa", "links": "Viungo vya Haraka", "openSite": "Fungua tovuti", "fbPage": "Ukurasa wa Facebook" },
+    "common": { "cancel": "Ghairi", "saving": "Inahifadhi…", "delete": "Futa", "edit": "Hariri", "noItems": "Hakuna bado.", "error": "Kitu fulani kilienda vibaya." }
+  },
+  "common": {
+    "loading": "Inapakia…",
+    "noResults": "Hakuna matokeo yaliyopatikana.",
+    "theme": { "light": "Mwanga", "dark": "Giza", "youth": "Vijana" },
+    "lang": { "da": "Dansk", "en": "English", "fr": "Français", "sw": "Swahili" }
+  },
+  "footer": {
+    "desc": "Jumuiya ya Kikristo yenye nguvu huko Brønderslev na watu kutoka duniani kote.",
+    "navTitle": "Urambazaji",
+    "contactTitle": "Wasiliana",
+    "copyright": "BIAK — Bethany International Apostolic Kingdom",
+    "backToTop": "Juu"
+  }
+}

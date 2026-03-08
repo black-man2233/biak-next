@@ -1,0 +1,306 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "events": "Events",
+    "youth": "Youth",
+    "sermons": "Sermons",
+    "contact": "Contact",
+    "upcomingEvents": "Upcoming Events"
+  },
+  "hero": {
+    "badge": "Sunday Service · 10:30 AM",
+    "title": "Experience God's",
+    "titleAccent": "Love",
+    "subtitle2": "& His Power",
+    "desc": "A vibrant Christian community in Brønderslev with people from all over the world. Danish, English, Swahili and Spanish — you are always welcome.",
+    "ctaLearn": "Learn About Us",
+    "ctaLive": "Watch Live Stream",
+    "stat1Label": "Nationalities",
+    "stat2Label": "Languages",
+    "stat3Label": "Love",
+    "scroll": "Scroll"
+  },
+  "services": {
+    "sectionLabel": "Services & Meetings",
+    "title": "Join Us",
+    "titleAccent": "This Week",
+    "subtitle": "We gather regularly — everyone is welcome regardless of background",
+    "primaryBadge": "Primary",
+    "sunday": {
+      "day": "Sunday",
+      "title": "Sunday Service",
+      "desc": "Worship, prayer and preaching. Interpretation in Danish, English, Swahili and Spanish.",
+      "f1": "Live Music", "f2": "Bible Teaching", "f3": "Prayer"
+    },
+    "wednesday": {
+      "day": "Wednesday",
+      "title": "Prayer & Bible Study",
+      "desc": "Midweek gathering focused on prayer and deeper study of the Bible.",
+      "f1": "Prayer", "f2": "Bible Study"
+    },
+    "friday": {
+      "day": "Friday",
+      "title": "Youth Meeting",
+      "desc": "Monthly meeting with fun, worship and strong community for young people.",
+      "f1": "Music", "f2": "Activities"
+    },
+    "livestream": "Can't make it in person? Watch us live on Facebook — every Sunday at 10:30 AM",
+    "livestreamBtn": "Go to Facebook"
+  },
+  "mission": {
+    "sectionLabel": "Our Mission",
+    "title": "To Reveal God's Love &",
+    "titleAccent": "Demonstrate His Power",
+    "verse": "Mark 12:30 — Love the Lord your God with all your heart",
+    "values": {
+      "love": { "title": "God's Love", "desc": "We believe in a God who loves everyone regardless of background or past." },
+      "power": { "title": "His Power", "desc": "We experience and proclaim God's power — healing and miracles." },
+      "intl": { "title": "International", "desc": "People from over 10 nationalities. 4 languages in our services." },
+      "connected": { "title": "Connected Lives", "desc": "We connect people with God and each other in their calling." }
+    },
+    "visionLabel": "Our Vision",
+    "vision": {
+      "v1": { "label": "Connect", "desc": "People with God and each other" },
+      "v2": { "label": "Equip", "desc": "To live in their God-given calling" },
+      "v3": { "label": "Reach Out", "desc": "Locally and globally with the gospel" }
+    }
+  },
+  "events": {
+    "sectionLabel": "Calendar",
+    "title": "Upcoming",
+    "titleAccent": "Events",
+    "viewAll": "View all events",
+    "empty": "No upcoming events at the moment.",
+    "heroTitle": "Upcoming",
+    "heroDesc": "Join us for services, prayer, youth meetings and much more.",
+    "filterAll": "All",
+    "filterService": "Service",
+    "filterPrayer": "Prayer",
+    "filterYouth": "Youth",
+    "filterGeneral": "General",
+    "noEvents": "No events found in this category.",
+    "catService": "Service",
+    "catPrayer": "Prayer",
+    "catYouth": "Youth",
+    "catGeneral": "General"
+  },
+  "pastors": {
+    "sectionLabel": "Leadership",
+    "title": "Meet Our",
+    "titleAccent": "Pastors",
+    "martin": {
+      "role": "Senior Pastor",
+      "bio": "Martin holds a theology degree from Harvest Bible College in Australia. He leads the congregation with wisdom and deep love for God and people."
+    },
+    "ruth": {
+      "role": "Pastor & Women's Leader",
+      "bio": "Ruth leads the women's group and worship team. With her heart for worship, she is a beloved and central part of BIAK."
+    },
+    "quote": "We want to inspire people to experience God and follow Jesus — in a community full of God's power and love.",
+    "quoteAuthor": "Martin & Ruth Mutale"
+  },
+  "cta": {
+    "sectionLabel": "Come and meet us",
+    "title": "Ready to",
+    "titleAccent": "Meet God?",
+    "desc": "Whether you are curious, searching or already a believer — you are always welcome. Come meet us on a Sunday.",
+    "btnContact": "Contact Us",
+    "btnEvents": "View All Events"
+  },
+  "about": {
+    "sectionLabel": "About Us",
+    "heroTitle": "A Living Church",
+    "heroTitleAccent": "Rooted in Faith",
+    "heroDesc": "BIAK — Bethany International Apostolic Kingdom — is an international Christian church in Brønderslev, Denmark, founded by Pastors Martin and Ruth Mutale.",
+    "storyLabel": "Our Story",
+    "storyTitle": "Founded in Faith &",
+    "storyTitleAccent": "Love",
+    "story1": "BIAK was founded with a vision to create a home for everyone — regardless of nationality, background or past. The church brings together people from over 10 nations under one roof in Brønderslev.",
+    "story2": "We believe that the church is more than a building — it is a community of believers who desire to experience God and follow Jesus in everyday life.",
+    "story3": "Our services are held in Danish, English, Swahili and Spanish — because we want everyone to meet God in their own mother tongue.",
+    "stat1": "Nationalities",
+    "stat2": "Languages",
+    "stat3": "Love",
+    "stat4": "Pastors",
+    "beliefsLabel": "Beliefs",
+    "beliefsTitle": "What We",
+    "beliefsTitleAccent": "Believe",
+    "b1": { "title": "Biblical Authority", "desc": "We believe the Bible is God's inspired and infallible word — our guide for faith and life." },
+    "b2": { "title": "Salvation by Grace", "desc": "Salvation is God's gift to all who believe — not something we earn, but something we receive." },
+    "b3": { "title": "Power of the Holy Spirit", "desc": "We believe in the Holy Spirit's active work today — with signs, wonders and spiritual gifts." },
+    "b4": { "title": "The Body of Christ", "desc": "The church is not a building but a community — the Body of Christ on earth." },
+    "b5": { "title": "Return of Jesus", "desc": "We live in expectation of Jesus' visible, physical return to establish His kingdom." },
+    "b6": { "title": "Mission & Gospel", "desc": "We are called to share the gospel locally and globally — to all nations." }
+  },
+  "sermons": {
+    "sectionLabel": "Sermons",
+    "heroTitle": "Listen & Learn —",
+    "heroTitleAccent": "God's Word",
+    "heroDesc": "Sermons, teaching and talks from our services and meetings.",
+    "search": "Search sermons…",
+    "empty": "No sermons found.",
+    "noVideo": "No video",
+    "watchVideo": "Watch video",
+    "unknownSpeaker": "Unknown speaker"
+  },
+  "youth": {
+    "sectionLabel": "Youth",
+    "heroTitle": "Young People with",
+    "heroTitleAccent": "Fire in Their Hearts",
+    "heroDesc": "BIAK Youth is a place for young people to meet, build community, worship and grow in faith.",
+    "ctaJoin": "Come and Meet Us",
+    "infoLabel": "About BIAK Youth",
+    "infoTitle": "A Place You",
+    "infoTitleAccent": "Belong",
+    "info1": "We meet once a month for our youth meeting — with worship, teaching, fun and strong community. You don't need to have experience with Christianity. You are welcome just as you are.",
+    "info2": "The youth group is led by dedicated young leaders under the guidance of Pastor Ruth Mutale, who has a passion for seeing young people grow in their faith and identity.",
+    "when": "When",
+    "whenVal": "Monthly Friday meetings",
+    "time": "Time",
+    "timeVal": "6:00 PM – 8:00 PM",
+    "place": "Location",
+    "placeVal": "Kirkevej 10, Brønderslev",
+    "f1": { "title": "Worship", "desc": "Live music and praise" },
+    "f2": { "title": "Community", "desc": "Friends for life" },
+    "f3": { "title": "Teaching", "desc": "Bible-based teaching" },
+    "f4": { "title": "Activities", "desc": "Fun, sports and events" }
+  },
+  "contact": {
+    "sectionLabel": "Contact",
+    "heroTitle": "We'd Love to",
+    "heroTitleAccent": "Hear From You",
+    "heroDesc": "Have questions, need prayer or just want to say hi? Write to us.",
+    "infoLabel": "Find Us",
+    "infoTitle": "Contact",
+    "infoTitleAccent": "Information",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "addressVal": "Kirkevej 10, 9700 Brønderslev",
+    "facebook": "Facebook",
+    "meetingLabel": "Meeting Times",
+    "t1": { "day": "Sunday", "time": "10:30 AM – 12:30 PM" },
+    "t2": { "day": "Wednesday", "time": "6:30 PM – 8:00 PM" },
+    "t3": { "day": "Friday (monthly)", "time": "6:00 PM – 8:00 PM" },
+    "formTitle": "Send a Message",
+    "name": "Name",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "your@email.com",
+    "subject": "Subject",
+    "subjectPlaceholder": "What is it about?",
+    "message": "Message",
+    "messagePlaceholder": "Write your message here…",
+    "send": "Send Message",
+    "sending": "Sending…",
+    "success": "Thank you for your message! We will get back to you as soon as possible.",
+    "error": "Something went wrong. Please try again."
+  },
+  "admin": {
+    "login": {
+      "title": "Log In",
+      "password": "Password",
+      "submit": "Log In",
+      "submitting": "Logging in…",
+      "error": "Incorrect password. Please try again."
+    },
+    "dashboard": {
+      "title": "Dashboard",
+      "subtitle": "Welcome to the BIAK admin panel",
+      "eventsLabel": "Events",
+      "sermonsLabel": "Sermons",
+      "announcementsLabel": "Announcements",
+      "settingsLabel": "Settings",
+      "seedBtn": "Create Recurring Events",
+      "seedSuccess": "Events created!",
+      "seedError": "Error creating events."
+    },
+    "events": {
+      "title": "Events",
+      "subtitle": "Create and manage upcoming events",
+      "newBtn": "New Event",
+      "editTitle": "Edit Event",
+      "createTitle": "New Event",
+      "titleField": "Title",
+      "desc": "Description",
+      "date": "Date",
+      "category": "Category",
+      "startTime": "Start time",
+      "endTime": "End time",
+      "location": "Location",
+      "imageUrl": "Image URL",
+      "update": "Update",
+      "create": "Create",
+      "confirmDelete": "Are you sure you want to delete this event?"
+    },
+    "sermons": {
+      "title": "Sermons",
+      "subtitle": "Manage sermons and talks",
+      "newBtn": "New Sermon",
+      "speaker": "Speaker",
+      "speakerPlaceholder": "Pastor Martin Mutale",
+      "videoUrl": "Video URL",
+      "imageUrl": "Image URL",
+      "editTitle": "Edit Sermon",
+      "createTitle": "New Sermon",
+      "update": "Update",
+      "create": "Create",
+      "confirmDelete": "Delete this sermon?"
+    },
+    "announcements": {
+      "title": "Announcements",
+      "subtitle": "Current announcements for the congregation",
+      "newBtn": "New Announcement",
+      "content": "Content",
+      "active": "Active (shown on website)",
+      "activeLabel": "Active",
+      "inactiveLabel": "Inactive",
+      "editTitle": "Edit",
+      "createTitle": "New",
+      "update": "Update",
+      "create": "Create",
+      "confirmDelete": "Delete this announcement?"
+    },
+    "settings": {
+      "title": "Settings",
+      "subtitle": "Church and system settings",
+      "security": "Session & Security",
+      "securityDesc": "You are logged in as administrator. Your session is encrypted and secure.",
+      "logout": "Log Out",
+      "churchInfo": "Church Info",
+      "links": "Quick Links",
+      "openSite": "Open website",
+      "fbPage": "Facebook page"
+    },
+    "common": {
+      "cancel": "Cancel",
+      "saving": "Saving…",
+      "delete": "Delete",
+      "edit": "Edit",
+      "noItems": "None yet.",
+      "error": "Something went wrong."
+    }
+  },
+  "common": {
+    "loading": "Loading…",
+    "noResults": "No results found.",
+    "theme": {
+      "light": "Light",
+      "dark": "Dark",
+      "youth": "Youth"
+    },
+    "lang": {
+      "da": "Dansk",
+      "en": "English",
+      "fr": "Français",
+      "sw": "Swahili"
+    }
+  },
+  "footer": {
+    "desc": "A vibrant Christian community in Brønderslev with people from all over the world.",
+    "navTitle": "Navigation",
+    "contactTitle": "Contact",
+    "copyright": "BIAK — Brønderslev International Apostolic Kingdom",
+    "backToTop": "Top"
+  }
+}

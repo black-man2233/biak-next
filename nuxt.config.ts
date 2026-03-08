@@ -1,8 +1,21 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: false },
-  modules: ['@nuxtjs/tailwindcss'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/i18n'],
   css: ['~/assets/css/main.css'],
+
+  i18n: {
+    defaultLocale: 'da',
+    langDir: 'locales',
+    lazy: true,
+    strategy: 'no_prefix',
+    locales: [
+      { code: 'da', name: 'Dansk',    file: 'da.json', iso: 'da-DK' },
+      { code: 'en', name: 'English',  file: 'en.json', iso: 'en-US' },
+      { code: 'fr', name: 'Français', file: 'fr.json', iso: 'fr-FR' },
+      { code: 'sw', name: 'Swahili',  file: 'sw.json', iso: 'sw-KE' },
+    ],
+  },
 
   app: {
     head: {
@@ -14,11 +27,12 @@ export default defineNuxtConfig({
         { name: 'keywords', content: 'kirke, BIAK, Brønderslev, kristen, apostolsk' },
       ],
       link: [
+        { rel: 'icon', type: 'image/svg+xml', href: '/biak-logo.svg' },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
         {
           rel: 'stylesheet',
-          href: 'https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap',
+          href: 'https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap',
         },
       ],
     },

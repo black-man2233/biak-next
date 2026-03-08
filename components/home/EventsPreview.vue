@@ -1,25 +1,25 @@
 <template>
   <section class="py-24 md:py-32 bg-warm">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
-
       <!-- Header -->
       <div ref="headerEl" :class="['reveal flex items-end justify-between mb-12 gap-4 flex-wrap', headerVisible && 'visible']">
         <div>
-          <span class="section-label mb-3">Kalender</span>
-          <h2 class="font-serif font-bold text-3xl sm:text-4xl text-terra-900 mt-3">
-            Kommende <span class="text-gold-600">Events</span>
+          <span class="section-label mb-3">{{ $t('events.sectionLabel') }}</span>
+          <h2 class="font-serif font-bold text-3xl sm:text-4xl mt-3" style="color:var(--text)">
+            {{ $t('events.title') }} <span style="color:var(--accent)">{{ $t('events.titleAccent') }}</span>
           </h2>
         </div>
-        <NuxtLink to="/events" class="flex items-center gap-1.5 text-sm text-warm-400 hover:text-terra-600 transition-colors font-medium group">
-          Se alle events
+        <NuxtLink to="/events" class="flex items-center gap-1.5 text-sm font-medium group transition-colors"
+          style="color:var(--text-mid)">
+          {{ $t('events.viewAll') }}
           <ArrowRight class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
         </NuxtLink>
       </div>
 
       <!-- Empty state -->
       <div v-if="!events.length" class="card p-14 text-center">
-        <Calendar class="w-10 h-10 text-warm-200 mx-auto mb-3" />
-        <p class="text-warm-400 text-sm">Ingen kommende events på nuværende tidspunkt.</p>
+        <Calendar class="w-10 h-10 mx-auto mb-3" style="color:var(--border-mid)" />
+        <p class="text-sm" style="color:var(--text-mid)">{{ $t('events.empty') }}</p>
       </div>
 
       <!-- Event cards -->
@@ -30,22 +30,13 @@
           :ref="el => cardEls[i] = el as Element"
           :class="['reveal card group overflow-hidden', cardVisible[i] && 'visible', `delay-${i * 100 + 100}`]"
         >
-          <!-- Image or gradient -->
           <div class="h-44 overflow-hidden relative">
-            <img
-              v-if="event.imageUrl"
-              :src="event.imageUrl"
-              :alt="event.title"
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-            />
-            <div
-              v-else
-              class="w-full h-full flex items-center justify-center"
-              :style="`background: linear-gradient(135deg, ${gradients[i % 3][0]}, ${gradients[i % 3][1]})`"
-            >
+            <img v-if="event.imageUrl" :src="event.imageUrl" :alt="event.title"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+            <div v-else class="w-full h-full flex items-center justify-center"
+              :style="`background: linear-gradient(135deg, ${gradients[i % 3][0]}, ${gradients[i % 3][1]})`">
               <Calendar class="w-10 h-10 text-white/30" />
             </div>
-            <!-- Category badge -->
             <div class="absolute top-3 right-3">
               <span :class="['text-xs font-semibold px-2.5 py-1 rounded-full', catStyle(event.category)]">
                 {{ catLabel(event.category) }}
@@ -54,32 +45,23 @@
           </div>
 
           <div class="p-5">
-            <!-- Date -->
             <div class="flex items-center gap-3 mb-4">
               <div class="text-center min-w-[2.5rem]">
-                <p class="text-[10px] text-warm-400 uppercase font-bold tracking-wider leading-none">
-                  {{ fmtMonth(event.date) }}
-                </p>
-                <p class="font-serif font-bold text-2xl text-terra-900 leading-tight">
-                  {{ fmtDay(event.date) }}
-                </p>
+                <p class="text-[10px] uppercase font-bold tracking-wider leading-none" style="color:var(--text-mid)">{{ fmtMonth(event.date) }}</p>
+                <p class="font-serif font-bold text-2xl leading-tight" style="color:var(--text)">{{ fmtDay(event.date) }}</p>
               </div>
-              <div class="w-px h-9 bg-warm-100" />
-              <p class="text-warm-400 text-xs capitalize">{{ fmtWeekday(event.date) }}</p>
+              <div class="w-px h-9" style="background:var(--border)" />
+              <p class="text-xs capitalize" style="color:var(--text-mid)">{{ fmtWeekday(event.date) }}</p>
             </div>
-
-            <h3 class="font-serif font-semibold text-terra-900 text-base mb-2 group-hover:text-terra-600 transition-colors">
-              {{ event.title }}
-            </h3>
-            <p class="text-warm-400 text-sm leading-relaxed line-clamp-2 mb-4">{{ event.description }}</p>
-
-            <div class="space-y-1.5 pt-4 border-t border-warm-100 text-xs text-warm-400">
+            <h3 class="font-serif font-semibold text-base mb-2 transition-colors group-hover:opacity-80" style="color:var(--text)">{{ event.title }}</h3>
+            <p class="text-sm leading-relaxed line-clamp-2 mb-4" style="color:var(--text-mid)">{{ event.description }}</p>
+            <div class="space-y-1.5 pt-4 border-t text-xs" style="border-color:var(--border); color:var(--text-mid)">
               <div v-if="event.startTime" class="flex items-center gap-2">
-                <Clock class="w-3 h-3 flex-shrink-0 text-warm-300" />
+                <Clock class="w-3 h-3 flex-shrink-0" style="color:var(--border-mid)" />
                 {{ event.startTime }}{{ event.endTime ? ` – ${event.endTime}` : '' }}
               </div>
               <div class="flex items-center gap-2">
-                <MapPin class="w-3 h-3 flex-shrink-0 text-warm-300" />
+                <MapPin class="w-3 h-3 flex-shrink-0" style="color:var(--border-mid)" />
                 <span class="truncate">{{ event.location }}</span>
               </div>
             </div>
@@ -92,34 +74,23 @@
 
 <script setup lang="ts">
 import { Calendar, Clock, MapPin, ArrowRight } from 'lucide-vue-next'
+const { t } = useI18n()
 
 const props = defineProps<{
-  events: Array<{
-    id: string; title: string; description: string; date: string
-    startTime: string | null; endTime: string | null; location: string
-    category: string; imageUrl: string | null
-  }>
+  events: Array<{ id: string; title: string; description: string; date: string; startTime: string | null; endTime: string | null; location: string; category: string; imageUrl: string | null }>
 }>()
 
-const gradients = [
-  ['#8b4513', '#62300d'],
-  ['#c9a84c', '#a8842a'],
-  ['#7c6a5a', '#4a3828'],
-]
+const gradients = [['var(--primary)', 'var(--primary-dark)'], ['var(--accent)', 'var(--primary)'], ['#7c6a5a', '#4a3828']]
 
 function catLabel(cat: string) {
-  return { service: 'Gudstjeneste', prayer: 'Bøn', youth: 'Unge', general: 'Generelt' }[cat] ?? cat
+  const map: Record<string, string> = { service: t('events.catService'), prayer: t('events.catPrayer'), youth: t('events.catYouth'), general: t('events.catGeneral') }
+  return map[cat] ?? cat
 }
 function catStyle(cat: string) {
-  return {
-    service: 'bg-terra-100 text-terra-700',
-    prayer:  'bg-warm-100 text-warm-600',
-    youth:   'bg-gold-100 text-gold-700',
-    general: 'bg-gray-100 text-gray-600',
-  }[cat] ?? 'bg-gray-100 text-gray-600'
+  return { service: 'bg-[#fdf1ec] text-[var(--primary)]', prayer: 'bg-[var(--bg-secondary)] text-[var(--text-mid)]', youth: 'bg-[var(--bg-secondary)] text-[var(--accent)]', general: 'bg-gray-100 text-gray-600' }[cat] ?? 'bg-gray-100 text-gray-600'
 }
-function fmtMonth(d: string)   { return new Date(d).toLocaleDateString('da-DK', { month: 'short' }) }
-function fmtDay(d: string)     { return new Date(d).getDate() }
+function fmtMonth(d: string) { return new Date(d).toLocaleDateString('da-DK', { month: 'short' }) }
+function fmtDay(d: string)   { return new Date(d).getDate() }
 function fmtWeekday(d: string) { return new Date(d).toLocaleDateString('da-DK', { weekday: 'long' }) }
 
 const { el: headerEl, isVisible: headerVisible } = useReveal()

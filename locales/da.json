@@ -1,0 +1,306 @@
+{
+  "nav": {
+    "home": "Hjem",
+    "about": "Om Os",
+    "events": "Events",
+    "youth": "Unge",
+    "sermons": "Prædikener",
+    "contact": "Kontakt",
+    "upcomingEvents": "Kommende Events"
+  },
+  "hero": {
+    "badge": "Søndagsgudstjeneste · Kl. 10:30",
+    "title": "Oplev Guds",
+    "titleAccent": "Kærlighed",
+    "subtitle2": "& Hans Kraft",
+    "desc": "Et levende kristent fællesskab i Brønderslev med folk fra hele verden. Dansk, engelsk, swahili og spansk — du er altid velkommen.",
+    "ctaLearn": "Lær Os At Kende",
+    "ctaLive": "Se Live Stream",
+    "stat1Label": "Nationaliteter",
+    "stat2Label": "Sprog",
+    "stat3Label": "Kærlighed",
+    "scroll": "Scroll"
+  },
+  "services": {
+    "sectionLabel": "Gudstjenester & Møder",
+    "title": "Mød Os",
+    "titleAccent": "Denne Uge",
+    "subtitle": "Vi samles regelmæssigt — alle er velkomne uanset baggrund",
+    "primaryBadge": "Primær",
+    "sunday": {
+      "day": "Søndag",
+      "title": "Søndagsgudstjeneste",
+      "desc": "Tilbedelse, bøn og forkyndelse. Tolkning på dansk, engelsk, swahili og spansk.",
+      "f1": "Livemusik", "f2": "Bibelundervisning", "f3": "Bøn"
+    },
+    "wednesday": {
+      "day": "Onsdag",
+      "title": "Bøn & Bibelundervisning",
+      "desc": "Midtugs-samling med fokus på bøn og fordybelse i Bibelen.",
+      "f1": "Bøn", "f2": "Bibelstudium"
+    },
+    "friday": {
+      "day": "Fredag",
+      "title": "Ungdomsmøde",
+      "desc": "Månedligt møde med sjov, tilbedelse og stærkt fællesskab for unge.",
+      "f1": "Musik", "f2": "Aktiviteter"
+    },
+    "livestream": "Kan du ikke være med fysisk? Se os live på Facebook — hver søndag kl. 10:30",
+    "livestreamBtn": "Gå til Facebook"
+  },
+  "mission": {
+    "sectionLabel": "Vores Mission",
+    "title": "At Åbenbare Guds Kærlighed &",
+    "titleAccent": "Demonstrere Hans Kraft",
+    "verse": "Mark 12:30 — Elsk Herren din Gud af hele dit hjerte",
+    "values": {
+      "love": { "title": "Guds Kærlighed", "desc": "Vi tror på en Gud der elsker alle uanset baggrund eller fortid." },
+      "power": { "title": "Hans Kraft", "desc": "Vi oplever og forkynder Guds kraft — helbredelse og mirakler." },
+      "intl": { "title": "Internationalt", "desc": "Folk fra over 10 nationaliteter. 4 sprog i vores gudstjenester." },
+      "connected": { "title": "Forbundne Liv", "desc": "Vi forbinder mennesker med Gud og hinanden i kaldet." }
+    },
+    "visionLabel": "Vores Vision",
+    "vision": {
+      "v1": { "label": "Forbinde", "desc": "Mennesker med Gud og hinanden" },
+      "v2": { "label": "Udruste", "desc": "Til at leve i deres gudgivne kald" },
+      "v3": { "label": "Nå Ud", "desc": "Lokalt og globalt med evangeliet" }
+    }
+  },
+  "events": {
+    "sectionLabel": "Kalender",
+    "title": "Kommende",
+    "titleAccent": "Events",
+    "viewAll": "Se alle events",
+    "empty": "Ingen kommende events på nuværende tidspunkt.",
+    "heroTitle": "Kommende",
+    "heroDesc": "Mød os til gudstjenester, bøn, ungdomsmøder og meget mere.",
+    "filterAll": "Alle",
+    "filterService": "Gudstjeneste",
+    "filterPrayer": "Bøn",
+    "filterYouth": "Unge",
+    "filterGeneral": "Generelt",
+    "noEvents": "Ingen events fundet i denne kategori.",
+    "catService": "Gudstjeneste",
+    "catPrayer": "Bøn",
+    "catYouth": "Unge",
+    "catGeneral": "Generelt"
+  },
+  "pastors": {
+    "sectionLabel": "Lederskab",
+    "title": "Mød Vores",
+    "titleAccent": "Pastorer",
+    "martin": {
+      "role": "Sognepastor",
+      "bio": "Martin har en kandidatgrad i teologi fra Harvest Bible College i Australien. Han leder menigheden med visdom og dyb kærlighed til Gud og mennesker."
+    },
+    "ruth": {
+      "role": "Sognepastor & Kvindeleder",
+      "bio": "Ruth leder kvindegruppen og tilbedelsesholdet. Med sit hjerte for tilbedelse er hun en elsket og central del af BIAK."
+    },
+    "quote": "Vi ønsker at inspirere mennesker til at opleve Gud og efterligne Jesus — i et fællesskab, der er fuld af Guds kraft og kærlighed.",
+    "quoteAuthor": "Martin & Ruth Mutale"
+  },
+  "cta": {
+    "sectionLabel": "Kom og mød os",
+    "title": "Klar til at",
+    "titleAccent": "Møde Gud?",
+    "desc": "Uanset om du er nysgerrig, søgende eller allerede troende — du er altid velkommen. Kom og mød os en søndag.",
+    "btnContact": "Kontakt Os",
+    "btnEvents": "Se Alle Events"
+  },
+  "about": {
+    "sectionLabel": "Om Os",
+    "heroTitle": "En Levende Menighed",
+    "heroTitleAccent": "med Rødderne i Tro",
+    "heroDesc": "BIAK — Bethany International Apostolic Kingdom — er en international kristen menighed i Brønderslev, Danmark, grundlagt af pastor Martin og Ruth Mutale.",
+    "storyLabel": "Vores Historie",
+    "storyTitle": "Grundlagt i Tro &",
+    "storyTitleAccent": "Kærlighed",
+    "story1": "BIAK blev grundlagt med en vision om at skabe et hjem for alle — uanset nationalitet, baggrund eller fortid. Menigheden samler mennesker fra over 10 nationer under ét tag i Brønderslev.",
+    "story2": "Vi tror på, at kirken er mere end en bygning — det er et fællesskab af troende, der ønsker at opleve Gud og efterligne Jesus i hverdagen.",
+    "story3": "Vores gudstjenester afholdes på dansk, engelsk, swahili og spansk — fordi vi ønsker, at alle kan møde Gud på deres eget modersmål.",
+    "stat1": "Nationaliteter",
+    "stat2": "Sprog",
+    "stat3": "Kærlighed",
+    "stat4": "Pastorer",
+    "beliefsLabel": "Trossyn",
+    "beliefsTitle": "Hvad Vi",
+    "beliefsTitleAccent": "Tror På",
+    "b1": { "title": "Bibelens Autoritet", "desc": "Vi tror at Bibelen er Guds inspirerede og ufejlbarlige ord — vores rettesnor for tro og liv." },
+    "b2": { "title": "Frelse ved Nåde", "desc": "Frelse er Guds gave til alle der tror — ikke noget vi fortjener, men noget vi modtager." },
+    "b3": { "title": "Helligåndens Kraft", "desc": "Vi tror på Helligåndens aktive arbejde i dag — med tegn, undere og åndelige gaver." },
+    "b4": { "title": "Kristi Legeme", "desc": "Kirken er ikke en bygning men et fællesskab — Kristi legeme på jordens." },
+    "b5": { "title": "Jesu Genkomst", "desc": "Vi lever i forventning om Jesu synlige, fysiske genkomst for at oprette sit rige." },
+    "b6": { "title": "Mission & Evangeliet", "desc": "Vi er kaldet til at dele evangeliet lokalt og globalt — til alle folkeslag." }
+  },
+  "sermons": {
+    "sectionLabel": "Prædikener",
+    "heroTitle": "Lyt & Lær —",
+    "heroTitleAccent": "Guds Ord",
+    "heroDesc": "Prædikener, undervisning og taler fra vores gudstjenester og møder.",
+    "search": "Søg prædikener…",
+    "empty": "Ingen prædikener fundet.",
+    "noVideo": "Ingen video",
+    "watchVideo": "Se video",
+    "unknownSpeaker": "Ukendt taler"
+  },
+  "youth": {
+    "sectionLabel": "Ungdom",
+    "heroTitle": "Unge med",
+    "heroTitleAccent": "Ild i Hjertet",
+    "heroDesc": "BIAK Ungdom er et sted for unge mennesker at mødes, dyrke fællesskab, tilbede og vokse i troen.",
+    "ctaJoin": "Kom og Mød Os",
+    "infoLabel": "Om BIAK Ungdom",
+    "infoTitle": "Et Sted Du",
+    "infoTitleAccent": "Hører Til",
+    "info1": "Vi mødes én gang om måneden til ungdomsmøde — med tilbedelse, undervisning, sjov og stærkt fællesskab. Du behøver ikke have erfaring med kristendom. Du er velkommen, som du er.",
+    "info2": "Ungdomsgruppen ledes af engagerede unge ledere under vejledning af pastor Ruth Mutale, der brænder for at se unge vækste i deres tro og identitet.",
+    "when": "Hvornår",
+    "whenVal": "Månedlige fredagsmøder",
+    "time": "Tid",
+    "timeVal": "18:00 – 20:00",
+    "place": "Sted",
+    "placeVal": "Kirkevej 10, Brønderslev",
+    "f1": { "title": "Tilbedelse", "desc": "Levende musik og lovsang" },
+    "f2": { "title": "Fællesskab", "desc": "Venner for livet" },
+    "f3": { "title": "Undervisning", "desc": "Bibelbaseret undervisning" },
+    "f4": { "title": "Aktiviteter", "desc": "Sjov, sport og events" }
+  },
+  "contact": {
+    "sectionLabel": "Kontakt",
+    "heroTitle": "Vi Hører",
+    "heroTitleAccent": "Fra Dig",
+    "heroDesc": "Har du spørgsmål, ønsker gebet eller vil du bare sige hej? Skriv til os.",
+    "infoLabel": "Find Os",
+    "infoTitle": "Kontakt",
+    "infoTitleAccent": "Information",
+    "phone": "Telefon",
+    "email": "Email",
+    "address": "Adresse",
+    "addressVal": "Kirkevej 10, 9700 Brønderslev",
+    "facebook": "Facebook",
+    "meetingLabel": "Mødetider",
+    "t1": { "day": "Søndag", "time": "10:30 – 12:30" },
+    "t2": { "day": "Onsdag", "time": "18:30 – 20:00" },
+    "t3": { "day": "Fredag (månedligt)", "time": "18:00 – 20:00" },
+    "formTitle": "Send En Besked",
+    "name": "Navn",
+    "namePlaceholder": "Dit navn",
+    "emailPlaceholder": "din@email.dk",
+    "subject": "Emne",
+    "subjectPlaceholder": "Hvad drejer det sig om?",
+    "message": "Besked",
+    "messagePlaceholder": "Skriv din besked her…",
+    "send": "Send Besked",
+    "sending": "Sender…",
+    "success": "Tak for din besked! Vi vender tilbage hurtigst muligt.",
+    "error": "Noget gik galt. Prøv igen."
+  },
+  "admin": {
+    "login": {
+      "title": "Log Ind",
+      "password": "Adgangskode",
+      "submit": "Log Ind",
+      "submitting": "Logger ind…",
+      "error": "Forkert adgangskode. Prøv igen."
+    },
+    "dashboard": {
+      "title": "Dashboard",
+      "subtitle": "Velkommen til BIAK admin panel",
+      "eventsLabel": "Events",
+      "sermonsLabel": "Prædikener",
+      "announcementsLabel": "Meddelelser",
+      "settingsLabel": "Indstillinger",
+      "seedBtn": "Opret Tilbagevendende Events",
+      "seedSuccess": "Events oprettet!",
+      "seedError": "Fejl ved oprettelse af events."
+    },
+    "events": {
+      "title": "Events",
+      "subtitle": "Opret og administrer kommende events",
+      "newBtn": "Nyt Event",
+      "editTitle": "Rediger Event",
+      "createTitle": "Nyt Event",
+      "titleField": "Titel",
+      "desc": "Beskrivelse",
+      "date": "Dato",
+      "category": "Kategori",
+      "startTime": "Start tid",
+      "endTime": "Slut tid",
+      "location": "Lokation",
+      "imageUrl": "Billede URL",
+      "update": "Opdater",
+      "create": "Opret",
+      "confirmDelete": "Er du sikker på, at du vil slette dette event?"
+    },
+    "sermons": {
+      "title": "Prædikener",
+      "subtitle": "Administrer prædikener og taler",
+      "newBtn": "Ny Prædiken",
+      "speaker": "Taler",
+      "speakerPlaceholder": "Pastor Martin Mutale",
+      "videoUrl": "Video URL",
+      "imageUrl": "Billede URL",
+      "editTitle": "Rediger Prædiken",
+      "createTitle": "Ny Prædiken",
+      "update": "Opdater",
+      "create": "Opret",
+      "confirmDelete": "Slet denne prædiken?"
+    },
+    "announcements": {
+      "title": "Meddelelser",
+      "subtitle": "Aktuelle meddelelser til menigheden",
+      "newBtn": "Ny Meddelelse",
+      "content": "Indhold",
+      "active": "Aktiv (vises på hjemmesiden)",
+      "activeLabel": "Aktiv",
+      "inactiveLabel": "Inaktiv",
+      "editTitle": "Rediger",
+      "createTitle": "Ny",
+      "update": "Opdater",
+      "create": "Opret",
+      "confirmDelete": "Slet denne meddelelse?"
+    },
+    "settings": {
+      "title": "Indstillinger",
+      "subtitle": "Menigheds- og systemindstillinger",
+      "security": "Session & Sikkerhed",
+      "securityDesc": "Du er logget ind som administrator. Din session er krypteret og sikker.",
+      "logout": "Log Ud",
+      "churchInfo": "Menighedsinfo",
+      "links": "Hurtige Genveje",
+      "openSite": "Åbn hjemmeside",
+      "fbPage": "Facebook side"
+    },
+    "common": {
+      "cancel": "Annuller",
+      "saving": "Gemmer…",
+      "delete": "Slet",
+      "edit": "Rediger",
+      "noItems": "Ingen endnu.",
+      "error": "Noget gik galt."
+    }
+  },
+  "common": {
+    "loading": "Indlæser…",
+    "noResults": "Ingen resultater fundet.",
+    "theme": {
+      "light": "Lyst",
+      "dark": "Mørkt",
+      "youth": "Ungdom"
+    },
+    "lang": {
+      "da": "Dansk",
+      "en": "English",
+      "fr": "Français",
+      "sw": "Swahili"
+    }
+  },
+  "footer": {
+    "desc": "Et levende kristent fællesskab i Brønderslev med folk fra hele verden.",
+    "navTitle": "Navigation",
+    "contactTitle": "Kontakt",
+    "copyright": "BIAK — Brønderslev International Apostolsk Kirke",
+    "backToTop": "Top"
+  }
+}

@@ -4,132 +4,102 @@
 
       <!-- Header -->
       <div ref="headerEl" :class="['reveal text-center mb-16', headerVisible && 'visible']">
-        <span class="section-label justify-center mb-4">Gudstjenester &amp; Møder</span>
-        <h2 class="font-serif font-bold text-3xl sm:text-4xl md:text-5xl text-terra-900 mt-3">
-          Mød Os <span class="text-gold-600">Denne Uge</span>
+        <span class="section-label justify-center mb-4">{{ $t('services.sectionLabel') }}</span>
+        <h2 class="font-serif font-bold text-3xl sm:text-4xl md:text-5xl mt-3" style="color:var(--text)">
+          {{ $t('services.title') }} <span style="color:var(--accent)">{{ $t('services.titleAccent') }}</span>
         </h2>
-        <p class="text-warm-500 mt-4 max-w-md mx-auto">Vi samles regelmæssigt — alle er velkomne uanset baggrund</p>
+        <p class="mt-4 max-w-md mx-auto text-sm" style="color:var(--text-mid)">{{ $t('services.subtitle') }}</p>
       </div>
 
       <!-- Cards -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div
           v-for="(s, i) in services"
-          :key="s.title"
+          :key="s.titleKey"
           :ref="el => cardEls[i] = el as Element"
-          :class="['reveal card group', cardVisible[i] && 'visible', `delay-${i * 100 + 100}`, s.primary && 'ring-2 ring-gold-400']"
+          :class="['reveal card group', cardVisible[i] && 'visible', `delay-${i * 100 + 100}`, s.primary && 'ring-2 ring-[var(--accent)]']"
         >
-          <!-- Top accent bar -->
-          <div class="h-1.5" :class="s.primary ? 'bg-gradient-to-r from-gold-500 to-gold-400' : 'bg-gradient-to-r from-warm-200 to-warm-100'" />
-
+          <div class="h-1.5" :style="s.primary ? 'background: linear-gradient(90deg, var(--accent), var(--accent-light))' : 'background: var(--border)'" />
           <div class="p-7">
-            <!-- Day badge -->
             <div class="flex items-center justify-between mb-5">
-              <span
-                class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest"
-                :class="s.primary ? 'text-gold-600' : 'text-warm-400'"
-              >
-                <span class="w-1.5 h-1.5 rounded-full" :class="s.primary ? 'bg-gold-500' : 'bg-warm-300'" />
-                {{ s.day }}
+              <span class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest"
+                :style="s.primary ? 'color:var(--accent)' : 'color:var(--text-mid)'">
+                <span class="w-1.5 h-1.5 rounded-full" :style="s.primary ? 'background:var(--accent)' : 'background:var(--border-mid)'" />
+                {{ $t(s.dayKey) }}
               </span>
-              <span v-if="s.primary" class="text-[10px] bg-gold-100 text-gold-700 px-2.5 py-1 rounded-full font-semibold uppercase tracking-wide">
-                Primær
+              <span v-if="s.primary" class="text-[10px] px-2.5 py-1 rounded-full font-semibold uppercase tracking-wide"
+                style="background:var(--bg-secondary); color:var(--accent)">
+                {{ $t('services.primaryBadge') }}
               </span>
             </div>
-
-            <!-- Icon -->
             <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5"
-              :class="s.primary ? 'bg-gold-100' : 'bg-warm-100'">
-              <component :is="s.icon" class="w-5 h-5" :class="s.primary ? 'text-gold-600' : 'text-warm-500'" />
+              :style="s.primary ? 'background:var(--bg-secondary)' : 'background:var(--bg-secondary)'">
+              <component :is="s.icon" class="w-5 h-5" :style="s.primary ? 'color:var(--accent)' : 'color:var(--text-mid)'" />
             </div>
-
-            <h3 class="font-serif font-bold text-xl text-terra-900 mb-2">{{ s.title }}</h3>
-            <p class="text-warm-500 text-sm leading-relaxed mb-6">{{ s.desc }}</p>
-
-            <div class="space-y-2 mb-5 text-sm text-warm-500">
+            <h3 class="font-serif font-bold text-xl mb-2" style="color:var(--text)">{{ $t(s.titleKey) }}</h3>
+            <p class="text-sm leading-relaxed mb-6" style="color:var(--text-mid)">{{ $t(s.descKey) }}</p>
+            <div class="space-y-2 mb-5 text-sm" style="color:var(--text-mid)">
               <div class="flex items-center gap-2.5">
-                <Clock class="w-3.5 h-3.5 text-warm-300 flex-shrink-0" />
+                <Clock class="w-3.5 h-3.5 flex-shrink-0" style="color:var(--border-mid)" />
                 {{ s.time }}
               </div>
               <div class="flex items-center gap-2.5">
-                <MapPin class="w-3.5 h-3.5 text-warm-300 flex-shrink-0" />
+                <MapPin class="w-3.5 h-3.5 flex-shrink-0" style="color:var(--border-mid)" />
                 <span class="truncate">{{ s.location }}</span>
               </div>
             </div>
-
-            <div class="flex flex-wrap gap-1.5 pt-5 border-t border-warm-100">
-              <span
-                v-for="f in s.features"
-                :key="f"
+            <div class="flex flex-wrap gap-1.5 pt-5 border-t border-[var(--border)]">
+              <span v-for="fk in s.featureKeys" :key="fk"
                 class="px-2.5 py-1 text-xs rounded-full font-medium"
-                :class="s.primary ? 'bg-gold-100 text-gold-700' : 'bg-warm-100 text-warm-500'"
-              >{{ f }}</span>
+                :style="s.primary ? 'background:var(--bg-secondary);color:var(--accent)' : 'background:var(--bg-secondary);color:var(--text-mid)'">
+                {{ $t(fk) }}
+              </span>
             </div>
           </div>
         </div>
       </div>
 
       <!-- Live stream bar -->
-      <div ref="barEl" :class="['reveal mt-6 p-5 rounded-2xl bg-terra-900 flex flex-wrap items-center justify-between gap-4', barVisible && 'visible delay-400']">
+      <div ref="barEl" :class="['reveal mt-6 p-5 rounded-2xl flex flex-wrap items-center justify-between gap-4', barVisible && 'visible delay-400']"
+        style="background: linear-gradient(135deg, var(--hero-from), var(--hero-to))">
         <div class="flex items-center gap-3 text-white/80">
-          <div class="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center">
-            <Wifi class="w-4 h-4 text-gold-400" />
+          <div class="w-8 h-8 rounded-lg flex items-center justify-center bg-white/10">
+            <Wifi class="w-4 h-4" style="color:var(--accent)" />
           </div>
-          <span class="text-sm">Kan du ikke være med fysisk? Se os live på Facebook — hver søndag kl. 10:30</span>
+          <span class="text-sm">{{ $t('services.livestream') }}</span>
         </div>
-        <a href="https://facebook.com/biakdk" target="_blank" rel="noopener noreferrer"
-          class="text-gold-400 hover:text-gold-300 text-sm font-semibold transition-colors flex items-center gap-1.5 group">
-          Gå til Facebook
-          <ArrowRight class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-        </a>
+        <div class="flex items-center gap-3">
+          <a href="https://facebook.com/biakdk" target="_blank" rel="noopener noreferrer"
+            class="text-sm font-semibold transition-colors flex items-center gap-1.5 group hover:opacity-80"
+            style="color:var(--accent)">
+            {{ $t('services.livestreamBtn') }}
+            <ArrowRight class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+          </a>
+          <a href="https://www.youtube.com/@biakyoutube" target="_blank" rel="noopener noreferrer"
+            class="text-sm font-semibold transition-colors flex items-center gap-1.5 group hover:opacity-80 text-red-400">
+            YouTube
+            <ArrowRight class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+          </a>
+        </div>
       </div>
-
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
 import { Music, BookOpen, Star, Clock, MapPin, Wifi, ArrowRight } from 'lucide-vue-next'
+const { t } = useI18n()
 
 const services = [
-  {
-    day: 'Søndag',
-    time: '10:30 – 12:30',
-    title: 'Søndagsgudstjeneste',
-    desc: 'Tilbedelse, bøn og forkyndelse. Tolkning på dansk, engelsk, swahili og spansk.',
-    icon: Music,
-    features: ['Livemusik', 'Bibelundervisning', 'Bøn'],
-    location: 'Kirkevej 10, Brønderslev',
-    primary: true,
-  },
-  {
-    day: 'Onsdag',
-    time: '18:30 – 20:00',
-    title: 'Bøn & Bibelundervisning',
-    desc: 'Midtugs-samling med fokus på bøn og fordybelse i Bibelen.',
-    icon: BookOpen,
-    features: ['Bøn', 'Bibelstudium'],
-    location: 'Kirkevej 12, Brønderslev',
-    primary: false,
-  },
-  {
-    day: 'Fredag',
-    time: '18:00 – 20:00',
-    title: 'Ungdomsmøde',
-    desc: 'Månedligt møde med sjov, tilbedelse og stærkt fællesskab for unge.',
-    icon: Star,
-    features: ['Musik', 'Aktiviteter'],
-    location: 'Kirkevej 10, Brønderslev',
-    primary: false,
-  },
+  { dayKey: 'services.sunday.day', titleKey: 'services.sunday.title', descKey: 'services.sunday.desc', icon: Music, featureKeys: ['services.sunday.f1', 'services.sunday.f2', 'services.sunday.f3'], time: '10:30 – 12:00', location: 'Kirkevej 10, Brønderslev', primary: true },
+  { dayKey: 'services.wednesday.day', titleKey: 'services.wednesday.title', descKey: 'services.wednesday.desc', icon: BookOpen, featureKeys: ['services.wednesday.f1', 'services.wednesday.f2'], time: '18:30 – 20:00', location: 'Kirkevej 12, Brønderslev', primary: false },
+  { dayKey: 'services.friday.day', titleKey: 'services.friday.title', descKey: 'services.friday.desc', icon: Star, featureKeys: ['services.friday.f1', 'services.friday.f2'], time: '18:00 – 20:00', location: 'Kirkevej 10, Brønderslev', primary: false },
 ]
 
 const { el: headerEl, isVisible: headerVisible } = useReveal()
 const { el: barEl, isVisible: barVisible } = useReveal()
-
 const cardEls = ref<Element[]>([])
 const cardVisible = ref([false, false, false])
-
 onMounted(() => {
   cardEls.value.forEach((el, i) => {
     if (!el) return
