@@ -39,82 +39,62 @@
             </div>
           </div>
 
-          <!-- Stats + single expandable community section -->
+          <!-- 2 expandable stat cards -->
           <div ref="statsEl" :class="['reveal delay-200', statsVisible && 'visible']">
-            <div class="grid grid-cols-2 gap-5 mb-5">
-              <div class="card p-6 text-center">
-                <p class="font-serif font-bold text-4xl mb-1" style="color:var(--text)">10+</p>
-                <p class="text-sm" style="color:var(--text-mid)">{{ $t('about.stat1') }}</p>
-              </div>
-              <div class="card p-6 text-center">
-                <p class="font-serif font-bold text-4xl mb-1" style="color:var(--text)">4</p>
-                <p class="text-sm" style="color:var(--text-mid)">{{ $t('about.stat2') }}</p>
-              </div>
-            </div>
+            <div class="grid grid-cols-2 gap-5">
 
-            <!-- Single expandable: Nationalities + Languages together -->
-            <div class="card overflow-hidden">
-              <button
-                @click="showCommunity = !showCommunity"
-                class="w-full flex items-center justify-between px-6 py-4 text-left transition-colors"
-                style="hover:background: var(--bg-secondary)"
-                @mouseenter="e => (e.currentTarget as HTMLElement).style.background = 'var(--bg-secondary)'"
-                @mouseleave="e => (e.currentTarget as HTMLElement).style.background = ''"
-              >
-                <div class="flex items-center gap-2.5">
-                  <Globe class="w-4 h-4" style="color:var(--primary)" />
-                  <span class="font-semibold text-sm" style="color:var(--text)">
-                    {{ $t('about.nationsLabel') }} & {{ $t('about.langsLabel') }}
-                  </span>
-                  <span class="text-xs px-2 py-0.5 rounded-full font-bold"
-                    style="background:var(--bg-secondary); color:var(--primary)">10+ / 4</span>
-                </div>
-                <ChevronDown class="w-4 h-4 flex-shrink-0 transition-transform duration-300"
-                  style="color:var(--text-mid)"
-                  :class="showCommunity && 'rotate-180'" />
-              </button>
-
-              <Transition name="expand">
-                <div v-if="showCommunity" class="px-6 pb-5 pt-2">
-                  <!-- Nationalities -->
-                  <div class="flex items-center gap-2 mb-3">
-                    <Globe class="w-3.5 h-3.5" style="color:var(--primary)" />
-                    <span class="text-xs font-bold uppercase tracking-wider" style="color:var(--text-mid)">
-                      {{ $t('about.nationsLabel') }}
-                    </span>
-                  </div>
-                  <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 mb-5">
-                    <div v-for="n in nations" :key="n.code"
-                      class="flex items-start gap-2 p-2.5 rounded-xl text-xs"
-                      style="background:var(--bg-secondary)">
-                      <span class="text-base leading-none mt-0.5">{{ n.flag }}</span>
-                      <div>
-                        <p class="font-semibold" style="color:var(--text)">{{ n.name }}</p>
-                        <p class="mt-0.5" style="color:var(--text-mid)">{{ n.lang }}</p>
+              <!-- 10+ Nationalities -->
+              <div class="card overflow-hidden">
+                <button @click="showNations = !showNations"
+                  class="w-full p-6 text-center hover:bg-[var(--bg-secondary)] transition-colors">
+                  <p class="font-serif font-bold text-4xl mb-1" style="color:var(--text)">10+</p>
+                  <p class="text-sm mb-2" style="color:var(--text-mid)">{{ $t('about.stat1') }}</p>
+                  <ChevronDown class="w-4 h-4 mx-auto opacity-40 transition-transform duration-300"
+                    style="color:var(--text-mid)" :class="showNations && 'rotate-180'" />
+                </button>
+                <Transition name="expand">
+                  <div v-if="showNations" class="px-3 pb-3">
+                    <div class="space-y-1">
+                      <div v-for="n in nations" :key="n.code"
+                        class="flex items-center gap-2 p-2 rounded-lg text-xs"
+                        style="background:var(--bg-secondary)">
+                        <span>{{ n.flag }}</span>
+                        <div>
+                          <p class="font-semibold" style="color:var(--text)">{{ n.name }}</p>
+                          <p style="color:var(--text-mid)">{{ n.lang }}</p>
+                        </div>
                       </div>
                     </div>
                   </div>
+                </Transition>
+              </div>
 
-                  <!-- Languages -->
-                  <div class="flex items-center gap-2 mb-3">
-                    <Languages class="w-3.5 h-3.5" style="color:var(--accent)" />
-                    <span class="text-xs font-bold uppercase tracking-wider" style="color:var(--text-mid)">
-                      {{ $t('about.langsLabel') }}
-                    </span>
-                  </div>
-                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                    <div v-for="l in languages" :key="l.code"
-                      class="flex items-center gap-3 p-3 rounded-xl text-sm"
-                      style="background:var(--bg-secondary)">
-                      <span class="text-xl">{{ l.flag }}</span>
-                      <div class="min-w-0">
-                        <p class="font-semibold" style="color:var(--text)">{{ l.name }}</p>
-                        <p class="text-xs" style="color:var(--text-mid)">{{ l.services }}</p>
+              <!-- 4 Languages -->
+              <div class="card overflow-hidden">
+                <button @click="showLangs = !showLangs"
+                  class="w-full p-6 text-center hover:bg-[var(--bg-secondary)] transition-colors">
+                  <p class="font-serif font-bold text-4xl mb-1" style="color:var(--text)">4</p>
+                  <p class="text-sm mb-2" style="color:var(--text-mid)">{{ $t('about.stat2') }}</p>
+                  <ChevronDown class="w-4 h-4 mx-auto opacity-40 transition-transform duration-300"
+                    style="color:var(--text-mid)" :class="showLangs && 'rotate-180'" />
+                </button>
+                <Transition name="expand">
+                  <div v-if="showLangs" class="px-3 pb-3">
+                    <div class="space-y-1">
+                      <div v-for="l in languages" :key="l.code"
+                        class="flex items-center gap-2.5 p-2.5 rounded-lg"
+                        style="background:var(--bg-secondary)">
+                        <span class="text-lg">{{ l.flag }}</span>
+                        <div>
+                          <p class="font-semibold text-xs" style="color:var(--text)">{{ l.name }}</p>
+                          <p class="text-xs" style="color:var(--text-mid)">{{ l.services }}</p>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </Transition>
+                </Transition>
+              </div>
+
             </div>
           </div>
         </div>
@@ -160,12 +140,13 @@
 </template>
 
 <script setup lang="ts">
-import { BookOpen, Heart, Zap, Users, Star, Globe, ChevronDown, Languages } from 'lucide-vue-next'
+import { BookOpen, Heart, Zap, Users, Star, Globe, ChevronDown } from 'lucide-vue-next'
 const { t } = useI18n()
 
 useHead({ title: computed(() => `${t('about.sectionLabel')} — BIAK`) })
 
-const showCommunity = ref(false)
+const showNations = ref(false)
+const showLangs = ref(false)
 
 const nations = [
   { flag: '🇩🇰', code: 'dk', name: 'Danmark', lang: 'Dansk' },

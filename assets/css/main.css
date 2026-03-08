@@ -661,3 +661,42 @@ h1, h2, h3, h4 { font-family: 'Lora', Georgia, serif; }
   border-radius: inherit; z-index: -1;
   animation: gradient-pan 3s ease infinite;
 }
+
+/* ── Admin panel — always light, override youth overrides ── */
+[data-admin] { background-color: #faf8f6 !important; }
+[data-admin] .bg-warm  { background-color: #faf8f6 !important; }
+[data-admin] .bg-cream { background-color: #f5f0e8 !important; }
+[data-admin] .bg-white { background-color: #ffffff !important; }
+[data-admin] .border-warm-100 { border-color: #ede7df !important; }
+[data-admin] .border-warm-200 { border-color: #e0d5ca !important; }
+[data-admin] .text-terra-900, [data-admin] .text-terra-800,
+[data-admin] .text-terra-700 { color: #2c1810 !important; }
+[data-admin] .text-terra-600, [data-admin] .text-terra-500 { color: #9c5030 !important; }
+[data-admin] .text-warm-500, [data-admin] .text-warm-400 { color: #7c6a5a !important; }
+[data-admin] .section-label { color: #9c5030 !important; text-shadow: none !important; }
+[data-admin] .section-label::before { background: #9c5030 !important; }
+[data-admin] .card {
+  background: #ffffff !important;
+  border-color: #e0d5ca !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06) !important;
+  backdrop-filter: none !important;
+}
+[data-admin] .form-input {
+  background: #faf8f6 !important;
+  border-color: #e0d5ca !important;
+  color: #2c1810 !important;
+}
+[data-admin] .admin-sidebar-link {
+  color: #7c6a5a !important;
+}
+[data-admin] .admin-sidebar-link:hover,
+[data-admin] .admin-sidebar-link.active {
+  background: rgba(156,80,48,0.08) !important;
+  color: #9c5030 !important;
+}
+[data-admin] .btn-primary {
+  background: linear-gradient(135deg, #9c5030, #7c3010) !important;
+  color: #fff !important;
+  box-shadow: none !important;
+  animation: none !important;
+}

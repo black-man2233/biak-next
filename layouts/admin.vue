@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-warm flex">
+  <div class="min-h-screen bg-warm flex" data-admin="true">
     <!-- Sidebar -->
     <aside class="w-64 bg-white border-r border-warm-200 flex flex-col shadow-sm fixed inset-y-0 left-0 z-30">
       <!-- Logo -->
@@ -34,6 +34,18 @@
 
       <!-- Footer -->
       <div class="p-4 border-t border-warm-100">
+        <!-- Theme switcher -->
+        <div class="flex items-center gap-1.5 mb-3 px-2">
+          <span class="text-xs text-warm-400 mr-1">Tema</span>
+          <button v-for="t in themes" :key="t" @click="setTheme(t)"
+            :title="t"
+            :class="['w-7 h-7 rounded-lg flex items-center justify-center text-xs transition-all border',
+              theme === t ? 'border-terra-400 bg-terra-50 text-terra-600' : 'border-transparent text-warm-400 hover:bg-warm-100']">
+            <Sun v-if="t === 'light'" class="w-3.5 h-3.5" />
+            <Moon v-else-if="t === 'dark'" class="w-3.5 h-3.5" />
+            <Zap v-else class="w-3.5 h-3.5" />
+          </button>
+        </div>
         <NuxtLink to="/" class="admin-sidebar-link text-warm-400 mb-1">
           <ExternalLink class="w-4 h-4" /> Se hjemmeside
         </NuxtLink>
@@ -57,9 +69,10 @@
 </template>
 
 <script setup lang="ts">
-import { LayoutDashboard, Calendar, Mic, Bell, Settings, LogOut, ExternalLink, Image } from 'lucide-vue-next'
+import { LayoutDashboard, Calendar, Mic, Bell, Settings, LogOut, ExternalLink, Image, Sun, Moon, Zap } from 'lucide-vue-next'
 
 const route = useRoute()
+const { theme, themes, setTheme } = useTheme()
 
 async function logout() {
   await $fetch('/api/auth/logout', { method: 'POST' })
