@@ -1,109 +1,104 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Clock, MapPin, Calendar, Music, BookOpen, Star } from "lucide-react";
+import { Clock, MapPin, Music, BookOpen, Star, Wifi } from "lucide-react";
+import Link from "next/link";
 
 const services = [
   {
     day: "Søndag",
     time: "10:30 – 12:30",
     title: "Søndagsgudstjeneste",
-    description: "Tilbedelse, bøn og forkyndelse. Tolkning tilgængelig på dansk, engelsk, swahili og spansk.",
+    desc: "Tilbedelse, bøn og forkyndelse. Tolkning på dansk, engelsk, swahili og spansk.",
     icon: Music,
-    features: ["Livemusik", "Bibelundervisning", "Bøn", "Fællesskab"],
-    color: "from-blue-500 to-indigo-600",
+    features: ["Livemusik", "Bibelundervisning", "Bøn"],
     location: "Kirkevej 10, Brønderslev",
-    isMain: true,
+    primary: true,
   },
   {
     day: "Onsdag",
     time: "18:30 – 20:00",
     title: "Bøn & Bibelundervisning",
-    description: "Midtugs-samling med fokus på bøn og fordybelse i Bibelen.",
+    desc: "Midtugs-samling med fokus på bøn og fordybelse i Bibelen.",
     icon: BookOpen,
-    features: ["Bøn", "Bibelstudium", "Fællesskab"],
-    color: "from-sky-500 to-blue-600",
+    features: ["Bøn", "Bibelstudium"],
     location: "Kirkevej 12, Brønderslev",
-    isMain: false,
+    primary: false,
   },
   {
     day: "Fredag",
     time: "18:00 – 20:00",
     title: "Ungdomsmøde",
-    description: "Månedligt ungdomsmøde med sjov, tilbedelse og stærkt fællesskab for unge.",
+    desc: "Månedligt møde med sjov, tilbedelse og stærkt fællesskab for unge.",
     icon: Star,
-    features: ["Musik", "Aktiviteter", "Undervisning"],
-    color: "from-indigo-500 to-blue-700",
+    features: ["Musik", "Aktiviteter"],
     location: "Kirkevej 10, Brønderslev",
-    isMain: false,
+    primary: false,
   },
 ];
 
 export function ServicesSection() {
   return (
-    <section className="relative py-16 md:py-24 lg:py-32 overflow-hidden">
-      <div className="absolute inset-0 bg-slate-950" />
+    <section className="py-24 md:py-32 bg-[#020617]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-10 md:mb-16"
+          className="text-center mb-14"
         >
-          <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest text-blue-400 border border-blue-500/30 bg-blue-500/10 uppercase mb-4">
-            Gudstjenester & Møder
-          </span>
+          <span className="section-label mb-5 mx-auto block w-fit">Gudstjenester & Møder</span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-4">
-            Mød Os{" "}
-            <span className="gradient-text">Denne Uge</span>
+            Mød Os <span className="gradient-text">Denne Uge</span>
           </h2>
-          <p className="text-slate-400 text-base sm:text-lg max-w-xl mx-auto">
-            Vi samles regelmæssigt og alle er velkomne — uanset baggrund
+          <p className="text-slate-500 max-w-md mx-auto text-sm sm:text-base">
+            Vi samles regelmæssigt — alle er velkomne uanset baggrund
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {services.map((service, i) => (
+        {/* Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          {services.map((s, i) => (
             <motion.div
-              key={service.title}
-              initial={{ opacity: 0, y: 40 }}
+              key={s.title}
+              initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: i * 0.15 }}
-              className={`relative glass-card p-6 sm:p-8 flex flex-col ${service.isMain ? "md:scale-105 border-blue-500/30" : ""}`}
+              transition={{ delay: i * 0.1 }}
+              className={`card p-7 flex flex-col ${s.primary ? "border-cyan-500/25 bg-slate-900/80" : ""}`}
             >
-              {service.isMain && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-xs font-bold tracking-wider whitespace-nowrap">
-                  PRIMÆR GUDSTJENESTE
-                </div>
+              {s.primary && (
+                <span className="text-xs font-bold uppercase tracking-widest text-cyan-400 mb-4">
+                  ★ Primær Gudstjeneste
+                </span>
               )}
 
-              <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-4 sm:mb-6 shadow-xl`}>
-                <service.icon className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
+              <div className="flex items-center gap-3 mb-5">
+                <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${s.primary ? "bg-cyan-500/15 border border-cyan-500/20" : "bg-slate-800 border border-white/[0.07]"}`}>
+                  <s.icon className={`w-5 h-5 ${s.primary ? "text-cyan-400" : "text-slate-400"}`} />
+                </div>
+                <span className={`text-sm font-semibold ${s.primary ? "text-cyan-400" : "text-slate-400"}`}>{s.day}</span>
               </div>
 
-              <span className="text-blue-400 text-sm font-semibold uppercase tracking-wider mb-2">
-                {service.day}
-              </span>
+              <h3 className="text-white font-bold text-xl mb-2">{s.title}</h3>
+              <p className="text-slate-500 text-sm leading-relaxed mb-6 flex-1">{s.desc}</p>
 
-              <h3 className="text-white font-bold text-xl sm:text-2xl mb-3">{service.title}</h3>
-              <p className="text-slate-400 text-sm leading-relaxed mb-5 flex-1">{service.description}</p>
-
-              <div className="space-y-2 sm:space-y-3 mb-5">
-                <div className="flex items-center gap-2 text-sm">
-                  <Clock className="w-4 h-4 text-blue-400 flex-shrink-0" />
-                  <span className="text-slate-300">{service.time}</span>
+              <div className="space-y-2 mb-5">
+                <div className="flex items-center gap-2.5 text-sm text-slate-400">
+                  <Clock className="w-3.5 h-3.5 text-slate-600 flex-shrink-0" />
+                  {s.time}
                 </div>
-                <div className="flex items-start gap-2 text-sm">
-                  <MapPin className="w-4 h-4 text-blue-400 mt-0.5 flex-shrink-0" />
-                  <span className="text-slate-300">{service.location}</span>
+                <div className="flex items-center gap-2.5 text-sm text-slate-400">
+                  <MapPin className="w-3.5 h-3.5 text-slate-600 flex-shrink-0" />
+                  {s.location}
                 </div>
               </div>
 
-              <div className="flex flex-wrap gap-2">
-                {service.features.map((f) => (
-                  <span key={f} className="px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-xs">
+              <div className="flex flex-wrap gap-1.5 pt-4 border-t border-white/[0.05]">
+                {s.features.map((f) => (
+                  <span key={f} className="px-2.5 py-1 rounded-full bg-slate-800 border border-white/[0.06] text-slate-400 text-xs">
                     {f}
                   </span>
                 ))}
@@ -112,25 +107,30 @@ export function ServicesSection() {
           ))}
         </div>
 
-        {/* Stream note */}
+        {/* Live stream bar */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.4 }}
-          className="mt-10 md:mt-12 text-center"
+          transition={{ delay: 0.3 }}
+          className="mt-6 flex items-center justify-between gap-4 px-6 py-4 card flex-wrap"
         >
-          <div className="inline-flex items-center gap-3 px-5 sm:px-6 py-3 sm:py-4 rounded-2xl glass border border-blue-500/20">
-            <Calendar className="w-5 h-5 text-blue-400 flex-shrink-0" />
+          <div className="flex items-center gap-3">
+            <Wifi className="w-4 h-4 text-cyan-400" />
             <span className="text-slate-300 text-sm">
-              Kan du ikke være med fysisk?{" "}
-              <a href="https://facebook.com/biakdk" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 font-medium underline underline-offset-2">
-                Følg os live på Facebook
-              </a>
-              {" "}— hver søndag
+              Kan du ikke være med fysisk? Se os live på Facebook — hver søndag kl. 10:30
             </span>
           </div>
+          <a
+            href="https://facebook.com/biakdk"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-cyan-400 hover:text-cyan-300 text-sm font-medium transition-colors flex-shrink-0"
+          >
+            Gå til Facebook →
+          </a>
         </motion.div>
+
       </div>
     </section>
   );

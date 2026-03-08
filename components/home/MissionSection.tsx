@@ -4,111 +4,84 @@ import { motion } from "framer-motion";
 import { Heart, Zap, Globe, Users } from "lucide-react";
 
 const values = [
-  {
-    icon: Heart,
-    title: "Guds Kærlighed",
-    description: "Vi tror på en Gud, der elsker alle mennesker uanset baggrund, nationalitet eller fortid.",
-    color: "from-blue-500 to-blue-700",
-    glow: "shadow-blue-500/20",
-  },
-  {
-    icon: Zap,
-    title: "Hans Kraft",
-    description: "Vi oplever og forkynder Guds kraft — helbredelse, mirakel og ånd i aktion.",
-    color: "from-indigo-500 to-blue-700",
-    glow: "shadow-indigo-500/20",
-  },
-  {
-    icon: Globe,
-    title: "International Fællesskab",
-    description: "Et mangfoldigt fællesskab med folk fra hele verden — dansk, engelsk, swahili og spansk.",
-    color: "from-sky-500 to-blue-700",
-    glow: "shadow-sky-500/20",
-  },
-  {
-    icon: Users,
-    title: "Forbundne Liv",
-    description: "Vi forbinder mennesker med Gud og hinanden, og udruster dem til at leve i deres kald.",
-    color: "from-blue-600 to-indigo-800",
-    glow: "shadow-blue-600/20",
-  },
+  { icon: Heart, title: "Guds Kærlighed",         desc: "Vi tror på en Gud der elsker alle uanset baggrund, nationalitet eller fortid.", color: "text-cyan-400",  bg: "bg-cyan-500/10",    border: "border-cyan-500/15" },
+  { icon: Zap,   title: "Hans Kraft",              desc: "Vi oplever og forkynder Guds kraft — helbredelse, mirakler og Ånden i aktion.", color: "text-blue-400",  bg: "bg-blue-500/10",    border: "border-blue-500/15" },
+  { icon: Globe, title: "Internationalt",          desc: "Folk fra over 10 nationaliteter. Vi taler dansk, engelsk, swahili og spansk.", color: "text-sky-400",   bg: "bg-sky-500/10",     border: "border-sky-500/15" },
+  { icon: Users, title: "Forbundne Liv",           desc: "Vi forbinder mennesker med Gud og hinanden, og udruster dem til at leve i kaldet.", color: "text-indigo-400", bg: "bg-indigo-500/10", border: "border-indigo-500/15" },
 ];
 
 export function MissionSection() {
   return (
-    <section className="relative py-16 md:py-24 lg:py-32 overflow-hidden">
-      <div className="absolute inset-0 bg-slate-900/50" />
-      <div className="hero-glow w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-blue-700 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-10" />
+    <section className="py-24 md:py-32 bg-slate-900/30">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section header */}
+        {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="text-center mb-12 md:mb-16 lg:mb-20"
+          className="mb-14 md:mb-16"
         >
-          <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest text-blue-400 border border-blue-500/30 bg-blue-500/10 uppercase mb-4">
-            Vores Mission
-          </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-4 sm:mb-6">
-            At Åbenbare Guds Kærlighed &{" "}
-            <span className="gradient-text">Demonstrere Hans Kraft</span>
-          </h2>
-          <p className="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto">
-            Mark 12:30 — &quot;Du skal elske Herren din Gud af hele dit hjerte og af hele din sjæl&quot;
-          </p>
+          <span className="section-label mb-5 block w-fit">Vores Mission</span>
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white max-w-xl leading-tight">
+              At Åbenbare Guds Kærlighed &{" "}
+              <span className="gradient-text">Demonstrere Hans Kraft</span>
+            </h2>
+            <p className="text-slate-500 text-sm max-w-xs md:text-right leading-relaxed">
+              Mark 12:30 — Elsk Herren din Gud af hele dit hjerte
+            </p>
+          </div>
         </motion.div>
 
-        {/* Values grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-          {values.map((value, i) => (
+        {/* Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {values.map((v, i) => (
             <motion.div
-              key={value.title}
-              initial={{ opacity: 0, y: 40 }}
+              key={v.title}
+              initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="glass-card p-6 sm:p-8 group"
+              transition={{ delay: i * 0.08 }}
+              className="card p-6"
             >
-              <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-br ${value.color} flex items-center justify-center mb-4 sm:mb-6 shadow-xl ${value.glow} group-hover:scale-110 transition-transform duration-300`}>
-                <value.icon className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
+              <div className={`w-11 h-11 rounded-xl ${v.bg} border ${v.border} flex items-center justify-center mb-5`}>
+                <v.icon className={`w-5 h-5 ${v.color}`} />
               </div>
-              <h3 className="text-white font-bold text-base sm:text-lg mb-2 sm:mb-3">{value.title}</h3>
-              <p className="text-slate-400 text-sm leading-relaxed">{value.description}</p>
+              <h3 className="text-white font-bold text-base mb-2">{v.title}</h3>
+              <p className="text-slate-500 text-sm leading-relaxed">{v.desc}</p>
             </motion.div>
           ))}
         </div>
 
-        {/* Vision block */}
+        {/* Vision strip */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7, delay: 0.3 }}
-          className="mt-12 md:mt-16 lg:mt-20 glass-card p-8 sm:p-10 md:p-14 text-center relative overflow-hidden"
+          transition={{ delay: 0.2 }}
+          className="mt-8 card p-8 md:p-10"
         >
-          <div className="shimmer absolute inset-0" />
-          <div className="relative z-10">
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-white mb-6 sm:mb-8">
-              Vores <span className="gradient-text">Vision</span>
-            </h3>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10 md:gap-16">
-              {[
-                { emoji: "🔗", label: "Forbinde", desc: "Mennesker med Gud og hinanden" },
-                { emoji: "⚡", label: "Udruste", desc: "Til at leve i kaldet" },
-                { emoji: "🌍", label: "Nå Ud", desc: "Lokalt og globalt" },
-              ].map((item) => (
-                <div key={item.label} className="flex flex-col items-center gap-2">
-                  <span className="text-3xl sm:text-4xl">{item.emoji}</span>
-                  <span className="text-white font-bold text-lg sm:text-xl">{item.label}</span>
-                  <span className="text-slate-400 text-sm text-center">{item.desc}</span>
+          <p className="text-slate-500 text-xs uppercase tracking-widest mb-6 font-semibold">Vores Vision</p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            {[
+              { label: "Forbinde",  desc: "Mennesker med Gud og hinanden" },
+              { label: "Udruste",   desc: "Til at leve i deres gudgivne kald" },
+              { label: "Nå Ud",     desc: "Lokalt og globalt med evangeliet" },
+            ].map((item, i) => (
+              <div key={item.label} className="flex items-start gap-3">
+                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-cyan-500/15 border border-cyan-500/20 text-cyan-400 text-xs font-bold flex items-center justify-center mt-0.5">
+                  {i + 1}
+                </span>
+                <div>
+                  <p className="text-white font-semibold text-sm">{item.label}</p>
+                  <p className="text-slate-500 text-sm mt-0.5">{item.desc}</p>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </motion.div>
+
       </div>
     </section>
   );

@@ -1,93 +1,80 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Quote } from "lucide-react";
+
+const pastors = [
+  {
+    initial: "M",
+    name: "Pastor Martin Mutale",
+    role: "Sognepastor",
+    bio: "Martin har en kandidatgrad i teologi fra Harvest Bible College i Australien og er uddannet fra Kaniki Bible University College i Zambia. Han leder menigheden med visdom og dyb kærlighed til Gud og mennesker.",
+    color: "from-cyan-600 to-blue-700",
+  },
+  {
+    initial: "R",
+    name: "Pastor Ruth Mutale",
+    role: "Sognepastor & Kvindeleder",
+    bio: "Ruth leder kvindegruppen og tilbedelsesholdet. Med sit hjerte for tilbedelse og evnen til at inspirere er hun en elsket og central del af BIAK. Hun brænder for at se kvinder vokse i troen.",
+    color: "from-sky-600 to-blue-700",
+  },
+];
 
 export function PastorsSection() {
   return (
-    <section className="relative py-16 md:py-24 lg:py-32 overflow-hidden">
-      <div className="absolute inset-0 bg-slate-950" />
+    <section className="py-24 md:py-32 bg-[#020617]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-10 md:mb-16"
+          className="text-center mb-14"
         >
-          <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest text-blue-400 border border-blue-500/30 bg-blue-500/10 uppercase mb-4">
-            Lederskab
-          </span>
+          <span className="section-label mb-5 mx-auto block w-fit">Lederskab</span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white">
             Mød Vores <span className="gradient-text">Pastorer</span>
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-8 max-w-4xl mx-auto">
-          {/* Martin */}
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="glass-card p-6 sm:p-8"
-          >
-            <div className="flex items-center gap-4 mb-5">
-              <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-700 flex items-center justify-center text-2xl sm:text-3xl font-black text-white shadow-xl shadow-blue-500/20 flex-shrink-0">
-                M
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-4xl mx-auto">
+          {pastors.map((p, i) => (
+            <motion.div
+              key={p.name}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.12 }}
+              className="card p-7 flex gap-5"
+            >
+              <div className={`w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br ${p.color} flex items-center justify-center text-2xl font-black text-white flex-shrink-0`}>
+                {p.initial}
               </div>
               <div>
-                <h3 className="text-white font-bold text-lg sm:text-xl">Pastor Martin Mutale</h3>
-                <p className="text-blue-400 text-sm">Sognepastor</p>
+                <h3 className="text-white font-bold text-lg leading-tight">{p.name}</h3>
+                <p className="text-cyan-400 text-xs font-medium mt-0.5 mb-3">{p.role}</p>
+                <p className="text-slate-500 text-sm leading-relaxed">{p.bio}</p>
               </div>
-            </div>
-            <p className="text-slate-400 text-sm leading-relaxed">
-              Martin har en kandidatgrad i teologi fra Harvest Bible College i Australien og er uddannet fra
-              Kaniki Bible University College i Zambia. Han leder menigheden med passion og visdom.
-            </p>
-          </motion.div>
-
-          {/* Ruth */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="glass-card p-6 sm:p-8"
-          >
-            <div className="flex items-center gap-4 mb-5">
-              <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br from-sky-500 to-blue-700 flex items-center justify-center text-2xl sm:text-3xl font-black text-white shadow-xl shadow-sky-500/20 flex-shrink-0">
-                R
-              </div>
-              <div>
-                <h3 className="text-white font-bold text-lg sm:text-xl">Pastor Ruth Mutale</h3>
-                <p className="text-blue-400 text-sm">Sognepastor & Kvindeleder</p>
-              </div>
-            </div>
-            <p className="text-slate-400 text-sm leading-relaxed">
-              Ruth leder kvindegruppen og tilbedelsesholdet med hjerte og kraft. Hun er en inspirerende
-              leder der hjælper kvinder til at vokse i troen og finde deres kald.
-            </p>
-          </motion.div>
+            </motion.div>
+          ))}
         </div>
 
         {/* Quote */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.3 }}
-          className="mt-10 sm:mt-16 max-w-3xl mx-auto text-center"
+          transition={{ delay: 0.2 }}
+          className="mt-8 max-w-4xl mx-auto card p-8 md:p-10 text-center accent-border-l"
+          style={{ borderLeft: "3px solid #06b6d4" }}
         >
-          <div className="glass-card p-8 sm:p-10 relative">
-            <Quote className="w-8 h-8 sm:w-10 sm:h-10 text-blue-500/40 absolute top-5 sm:top-6 left-5 sm:left-6" />
-            <blockquote className="text-lg sm:text-xl md:text-2xl font-medium text-slate-200 leading-relaxed italic">
-              &quot;Vi ønsker at inspirere mennesker til at opleve Gud og efterligne Jesus
-              — i et fællesskab, der er fuld af Guds kraft og kærlighed.&quot;
-            </blockquote>
-            <p className="text-blue-400 text-sm mt-4 font-semibold">— Martin & Ruth Mutale</p>
-          </div>
+          <p className="text-slate-300 text-lg sm:text-xl leading-relaxed italic font-medium">
+            &ldquo;Vi ønsker at inspirere mennesker til at opleve Gud og efterligne Jesus
+            — i et fællesskab, der er fuld af Guds kraft og kærlighed.&rdquo;
+          </p>
+          <p className="text-slate-500 text-sm mt-4">— Martin & Ruth Mutale</p>
         </motion.div>
+
       </div>
     </section>
   );

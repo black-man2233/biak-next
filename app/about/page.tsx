@@ -5,152 +5,112 @@ import { Heart, Zap, Users, Globe, BookOpen, Shield, Star } from "lucide-react";
 import Link from "next/link";
 
 const beliefs = [
-  { icon: BookOpen, title: "Bibelens Autoritet", desc: "Vi tror at Bibelen er Guds inspirerede og ufejlbarlige ord." },
-  { icon: Star, title: "Treenighed", desc: "Vi tror på én Gud i tre personer — Fader, Søn og Helligånd." },
-  { icon: Heart, title: "Frelse i Kristus", desc: "Frelse sker alene ved tro på Jesus Kristus." },
-  { icon: Zap, title: "Helligåndens Kraft", desc: "Vi tror på Helligåndens indboende kraft og nådegaver." },
-  { icon: Shield, title: "Guddommelig Helbredelse", desc: "Guddommelig helbredelse er del af Jesu forsoning." },
-  { icon: Globe, title: "Kristi Genkomst", desc: "Vi ser frem til Jesu Kristi snarlige genkomst." },
+  { icon: BookOpen, title: "Bibelens Autoritet",   desc: "Vi tror at Bibelen er Guds inspirerede og ufejlbarlige ord." },
+  { icon: Star,     title: "Treenighed",            desc: "Vi tror på én Gud i tre personer — Fader, Søn og Helligånd." },
+  { icon: Heart,    title: "Frelse i Kristus",      desc: "Frelse sker alene ved tro på Jesus Kristus." },
+  { icon: Zap,      title: "Helligåndens Kraft",    desc: "Vi tror på Helligåndens indboende kraft og nådegaver." },
+  { icon: Shield,   title: "Guddommelig Helbredelse", desc: "Guddommelig helbredelse er del af Jesu forsoning." },
+  { icon: Globe,    title: "Kristi Genkomst",       desc: "Vi ser frem til Jesu Kristi snarlige genkomst." },
 ];
 
-const timeline = [
-  { year: "Grundlagt", title: "BIAK åbnede dørene", desc: "Brønderslev International Apostolsk Kirke begyndte med en vision om at nå mennesker fra alle nationer." },
-  { year: "Vækst", title: "Internationalt fællesskab", desc: "Menigheden voksede til at inkludere folk fra over 10 nationaliteter med tolkning på 4 sprog." },
-  { year: "I Dag", title: "Levende menighed", desc: "BIAK er i dag et blomstrende fællesskab med søndagsgudstjenester, bøn og ungdomsarbejde." },
-];
+function PageHeader({ label, title, subtitle }: { label: string; title: React.ReactNode; subtitle: string }) {
+  return (
+    <section className="relative py-24 md:py-32 overflow-hidden animated-bg">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+          <span className="section-label mb-5 mx-auto block w-fit">{label}</span>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-white mb-4 leading-tight">{title}</h1>
+          <p className="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">{subtitle}</p>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
 
 export default function AboutPage() {
   return (
     <div className="min-h-screen pt-20">
-      {/* Hero */}
-      <section className="relative py-32 overflow-hidden">
-        <div className="absolute inset-0 animated-bg" />
-        <div className="hero-glow w-[500px] h-[500px] bg-blue-600 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-            <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest text-blue-400 border border-blue-500/30 bg-blue-500/10 uppercase mb-6">
-              Om Os
-            </span>
-            <h1 className="text-5xl sm:text-6xl md:text-7xl font-black text-white mb-6">
-              Hvem er <span className="gradient-text">BIAK?</span>
-            </h1>
-            <p className="text-slate-300 text-xl leading-relaxed max-w-3xl mx-auto">
-              BIAK — Brønderslev International Apostolsk Kirke — er et levende kristent fællesskab
-              dedikeret til at åbenbare Guds kærlighed og demonstrere Hans kraft.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+      <PageHeader
+        label="Om Os"
+        title={<>Hvem er <span className="gradient-text">BIAK?</span></>}
+        subtitle="BIAK — Brønderslev International Apostolsk Kirke — er et levende kristent fællesskab dedikeret til at åbenbare Guds kærlighed og demonstrere Hans kraft."
+      />
 
       {/* Mission & Vision */}
-      <section className="py-24 bg-slate-900/50">
+      <section className="py-20 md:py-28 bg-slate-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
             <motion.div
-              initial={{ opacity: 0, x: -40 }}
+              initial={{ opacity: 0, x: -24 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
+              transition={{ duration: 0.6 }}
             >
-              <span className="text-blue-400 text-sm font-semibold uppercase tracking-wider">Mission</span>
-              <h2 className="text-3xl sm:text-4xl font-black text-white mt-2 mb-6">
+              <span className="text-cyan-400 text-xs font-bold uppercase tracking-widest">Mission</span>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-white mt-2 mb-5 leading-tight">
                 At Åbenbare Guds Kærlighed &{" "}
                 <span className="gradient-text">Demonstrere Hans Kraft</span>
               </h2>
-              <p className="text-slate-400 leading-relaxed mb-6">
+              <p className="text-slate-400 leading-relaxed mb-4 text-sm sm:text-base">
                 Vores mission er baseret på Markus 12:30 — at elske Gud af hele vores hjerte, sjæl,
                 sind og kræfter. Denne kærlighed deler vi med alle, vi møder.
               </p>
-              <p className="text-slate-400 leading-relaxed">
+              <p className="text-slate-400 leading-relaxed text-sm sm:text-base">
                 Vi inviterer mennesker til at opleve et levende kristent fællesskab, der er forpligtet
                 til at udtrykke Guds kraft og kærlighed til alle mennesker.
               </p>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              className="space-y-4"
-            >
+            <div className="space-y-3">
               {[
-                { icon: Users, label: "Forbinde", desc: "Mennesker med Gud og hinanden" },
-                { icon: Zap, label: "Udruste", desc: "Mennesker til at leve i deres gudgivne kald" },
-                { icon: Globe, label: "Nå Ud", desc: "Lokalt og globalt med evangeliet" },
+                { icon: Users, label: "Forbinde",  desc: "Mennesker med Gud og hinanden" },
+                { icon: Zap,   label: "Udruste",   desc: "Mennesker til at leve i deres gudgivne kald" },
+                { icon: Globe, label: "Nå Ud",     desc: "Lokalt og globalt med evangeliet" },
               ].map((item, i) => (
                 <motion.div
                   key={item.label}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 16 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
-                  className="glass-card p-6 flex items-start gap-4"
+                  transition={{ delay: i * 0.08 }}
+                  className="card p-5 flex items-start gap-4"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-700 flex items-center justify-center flex-shrink-0">
-                    <item.icon className="w-6 h-6 text-white" />
+                  <div className="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/15 flex items-center justify-center flex-shrink-0">
+                    <item.icon className="w-5 h-5 text-cyan-400" />
                   </div>
                   <div>
-                    <h3 className="text-white font-bold text-lg">{item.label}</h3>
-                    <p className="text-slate-400 text-sm mt-1">{item.desc}</p>
+                    <h3 className="text-white font-bold text-sm">{item.label}</h3>
+                    <p className="text-slate-500 text-sm mt-0.5">{item.desc}</p>
                   </div>
                 </motion.div>
               ))}
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Pastors */}
-      <section className="py-24">
+      <section className="py-20 md:py-28 bg-[#020617]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest text-blue-400 border border-blue-500/30 bg-blue-500/10 uppercase mb-4">
-              Lederskab
-            </span>
-            <h2 className="text-4xl font-black text-white">Vores <span className="gradient-text">Pastorer</span></h2>
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+            <span className="section-label mb-4 mx-auto block w-fit">Lederskab</span>
+            <h2 className="text-3xl sm:text-4xl font-black text-white">Vores <span className="gradient-text">Pastorer</span></h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-4xl mx-auto">
             {[
-              {
-                initial: "M",
-                name: "Pastor Martin Mutale",
-                role: "Sognepastor",
-                color: "from-blue-500 to-indigo-700",
-                desc: "Martin har en kandidatgrad i teologi fra Harvest Bible College i Australien og er uddannet fra Kaniki Bible University College i Zambia. Han leder menigheden med visdom, passion og dyb kærlighed til Gud og mennesker. Sammen med Ruth har han fire børn.",
-              },
-              {
-                initial: "R",
-                name: "Pastor Ruth Mutale",
-                role: "Sognepastor & Kvindeleder",
-                color: "from-sky-500 to-blue-700",
-                desc: "Ruth leder kvindegruppen og tilbedelsesholdet. Med sit hjerte for tilbedelse og hendes evne til at inspirere og bygge op, er hun en central og elsket del af BIAK. Hun brænder for at se kvinder vokse i troen.",
-              },
-            ].map((pastor, i) => (
-              <motion.div
-                key={pastor.name}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.15 }}
-                className="glass-card p-8"
-              >
-                <div className="flex items-center gap-4 mb-6">
-                  <div className={`w-24 h-24 rounded-3xl bg-gradient-to-br ${pastor.color} flex items-center justify-center text-4xl font-black text-white shadow-xl`}>
-                    {pastor.initial}
-                  </div>
-                  <div>
-                    <h3 className="text-white font-bold text-xl">{pastor.name}</h3>
-                    <p className="text-blue-400 text-sm mt-1">{pastor.role}</p>
-                  </div>
+              { initial: "M", name: "Pastor Martin Mutale", role: "Sognepastor", color: "from-cyan-600 to-blue-700",
+                desc: "Martin har en kandidatgrad i teologi fra Harvest Bible College i Australien og er uddannet fra Kaniki Bible University College i Zambia. Han leder menigheden med visdom, passion og dyb kærlighed til Gud og mennesker. Sammen med Ruth har han fire børn." },
+              { initial: "R", name: "Pastor Ruth Mutale", role: "Sognepastor & Kvindeleder", color: "from-sky-600 to-blue-700",
+                desc: "Ruth leder kvindegruppen og tilbedelsesholdet. Med sit hjerte for tilbedelse og hendes evne til at inspirere og bygge op, er hun en central og elsket del af BIAK. Hun brænder for at se kvinder vokse i troen." },
+            ].map((p, i) => (
+              <motion.div key={p.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="card p-7 flex gap-5">
+                <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${p.color} flex items-center justify-center text-2xl font-black text-white flex-shrink-0`}>{p.initial}</div>
+                <div>
+                  <h3 className="text-white font-bold text-lg leading-tight">{p.name}</h3>
+                  <p className="text-cyan-400 text-xs font-medium mt-0.5 mb-3">{p.role}</p>
+                  <p className="text-slate-500 text-sm leading-relaxed">{p.desc}</p>
                 </div>
-                <p className="text-slate-400 leading-relaxed text-sm">{pastor.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -158,35 +118,21 @@ export default function AboutPage() {
       </section>
 
       {/* Beliefs */}
-      <section className="py-24 bg-slate-900/50">
+      <section className="py-20 md:py-28 bg-slate-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest text-blue-400 border border-blue-500/30 bg-blue-500/10 uppercase mb-4">
-              Tro
-            </span>
-            <h2 className="text-4xl font-black text-white">Hvad vi <span className="gradient-text">Tror På</span></h2>
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+            <span className="section-label mb-4 mx-auto block w-fit">Tro</span>
+            <h2 className="text-3xl sm:text-4xl font-black text-white">Hvad vi <span className="gradient-text">Tror På</span></h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {beliefs.map((belief, i) => (
-              <motion.div
-                key={belief.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.08 }}
-                className="glass-card p-6"
-              >
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-700 flex items-center justify-center mb-4">
-                  <belief.icon className="w-6 h-6 text-white" />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {beliefs.map((b, i) => (
+              <motion.div key={b.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.06 }} className="card p-6">
+                <div className="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/15 flex items-center justify-center mb-4">
+                  <b.icon className="w-5 h-5 text-blue-400" />
                 </div>
-                <h3 className="text-white font-bold text-lg mb-2">{belief.title}</h3>
-                <p className="text-slate-400 text-sm leading-relaxed">{belief.desc}</p>
+                <h3 className="text-white font-bold text-sm mb-1.5">{b.title}</h3>
+                <p className="text-slate-500 text-sm leading-relaxed">{b.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -194,18 +140,14 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-24">
-        <div className="max-w-3xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl font-black text-white mb-4">Kom og <span className="gradient-text">Mød Os</span></h2>
-            <p className="text-slate-400 mb-8">Søndage kl. 10:30 — Kirkevej 10, 9700 Brønderslev</p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link href="/contact" className="btn-primary">Kontakt Os</Link>
-              <Link href="/events" className="px-6 py-3 rounded-lg glass border border-white/10 text-white font-medium hover:bg-white/10 transition-all">
+      <section className="py-20 md:py-24 bg-[#020617]">
+        <div className="max-w-2xl mx-auto px-4 text-center">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <h2 className="text-3xl font-black text-white mb-3">Kom og <span className="gradient-text">Mød Os</span></h2>
+            <p className="text-slate-500 text-sm mb-8">Søndage kl. 10:30 — Kirkevej 10, 9700 Brønderslev</p>
+            <div className="flex flex-col sm:flex-row justify-center gap-3">
+              <Link href="/contact" className="btn-primary justify-center">Kontakt Os</Link>
+              <Link href="/events" className="inline-flex items-center justify-center px-[1.6rem] py-[0.68rem] rounded-[10px] border border-white/10 text-slate-300 text-sm font-medium hover:border-white/20 hover:text-white transition-all">
                 Se Events
               </Link>
             </div>
