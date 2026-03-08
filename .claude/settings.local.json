@@ -9,7 +9,8 @@
       "Bash(npm run:*)",
       "Bash(node:*)",
       "Bash(tail:*)",
-      "Bash(head:*)"
+      "Bash(head:*)",
+      "Bash(ls:*)"
     ]
   }
 }
