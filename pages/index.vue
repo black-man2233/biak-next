@@ -6,10 +6,33 @@
       :slideshow-images="churchInfo.slideshow_images"
     />
 
-    <!-- 2. Announcements (if any) -->
+    <!-- 2. Quick service info strip — always visible, no reveal -->
+    <div class="bg-cream border-b border-[var(--border)]">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 py-5">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-px bg-[var(--border)]">
+          <div class="bg-cream text-center py-5 px-6">
+            <p class="text-[10px] font-bold uppercase tracking-widest mb-1.5" style="color:var(--text-mid)">{{ $t('services.sunday.day') }}</p>
+            <p class="font-serif font-bold text-2xl" style="color:var(--text)">10:30 – 12:00</p>
+            <p class="text-xs mt-1" style="color:var(--text-light)">{{ $t('services.sunday.title') }}</p>
+          </div>
+          <div class="bg-cream text-center py-5 px-6">
+            <p class="text-[10px] font-bold uppercase tracking-widest mb-1.5" style="color:var(--text-mid)">{{ $t('services.wednesday.day') }}</p>
+            <p class="font-serif font-bold text-2xl" style="color:var(--text)">18:30 – 20:00</p>
+            <p class="text-xs mt-1" style="color:var(--text-light)">{{ $t('services.wednesday.title') }}</p>
+          </div>
+          <div class="bg-cream text-center py-5 px-6">
+            <p class="text-[10px] font-bold uppercase tracking-widest mb-1.5" style="color:var(--text-mid)">{{ $t('services.friday.day') }}</p>
+            <p class="font-serif font-bold text-2xl" style="color:var(--accent)">18:00 – 20:00</p>
+            <p class="text-xs mt-1" style="color:var(--text-light)">{{ $t('services.friday.title') }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Announcements (if any) -->
     <AnnouncementsBar :announcements="activeAnnouncements" />
 
-    <!-- 3. Welcome message (admin-editable) -->
+    <!-- 4. Welcome message (admin-editable) -->
     <div v-if="churchInfo.welcome_message" class="bg-cream py-8">
       <div class="max-w-3xl mx-auto px-6 text-center">
         <p class="text-lg leading-relaxed" style="color: var(--text-mid)">

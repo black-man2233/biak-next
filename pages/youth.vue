@@ -2,27 +2,31 @@
   <div>
     <!-- Hero — full-bleed with floating orbs -->
     <section class="relative min-h-[70vh] flex items-center overflow-hidden pt-32 pb-24"
-      style="background: linear-gradient(135deg, #2d0859 0%, #1a0535 40%, #0f0320 100%)">
+      style="background: linear-gradient(135deg, var(--hero-from) 0%, var(--hero-to) 100%)">
 
-      <!-- Animated orbs -->
+      <!-- Animated orbs (site-theme colors) -->
       <div class="absolute inset-0 pointer-events-none overflow-hidden">
-        <div class="absolute w-[500px] h-[500px] rounded-full opacity-25 top-[-100px] right-[-100px]"
-          style="background: radial-gradient(circle, #7c3aed 0%, transparent 70%); animation: orb-drift-1 12s ease-in-out infinite" />
-        <div class="absolute w-[350px] h-[350px] rounded-full opacity-20 bottom-[-80px] left-[10%]"
-          style="background: radial-gradient(circle, #a78bfa 0%, transparent 70%); animation: orb-drift-2 15s ease-in-out infinite" />
-        <div class="absolute w-[250px] h-[250px] rounded-full opacity-15 top-[40%] left-[50%]"
-          style="background: radial-gradient(circle, #c9a84c 0%, transparent 70%); animation: orb-drift-3 10s ease-in-out infinite" />
+        <div class="absolute w-[500px] h-[500px] rounded-full opacity-20 top-[-100px] right-[-100px]"
+          style="background: radial-gradient(circle, var(--primary) 0%, transparent 70%); animation: orb-drift-1 12s ease-in-out infinite" />
+        <div class="absolute w-[350px] h-[350px] rounded-full opacity-15 bottom-[-80px] left-[10%]"
+          style="background: radial-gradient(circle, var(--accent) 0%, transparent 70%); animation: orb-drift-2 15s ease-in-out infinite" />
+        <div class="absolute w-[250px] h-[250px] rounded-full opacity-10 top-[40%] left-[50%]"
+          style="background: radial-gradient(circle, var(--accent-light) 0%, transparent 70%); animation: orb-drift-3 10s ease-in-out infinite" />
       </div>
 
-      <!-- Grid texture -->
-      <div class="absolute inset-0 opacity-[0.03] pointer-events-none"
-        style="background-image: repeating-linear-gradient(0deg,transparent,transparent 40px,rgba(255,255,255,1) 40px,rgba(255,255,255,1) 41px),repeating-linear-gradient(90deg,transparent,transparent 40px,rgba(255,255,255,1) 40px,rgba(255,255,255,1) 41px)" />
+      <!-- Decorative cross -->
+      <div class="absolute right-0 top-1/2 -translate-y-1/2 opacity-[0.04] pointer-events-none hidden xl:block" aria-hidden>
+        <svg width="300" height="480" viewBox="0 0 300 480" fill="none">
+          <rect x="130" y="0" width="40" height="480" fill="white" rx="6" />
+          <rect x="0" y="160" width="300" height="40" fill="white" rx="6" />
+        </svg>
+      </div>
 
       <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
         <div ref="heroEl" :class="['reveal', heroVisible && 'visible']">
           <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-6"
-            style="background: rgba(124,58,237,0.25); border: 1px solid rgba(167,139,250,0.4); color: #c4b5fd; animation: fadeIn 0.5s ease both">
-            <span class="w-1.5 h-1.5 rounded-full bg-violet-400 animate-pulse" />
+            style="background: var(--bg-secondary); border: 1px solid var(--accent); color: var(--accent); animation: fadeIn 0.5s ease both">
+            <span class="w-1.5 h-1.5 rounded-full animate-pulse" style="background: var(--accent)" />
             Ungdom
           </span>
 
@@ -30,7 +34,7 @@
             style="font-size: clamp(2.5rem, 7vw, 5.5rem); animation: fadeUp 0.7s 0.1s ease both">
             Unge med <br />
             <span style="
-              background: linear-gradient(135deg, #f0d6ff, #c4b5fd, #a78bfa, #7c3aed, #c9a84c);
+              background: linear-gradient(135deg, var(--accent-light), var(--accent), var(--primary-dark), var(--accent));
               background-size: 300% 300%;
               -webkit-background-clip: text;
               background-clip: text;
@@ -44,11 +48,12 @@
           </p>
 
           <div class="flex flex-col sm:flex-row gap-4 mt-10" style="animation: fadeUp 0.7s 0.38s ease both">
-            <NuxtLink to="/contact?context=youth"
-              class="relative inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-bold text-sm text-white justify-center overflow-hidden"
-              style="background: linear-gradient(135deg, #7c3aed, #6d28d9); animation: youth-glow 3s ease-in-out infinite; box-shadow: 0 0 30px rgba(124,58,237,0.4)">
+            <NuxtLink to="/contact?context=youth" class="btn-gold">
               Kom og Mød Os
               <ArrowRight class="w-4 h-4" />
+            </NuxtLink>
+            <NuxtLink to="/about" class="btn-outline">
+              Lær Os At Kende
             </NuxtLink>
           </div>
         </div>
@@ -99,9 +104,10 @@
                 class="relative rounded-2xl p-5 text-center cursor-pointer select-none transition-all duration-300 overflow-hidden border-2"
                 :class="[
                   expandedFeature === feat.title
-                    ? 'border-violet-400 shadow-xl shadow-violet-100'
-                    : 'border-[var(--border)] hover:border-violet-300 hover:shadow-lg'
+                    ? 'shadow-lg'
+                    : 'border-[var(--border)] hover:shadow-lg'
                 ]"
+                :style="expandedFeature === feat.title ? `border-color: var(--accent)` : ''"
                 style="background: rgba(255,255,255,0.85); backdrop-filter: blur(8px)"
                 @click="toggleFeature(feat.title)"
               >
@@ -119,7 +125,7 @@
                 <!-- Expanded detail -->
                 <Transition name="slide-expand">
                   <div v-if="expandedFeature === feat.title"
-                    class="mt-3 pt-3 border-t border-violet-100 text-left relative z-10">
+                    class="mt-3 pt-3 border-t border-[var(--border)] text-left relative z-10">
                     <p class="text-terra-700 text-xs leading-relaxed">{{ feat.detail }}</p>
                   </div>
                 </Transition>
@@ -127,8 +133,9 @@
                 <!-- Chevron -->
                 <div class="mt-2 flex justify-center relative z-10">
                   <ChevronDown
-                    class="w-3.5 h-3.5 transition-transform duration-300 text-warm-300"
-                    :class="expandedFeature === feat.title ? 'rotate-180 text-violet-500' : ''" />
+                    class="w-3.5 h-3.5 transition-transform duration-300"
+                    :class="expandedFeature === feat.title ? 'rotate-180' : ''"
+                    :style="expandedFeature === feat.title ? 'color: var(--accent)' : 'color: var(--border-mid)'" />
                 </div>
               </div>
             </div>
