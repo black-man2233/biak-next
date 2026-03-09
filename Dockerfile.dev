@@ -1,0 +1,19 @@
+FROM node:20-alpine
+RUN apk add --no-cache libc6-compat openssl
+
+WORKDIR /app
+
+# Install deps separately so this layer is cached
+COPY package.json ./
+RUN npm install
+
+# Copy source and generate Prisma client
+COPY . .
+RUN npx prisma generate
+
+EXPOSE 3000
+ENV PORT=3000
+ENV HOST=0.0.0.0
+ENV CHOKIDAR_USEPOLLING=true
+
+CMD ["npm", "run", "dev"]

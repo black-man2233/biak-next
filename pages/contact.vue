@@ -4,10 +4,10 @@
     <section class="bg-terra-900 pt-32 pb-20 relative overflow-hidden">
       <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-500/30 to-transparent" />
       <div class="relative max-w-7xl mx-auto px-6 lg:px-8">
-        <span class="section-label !text-gold-400 mb-4" style="--section-color:#c9a84c">
+        <span class="section-label !text-gold-400 mb-4" style="--section-color:#c9a84c; animation: fadeIn 0.5s ease both">
           {{ isYouth ? 'Ungdom' : 'Kontakt' }}
         </span>
-        <h1 class="font-serif font-bold text-white text-4xl sm:text-5xl mt-3 leading-tight">
+        <h1 class="font-serif font-bold text-white text-4xl sm:text-5xl mt-3 leading-tight" style="animation: fadeUp 0.8s 0.1s ease both">
           <template v-if="isYouth">
             Mød <span style="background: linear-gradient(135deg, #e8c76a, #c9a84c); -webkit-background-clip: text; background-clip: text; color: transparent">BIAK Ungdom</span>
           </template>
@@ -15,7 +15,7 @@
             Vi Hører <span style="background: linear-gradient(135deg, #e8c76a, #c9a84c); -webkit-background-clip: text; background-clip: text; color: transparent">Fra Dig</span>
           </template>
         </h1>
-        <p class="text-white/60 mt-4 max-w-md">
+        <p class="text-white/60 mt-4 max-w-md" style="animation: fadeUp 0.8s 0.25s ease both">
           {{ isYouth
             ? 'Har du spørgsmål om ungdomsgruppen? Kontakt vores ungdomsleder Cyrus direkte.'
             : 'Har du spørgsmål, ønsker gebet eller vil du bare sige hej? Skriv til os.' }}

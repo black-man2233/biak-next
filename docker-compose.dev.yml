@@ -1,0 +1,61 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "8003:3000"
+    environment:
+      DATABASE_URL: file:/app/data/biak.db
+      SESSION_SECRET: a5a139c812e629ccba6f59a06c9d1d7c84ce6b3efb8870449c75765864158409
+      ADMIN_PASSWORD: admin123
+      NODE_ENV: development
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - db_data:/app/data
+    develop:
+      watch:
+        - action: sync
+          path: ./pages
+          target: /app/pages
+        - action: sync
+          path: ./components
+          target: /app/components
+        - action: sync
+          path: ./composables
+          target: /app/composables
+        - action: sync
+          path: ./layouts
+          target: /app/layouts
+        - action: sync
+          path: ./assets
+          target: /app/assets
+        - action: sync
+          path: ./server
+          target: /app/server
+        - action: sync
+          path: ./i18n
+          target: /app/i18n
+        - action: sync
+          path: ./public
+          target: /app/public
+        - action: rebuild
+          path: package.json
+        - action: rebuild
+          path: nuxt.config.ts
+        - action: rebuild
+          path: prisma/schema.prisma
+    restart: unless-stopped
+    networks:
+      - default
+      - npm_network
+
+volumes:
+  db_data:
+
+networks:
+  default:
+  npm_network:
+    external: true
+    name: ngnix_default
