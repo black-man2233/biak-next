@@ -31,19 +31,23 @@
       "day": "Søndag",
       "title": "Søndagsgudstjeneste",
       "desc": "Tilbedelse, bøn og forkyndelse. Tolkning på dansk, engelsk, swahili og spansk.",
-      "f1": "Livemusik", "f2": "Bibelundervisning", "f3": "Bøn"
+      "f1": "Livemusik",
+      "f2": "Bibelundervisning",
+      "f3": "Bøn"
     },
     "wednesday": {
       "day": "Onsdag",
       "title": "Bøn & Bibelundervisning",
       "desc": "Midtugs-samling med fokus på bøn og fordybelse i Bibelen.",
-      "f1": "Bøn", "f2": "Bibelstudium"
+      "f1": "Bøn",
+      "f2": "Bibelstudium"
     },
     "friday": {
       "day": "Fredag",
       "title": "Ungdomsmøde",
       "desc": "Månedligt møde med sjov, tilbedelse og stærkt fællesskab for unge.",
-      "f1": "Musik", "f2": "Aktiviteter"
+      "f1": "Musik",
+      "f2": "Aktiviteter"
     },
     "livestream": "Kan du ikke være med fysisk? Se os live på Facebook — hver søndag kl. 10:30",
     "livestreamBtn": "Gå til Facebook"
@@ -54,16 +58,37 @@
     "titleAccent": "Demonstrere Hans Kraft",
     "verse": "Mark 12:30 — Elsk Herren din Gud af hele dit hjerte",
     "values": {
-      "love": { "title": "Guds Kærlighed", "desc": "Vi tror på en Gud der elsker alle uanset baggrund eller fortid." },
-      "power": { "title": "Hans Kraft", "desc": "Vi oplever og forkynder Guds kraft — helbredelse og mirakler." },
-      "intl": { "title": "Internationalt", "desc": "Folk fra over 10 nationaliteter. 4 sprog i vores gudstjenester." },
-      "connected": { "title": "Forbundne Liv", "desc": "Vi forbinder mennesker med Gud og hinanden i kaldet." }
+      "love": {
+        "title": "Guds Kærlighed",
+        "desc": "Vi tror på en Gud der elsker alle uanset baggrund eller fortid."
+      },
+      "power": {
+        "title": "Hans Kraft",
+        "desc": "Vi oplever og forkynder Guds kraft — helbredelse og mirakler."
+      },
+      "intl": {
+        "title": "Internationalt",
+        "desc": "Folk fra over 10 nationaliteter. 4 sprog i vores gudstjenester."
+      },
+      "connected": {
+        "title": "Forbundne Liv",
+        "desc": "Vi forbinder mennesker med Gud og hinanden i kaldet."
+      }
     },
     "visionLabel": "Vores Vision",
     "vision": {
-      "v1": { "label": "Forbinde", "desc": "Mennesker med Gud og hinanden" },
-      "v2": { "label": "Udruste", "desc": "Til at leve i deres gudgivne kald" },
-      "v3": { "label": "Nå Ud", "desc": "Lokalt og globalt med evangeliet" }
+      "v1": {
+        "label": "Forbinde",
+        "desc": "Mennesker med Gud og hinanden"
+      },
+      "v2": {
+        "label": "Udruste",
+        "desc": "Til at leve i deres gudgivne kald"
+      },
+      "v3": {
+        "label": "Nå Ud",
+        "desc": "Lokalt og globalt med evangeliet"
+      }
     }
   },
   "events": {
@@ -130,12 +155,30 @@
     "beliefsLabel": "Trossyn",
     "beliefsTitle": "Hvad Vi",
     "beliefsTitleAccent": "Tror På",
-    "b1": { "title": "Bibelens Autoritet", "desc": "Vi tror at Bibelen er Guds inspirerede og ufejlbarlige ord — vores rettesnor for tro og liv." },
-    "b2": { "title": "Frelse ved Nåde", "desc": "Frelse er Guds gave til alle der tror — ikke noget vi fortjener, men noget vi modtager." },
-    "b3": { "title": "Helligåndens Kraft", "desc": "Vi tror på Helligåndens aktive arbejde i dag — med tegn, undere og åndelige gaver." },
-    "b4": { "title": "Kristi Legeme", "desc": "Kirken er ikke en bygning men et fællesskab — Kristi legeme på jordens." },
-    "b5": { "title": "Jesu Genkomst", "desc": "Vi lever i forventning om Jesu synlige, fysiske genkomst for at oprette sit rige." },
-    "b6": { "title": "Mission & Evangeliet", "desc": "Vi er kaldet til at dele evangeliet lokalt og globalt — til alle folkeslag." }
+    "b1": {
+      "title": "Bibelens Autoritet",
+      "desc": "Vi tror at Bibelen er Guds inspirerede og ufejlbarlige ord — vores rettesnor for tro og liv."
+    },
+    "b2": {
+      "title": "Frelse ved Nåde",
+      "desc": "Frelse er Guds gave til alle der tror — ikke noget vi fortjener, men noget vi modtager."
+    },
+    "b3": {
+      "title": "Helligåndens Kraft",
+      "desc": "Vi tror på Helligåndens aktive arbejde i dag — med tegn, undere og åndelige gaver."
+    },
+    "b4": {
+      "title": "Kristi Legeme",
+      "desc": "Kirken er ikke en bygning men et fællesskab — Kristi legeme på jordens."
+    },
+    "b5": {
+      "title": "Jesu Genkomst",
+      "desc": "Vi lever i forventning om Jesu synlige, fysiske genkomst for at oprette sit rige."
+    },
+    "b6": {
+      "title": "Mission & Evangeliet",
+      "desc": "Vi er kaldet til at dele evangeliet lokalt og globalt — til alle folkeslag."
+    }
   },
   "sermons": {
     "sectionLabel": "Prædikener",
@@ -169,10 +212,22 @@
     "timeVal": "18:00 – 20:00",
     "place": "Sted",
     "placeVal": "Kirkevej 10, Brønderslev",
-    "f1": { "title": "Tilbedelse", "desc": "Levende musik og lovsang" },
-    "f2": { "title": "Fællesskab", "desc": "Venner for livet" },
-    "f3": { "title": "Undervisning", "desc": "Bibelbaseret undervisning" },
-    "f4": { "title": "Aktiviteter", "desc": "Sjov, sport og events" }
+    "f1": {
+      "title": "Tilbedelse",
+      "desc": "Levende musik og lovsang"
+    },
+    "f2": {
+      "title": "Fællesskab",
+      "desc": "Venner for livet"
+    },
+    "f3": {
+      "title": "Undervisning",
+      "desc": "Bibelbaseret undervisning"
+    },
+    "f4": {
+      "title": "Aktiviteter",
+      "desc": "Sjov, sport og events"
+    }
   },
   "announcements": {
     "title": "Aktuelle Meddelelser"
@@ -191,9 +246,18 @@
     "addressVal": "Kirkevej 10, 9700 Brønderslev",
     "facebook": "Facebook",
     "meetingLabel": "Mødetider",
-    "t1": { "day": "Søndag", "time": "10:30 – 12:30" },
-    "t2": { "day": "Onsdag", "time": "18:30 – 20:00" },
-    "t3": { "day": "Fredag (månedligt)", "time": "18:00 – 20:00" },
+    "t1": {
+      "day": "Søndag",
+      "time": "10:30 – 12:30"
+    },
+    "t2": {
+      "day": "Onsdag",
+      "time": "18:30 – 20:00"
+    },
+    "t3": {
+      "day": "Fredag (månedligt)",
+      "time": "18:00 – 20:00"
+    },
     "formTitle": "Send En Besked",
     "name": "Navn",
     "namePlaceholder": "Dit navn",
@@ -313,5 +377,10 @@
     "contactTitle": "Kontakt",
     "copyright": "BIAK — Brønderslev International Apostolsk Kirke",
     "backToTop": "Top"
+  },
+  "featured": {
+    "label": "Fra Menigheden",
+    "title": "Vores",
+    "titleAccent": "Fællesskab"
   }
 }

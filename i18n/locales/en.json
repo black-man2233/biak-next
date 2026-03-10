@@ -31,19 +31,23 @@
       "day": "Sunday",
       "title": "Sunday Service",
       "desc": "Worship, prayer and preaching. Interpretation in Danish, English, Swahili and Spanish.",
-      "f1": "Live Music", "f2": "Bible Teaching", "f3": "Prayer"
+      "f1": "Live Music",
+      "f2": "Bible Teaching",
+      "f3": "Prayer"
     },
     "wednesday": {
       "day": "Wednesday",
       "title": "Prayer & Bible Study",
       "desc": "Midweek gathering focused on prayer and deeper study of the Bible.",
-      "f1": "Prayer", "f2": "Bible Study"
+      "f1": "Prayer",
+      "f2": "Bible Study"
     },
     "friday": {
       "day": "Friday",
       "title": "Youth Meeting",
       "desc": "Monthly meeting with fun, worship and strong community for young people.",
-      "f1": "Music", "f2": "Activities"
+      "f1": "Music",
+      "f2": "Activities"
     },
     "livestream": "Can't make it in person? Watch us live on Facebook — every Sunday at 10:30 AM",
     "livestreamBtn": "Go to Facebook"
@@ -54,16 +58,37 @@
     "titleAccent": "Demonstrate His Power",
     "verse": "Mark 12:30 — Love the Lord your God with all your heart",
     "values": {
-      "love": { "title": "God's Love", "desc": "We believe in a God who loves everyone regardless of background or past." },
-      "power": { "title": "His Power", "desc": "We experience and proclaim God's power — healing and miracles." },
-      "intl": { "title": "International", "desc": "People from over 10 nationalities. 4 languages in our services." },
-      "connected": { "title": "Connected Lives", "desc": "We connect people with God and each other in their calling." }
+      "love": {
+        "title": "God's Love",
+        "desc": "We believe in a God who loves everyone regardless of background or past."
+      },
+      "power": {
+        "title": "His Power",
+        "desc": "We experience and proclaim God's power — healing and miracles."
+      },
+      "intl": {
+        "title": "International",
+        "desc": "People from over 10 nationalities. 4 languages in our services."
+      },
+      "connected": {
+        "title": "Connected Lives",
+        "desc": "We connect people with God and each other in their calling."
+      }
     },
     "visionLabel": "Our Vision",
     "vision": {
-      "v1": { "label": "Connect", "desc": "People with God and each other" },
-      "v2": { "label": "Equip", "desc": "To live in their God-given calling" },
-      "v3": { "label": "Reach Out", "desc": "Locally and globally with the gospel" }
+      "v1": {
+        "label": "Connect",
+        "desc": "People with God and each other"
+      },
+      "v2": {
+        "label": "Equip",
+        "desc": "To live in their God-given calling"
+      },
+      "v3": {
+        "label": "Reach Out",
+        "desc": "Locally and globally with the gospel"
+      }
     }
   },
   "events": {
@@ -130,12 +155,30 @@
     "beliefsLabel": "Beliefs",
     "beliefsTitle": "What We",
     "beliefsTitleAccent": "Believe",
-    "b1": { "title": "Biblical Authority", "desc": "We believe the Bible is God's inspired and infallible word — our guide for faith and life." },
-    "b2": { "title": "Salvation by Grace", "desc": "Salvation is God's gift to all who believe — not something we earn, but something we receive." },
-    "b3": { "title": "Power of the Holy Spirit", "desc": "We believe in the Holy Spirit's active work today — with signs, wonders and spiritual gifts." },
-    "b4": { "title": "The Body of Christ", "desc": "The church is not a building but a community — the Body of Christ on earth." },
-    "b5": { "title": "Return of Jesus", "desc": "We live in expectation of Jesus' visible, physical return to establish His kingdom." },
-    "b6": { "title": "Mission & Gospel", "desc": "We are called to share the gospel locally and globally — to all nations." }
+    "b1": {
+      "title": "Biblical Authority",
+      "desc": "We believe the Bible is God's inspired and infallible word — our guide for faith and life."
+    },
+    "b2": {
+      "title": "Salvation by Grace",
+      "desc": "Salvation is God's gift to all who believe — not something we earn, but something we receive."
+    },
+    "b3": {
+      "title": "Power of the Holy Spirit",
+      "desc": "We believe in the Holy Spirit's active work today — with signs, wonders and spiritual gifts."
+    },
+    "b4": {
+      "title": "The Body of Christ",
+      "desc": "The church is not a building but a community — the Body of Christ on earth."
+    },
+    "b5": {
+      "title": "Return of Jesus",
+      "desc": "We live in expectation of Jesus' visible, physical return to establish His kingdom."
+    },
+    "b6": {
+      "title": "Mission & Gospel",
+      "desc": "We are called to share the gospel locally and globally — to all nations."
+    }
   },
   "sermons": {
     "sectionLabel": "Sermons",
@@ -172,10 +215,22 @@
     "timeVal": "6:00 PM – 8:00 PM",
     "place": "Location",
     "placeVal": "Kirkevej 10, Brønderslev",
-    "f1": { "title": "Worship", "desc": "Live music and praise" },
-    "f2": { "title": "Community", "desc": "Friends for life" },
-    "f3": { "title": "Teaching", "desc": "Bible-based teaching" },
-    "f4": { "title": "Activities", "desc": "Fun, sports and events" }
+    "f1": {
+      "title": "Worship",
+      "desc": "Live music and praise"
+    },
+    "f2": {
+      "title": "Community",
+      "desc": "Friends for life"
+    },
+    "f3": {
+      "title": "Teaching",
+      "desc": "Bible-based teaching"
+    },
+    "f4": {
+      "title": "Activities",
+      "desc": "Fun, sports and events"
+    }
   },
   "contact": {
     "sectionLabel": "Contact",
@@ -191,9 +246,18 @@
     "addressVal": "Kirkevej 10, 9700 Brønderslev",
     "facebook": "Facebook",
     "meetingLabel": "Meeting Times",
-    "t1": { "day": "Sunday", "time": "10:30 AM – 12:30 PM" },
-    "t2": { "day": "Wednesday", "time": "6:30 PM – 8:00 PM" },
-    "t3": { "day": "Friday (monthly)", "time": "6:00 PM – 8:00 PM" },
+    "t1": {
+      "day": "Sunday",
+      "time": "10:30 AM – 12:30 PM"
+    },
+    "t2": {
+      "day": "Wednesday",
+      "time": "6:30 PM – 8:00 PM"
+    },
+    "t3": {
+      "day": "Friday (monthly)",
+      "time": "6:00 PM – 8:00 PM"
+    },
     "formTitle": "Send a Message",
     "name": "Name",
     "namePlaceholder": "Your name",
@@ -313,5 +377,10 @@
     "contactTitle": "Contact",
     "copyright": "BIAK — Brønderslev International Apostolic Kingdom",
     "backToTop": "Top"
+  },
+  "featured": {
+    "label": "From the Church",
+    "title": "Our",
+    "titleAccent": "Community"
   }
 }

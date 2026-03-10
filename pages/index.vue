@@ -13,7 +13,10 @@
       </div>
     </PageHero>
 
-    <!-- 2. Quick service info strip — always visible, no reveal -->
+    <!-- 2. Photo slideshow (admin-managed) -->
+    <HomeSlideshow :slides="slides" />
+
+    <!-- 3. Quick service info strip -->
     <div class="bg-cream border-b border-[var(--border)]">
       <div class="max-w-7xl mx-auto px-6 lg:px-8 py-5">
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-px bg-[var(--border)]">
@@ -36,34 +39,32 @@
       </div>
     </div>
 
-    <!-- 3. Announcements (if any) -->
+    <!-- 4. Announcements -->
     <AnnouncementsBar :announcements="activeAnnouncements" />
 
-    <!-- 4. Welcome message (admin-editable) -->
+    <!-- 5. Welcome message (admin-editable) -->
     <div v-if="churchInfo.welcome_message" class="bg-cream py-8">
       <div class="max-w-3xl mx-auto px-6 text-center">
-        <p class="text-lg leading-relaxed" style="color: var(--text-mid)">
-          {{ churchInfo.welcome_message }}
-        </p>
+        <p class="text-lg leading-relaxed" style="color:var(--text-mid)">{{ churchInfo.welcome_message }}</p>
       </div>
     </div>
 
-    <!-- 4. Latest sermons (imported via admin from YouTube) -->
+    <!-- 6. Featured cards (admin-managed) -->
+    <FeaturedCards :cards="featuredCards" />
+
+    <!-- 7. Latest sermons (imported via admin from YouTube) -->
     <SermonsPreview :sermons="sermons" />
 
-    <!-- 5. Services & meeting times -->
+    <!-- 8. Services & meeting times -->
     <ServicesSection />
 
-    <!-- 6. Mission & vision -->
+    <!-- 9. Mission & vision -->
     <MissionSection />
 
-    <!-- 7. Pastors -->
+    <!-- 10. Pastors -->
     <PastorsSection />
 
-    <!-- 8. Upcoming events -->
-    <EventsPreview :events="events" />
-
-    <!-- 9. CTA -->
+    <!-- 11. CTA -->
     <CTASection />
   </div>
 </template>
@@ -71,17 +72,20 @@
 <script setup lang="ts">
 useHead({ title: 'BIAK — Brønderslev International Apostolsk Kirke' })
 
-const [eventsRes, annRes, sermonsRes, infoRes] = await Promise.all([
+const [eventsRes, annRes, sermonsRes, infoRes, slidesRes, featuredRes] = await Promise.all([
   useFetch('/api/events'),
   useFetch('/api/announcements'),
   useFetch('/api/sermons'),
   useFetch('/api/church-info'),
+  useFetch('/api/slides'),
+  useFetch('/api/featured-cards'),
 ])
 
-const events   = computed(() => (eventsRes.data.value as any[]) ?? [])
 const activeAnnouncements = computed(() =>
   ((annRes.data.value as any[]) ?? []).filter((a: any) => a.isActive)
 )
-const sermons    = computed(() => (sermonsRes.data.value as any[]) ?? [])
-const churchInfo = computed<Record<string, string>>(() => (infoRes.data.value as any) ?? {})
+const sermons       = computed(() => (sermonsRes.data.value as any[]) ?? [])
+const churchInfo    = computed<Record<string, string>>(() => (infoRes.data.value as any) ?? {})
+const slides        = computed(() => (slidesRes.data.value as any[]) ?? [])
+const featuredCards = computed(() => ((featuredRes.data.value as any[]) ?? []).filter((c: any) => c.isActive))
 </script>

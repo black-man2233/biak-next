@@ -31,19 +31,23 @@
       "day": "Dimanche",
       "title": "Culte du Dimanche",
       "desc": "Adoration, prière et prédication. Interprétation en danois, anglais, swahili et espagnol.",
-      "f1": "Musique Live", "f2": "Enseignement Biblique", "f3": "Prière"
+      "f1": "Musique Live",
+      "f2": "Enseignement Biblique",
+      "f3": "Prière"
     },
     "wednesday": {
       "day": "Mercredi",
       "title": "Prière & Étude Biblique",
       "desc": "Réunion de mi-semaine axée sur la prière et l'approfondissement de la Bible.",
-      "f1": "Prière", "f2": "Étude Biblique"
+      "f1": "Prière",
+      "f2": "Étude Biblique"
     },
     "friday": {
       "day": "Vendredi",
       "title": "Réunion Jeunesse",
       "desc": "Réunion mensuelle avec du plaisir, de l'adoration et une forte communauté pour les jeunes.",
-      "f1": "Musique", "f2": "Activités"
+      "f1": "Musique",
+      "f2": "Activités"
     },
     "livestream": "Vous ne pouvez pas venir en personne ? Regardez-nous en direct sur Facebook — chaque dimanche à 10h30",
     "livestreamBtn": "Aller sur Facebook"
@@ -54,16 +58,37 @@
     "titleAccent": "Démontrer Sa Puissance",
     "verse": "Marc 12:30 — Aimez le Seigneur votre Dieu de tout votre cœur",
     "values": {
-      "love": { "title": "L'Amour de Dieu", "desc": "Nous croyons en un Dieu qui aime tout le monde quelle que soit son histoire." },
-      "power": { "title": "Sa Puissance", "desc": "Nous vivons et proclamons la puissance de Dieu — guérisons et miracles." },
-      "intl": { "title": "International", "desc": "Des personnes de plus de 10 nationalités. 4 langues dans nos cultes." },
-      "connected": { "title": "Vies Connectées", "desc": "Nous connectons les personnes à Dieu et entre elles dans leur vocation." }
+      "love": {
+        "title": "L'Amour de Dieu",
+        "desc": "Nous croyons en un Dieu qui aime tout le monde quelle que soit son histoire."
+      },
+      "power": {
+        "title": "Sa Puissance",
+        "desc": "Nous vivons et proclamons la puissance de Dieu — guérisons et miracles."
+      },
+      "intl": {
+        "title": "International",
+        "desc": "Des personnes de plus de 10 nationalités. 4 langues dans nos cultes."
+      },
+      "connected": {
+        "title": "Vies Connectées",
+        "desc": "Nous connectons les personnes à Dieu et entre elles dans leur vocation."
+      }
     },
     "visionLabel": "Notre Vision",
     "vision": {
-      "v1": { "label": "Connecter", "desc": "Les personnes avec Dieu et entre elles" },
-      "v2": { "label": "Équiper", "desc": "Pour vivre dans leur vocation divine" },
-      "v3": { "label": "Atteindre", "desc": "Localement et mondialement avec l'évangile" }
+      "v1": {
+        "label": "Connecter",
+        "desc": "Les personnes avec Dieu et entre elles"
+      },
+      "v2": {
+        "label": "Équiper",
+        "desc": "Pour vivre dans leur vocation divine"
+      },
+      "v3": {
+        "label": "Atteindre",
+        "desc": "Localement et mondialement avec l'évangile"
+      }
     }
   },
   "events": {
@@ -130,12 +155,30 @@
     "beliefsLabel": "Croyances",
     "beliefsTitle": "Ce Que Nous",
     "beliefsTitleAccent": "Croyons",
-    "b1": { "title": "Autorité Biblique", "desc": "Nous croyons que la Bible est la Parole inspirée et infaillible de Dieu — notre guide pour la foi et la vie." },
-    "b2": { "title": "Salut par la Grâce", "desc": "Le salut est le don de Dieu à tous ceux qui croient — non quelque chose que nous méritons, mais quelque chose que nous recevons." },
-    "b3": { "title": "Puissance du Saint-Esprit", "desc": "Nous croyons en l'œuvre active du Saint-Esprit aujourd'hui — avec des signes, des prodiges et des dons spirituels." },
-    "b4": { "title": "Corps du Christ", "desc": "L'église n'est pas un bâtiment mais une communauté — le Corps du Christ sur terre." },
-    "b5": { "title": "Retour de Jésus", "desc": "Nous vivons dans l'attente du retour visible et physique de Jésus pour établir son royaume." },
-    "b6": { "title": "Mission & Évangile", "desc": "Nous sommes appelés à partager l'évangile localement et mondialement — à toutes les nations." }
+    "b1": {
+      "title": "Autorité Biblique",
+      "desc": "Nous croyons que la Bible est la Parole inspirée et infaillible de Dieu — notre guide pour la foi et la vie."
+    },
+    "b2": {
+      "title": "Salut par la Grâce",
+      "desc": "Le salut est le don de Dieu à tous ceux qui croient — non quelque chose que nous méritons, mais quelque chose que nous recevons."
+    },
+    "b3": {
+      "title": "Puissance du Saint-Esprit",
+      "desc": "Nous croyons en l'œuvre active du Saint-Esprit aujourd'hui — avec des signes, des prodiges et des dons spirituels."
+    },
+    "b4": {
+      "title": "Corps du Christ",
+      "desc": "L'église n'est pas un bâtiment mais une communauté — le Corps du Christ sur terre."
+    },
+    "b5": {
+      "title": "Retour de Jésus",
+      "desc": "Nous vivons dans l'attente du retour visible et physique de Jésus pour établir son royaume."
+    },
+    "b6": {
+      "title": "Mission & Évangile",
+      "desc": "Nous sommes appelés à partager l'évangile localement et mondialement — à toutes les nations."
+    }
   },
   "sermons": {
     "sectionLabel": "Sermons",
@@ -172,10 +215,22 @@
     "timeVal": "18h00 – 20h00",
     "place": "Lieu",
     "placeVal": "Kirkevej 10, Brønderslev",
-    "f1": { "title": "Adoration", "desc": "Musique live et louanges" },
-    "f2": { "title": "Communauté", "desc": "Amis pour la vie" },
-    "f3": { "title": "Enseignement", "desc": "Enseignement basé sur la Bible" },
-    "f4": { "title": "Activités", "desc": "Plaisir, sport et événements" }
+    "f1": {
+      "title": "Adoration",
+      "desc": "Musique live et louanges"
+    },
+    "f2": {
+      "title": "Communauté",
+      "desc": "Amis pour la vie"
+    },
+    "f3": {
+      "title": "Enseignement",
+      "desc": "Enseignement basé sur la Bible"
+    },
+    "f4": {
+      "title": "Activités",
+      "desc": "Plaisir, sport et événements"
+    }
   },
   "contact": {
     "sectionLabel": "Contact",
@@ -191,9 +246,18 @@
     "addressVal": "Kirkevej 10, 9700 Brønderslev",
     "facebook": "Facebook",
     "meetingLabel": "Horaires des Réunions",
-    "t1": { "day": "Dimanche", "time": "10h30 – 12h30" },
-    "t2": { "day": "Mercredi", "time": "18h30 – 20h00" },
-    "t3": { "day": "Vendredi (mensuel)", "time": "18h00 – 20h00" },
+    "t1": {
+      "day": "Dimanche",
+      "time": "10h30 – 12h30"
+    },
+    "t2": {
+      "day": "Mercredi",
+      "time": "18h30 – 20h00"
+    },
+    "t3": {
+      "day": "Vendredi (mensuel)",
+      "time": "18h00 – 20h00"
+    },
     "formTitle": "Envoyer un Message",
     "name": "Nom",
     "namePlaceholder": "Votre nom",
@@ -215,18 +279,97 @@
       "submitting": "Connexion…",
       "error": "Mot de passe incorrect. Veuillez réessayer."
     },
-    "dashboard": { "title": "Tableau de Bord", "subtitle": "Bienvenue dans le panneau d'administration BIAK", "eventsLabel": "Événements", "sermonsLabel": "Sermons", "announcementsLabel": "Annonces", "settingsLabel": "Paramètres", "seedBtn": "Créer des Événements Récurrents", "seedSuccess": "Événements créés!", "seedError": "Erreur lors de la création des événements." },
-    "events": { "title": "Événements", "subtitle": "Créer et gérer les événements à venir", "newBtn": "Nouvel Événement", "editTitle": "Modifier l'Événement", "createTitle": "Nouvel Événement", "titleField": "Titre", "desc": "Description", "date": "Date", "category": "Catégorie", "startTime": "Heure de début", "endTime": "Heure de fin", "location": "Lieu", "imageUrl": "URL de l'image", "update": "Mettre à jour", "create": "Créer", "confirmDelete": "Êtes-vous sûr de vouloir supprimer cet événement ?" },
-    "sermons": { "title": "Sermons", "subtitle": "Gérer les sermons et les messages", "newBtn": "Nouveau Sermon", "speaker": "Prédicateur", "speakerPlaceholder": "Pasteur Martin Mutale", "videoUrl": "URL Vidéo", "imageUrl": "URL Image", "editTitle": "Modifier le Sermon", "createTitle": "Nouveau Sermon", "update": "Mettre à jour", "create": "Créer", "confirmDelete": "Supprimer ce sermon ?" },
-    "announcements": { "title": "Annonces", "subtitle": "Annonces actuelles pour la congrégation", "newBtn": "Nouvelle Annonce", "content": "Contenu", "active": "Actif (affiché sur le site)", "activeLabel": "Actif", "inactiveLabel": "Inactif", "editTitle": "Modifier", "createTitle": "Nouvelle", "update": "Mettre à jour", "create": "Créer", "confirmDelete": "Supprimer cette annonce ?" },
-    "settings": { "title": "Paramètres", "subtitle": "Paramètres de l'église et du système", "security": "Session & Sécurité", "securityDesc": "Vous êtes connecté en tant qu'administrateur. Votre session est chiffrée et sécurisée.", "logout": "Se Déconnecter", "churchInfo": "Infos Église", "links": "Liens Rapides", "openSite": "Ouvrir le site", "fbPage": "Page Facebook" },
-    "common": { "cancel": "Annuler", "saving": "Enregistrement…", "delete": "Supprimer", "edit": "Modifier", "noItems": "Aucun pour le moment.", "error": "Une erreur est survenue." }
+    "dashboard": {
+      "title": "Tableau de Bord",
+      "subtitle": "Bienvenue dans le panneau d'administration BIAK",
+      "eventsLabel": "Événements",
+      "sermonsLabel": "Sermons",
+      "announcementsLabel": "Annonces",
+      "settingsLabel": "Paramètres",
+      "seedBtn": "Créer des Événements Récurrents",
+      "seedSuccess": "Événements créés!",
+      "seedError": "Erreur lors de la création des événements."
+    },
+    "events": {
+      "title": "Événements",
+      "subtitle": "Créer et gérer les événements à venir",
+      "newBtn": "Nouvel Événement",
+      "editTitle": "Modifier l'Événement",
+      "createTitle": "Nouvel Événement",
+      "titleField": "Titre",
+      "desc": "Description",
+      "date": "Date",
+      "category": "Catégorie",
+      "startTime": "Heure de début",
+      "endTime": "Heure de fin",
+      "location": "Lieu",
+      "imageUrl": "URL de l'image",
+      "update": "Mettre à jour",
+      "create": "Créer",
+      "confirmDelete": "Êtes-vous sûr de vouloir supprimer cet événement ?"
+    },
+    "sermons": {
+      "title": "Sermons",
+      "subtitle": "Gérer les sermons et les messages",
+      "newBtn": "Nouveau Sermon",
+      "speaker": "Prédicateur",
+      "speakerPlaceholder": "Pasteur Martin Mutale",
+      "videoUrl": "URL Vidéo",
+      "imageUrl": "URL Image",
+      "editTitle": "Modifier le Sermon",
+      "createTitle": "Nouveau Sermon",
+      "update": "Mettre à jour",
+      "create": "Créer",
+      "confirmDelete": "Supprimer ce sermon ?"
+    },
+    "announcements": {
+      "title": "Annonces",
+      "subtitle": "Annonces actuelles pour la congrégation",
+      "newBtn": "Nouvelle Annonce",
+      "content": "Contenu",
+      "active": "Actif (affiché sur le site)",
+      "activeLabel": "Actif",
+      "inactiveLabel": "Inactif",
+      "editTitle": "Modifier",
+      "createTitle": "Nouvelle",
+      "update": "Mettre à jour",
+      "create": "Créer",
+      "confirmDelete": "Supprimer cette annonce ?"
+    },
+    "settings": {
+      "title": "Paramètres",
+      "subtitle": "Paramètres de l'église et du système",
+      "security": "Session & Sécurité",
+      "securityDesc": "Vous êtes connecté en tant qu'administrateur. Votre session est chiffrée et sécurisée.",
+      "logout": "Se Déconnecter",
+      "churchInfo": "Infos Église",
+      "links": "Liens Rapides",
+      "openSite": "Ouvrir le site",
+      "fbPage": "Page Facebook"
+    },
+    "common": {
+      "cancel": "Annuler",
+      "saving": "Enregistrement…",
+      "delete": "Supprimer",
+      "edit": "Modifier",
+      "noItems": "Aucun pour le moment.",
+      "error": "Une erreur est survenue."
+    }
   },
   "common": {
     "loading": "Chargement…",
     "noResults": "Aucun résultat trouvé.",
-    "theme": { "light": "Clair", "dark": "Sombre", "youth": "Jeunesse" },
-    "lang": { "da": "Dansk", "en": "English", "fr": "Français", "sw": "Swahili" }
+    "theme": {
+      "light": "Clair",
+      "dark": "Sombre",
+      "youth": "Jeunesse"
+    },
+    "lang": {
+      "da": "Dansk",
+      "en": "English",
+      "fr": "Français",
+      "sw": "Swahili"
+    }
   },
   "footer": {
     "desc": "Une communauté chrétienne vivante à Brønderslev avec des personnes du monde entier.",
@@ -234,5 +377,10 @@
     "contactTitle": "Contact",
     "copyright": "BIAK — Bethany International Apostolic Kingdom",
     "backToTop": "Haut"
+  },
+  "featured": {
+    "label": "De la Communauté",
+    "title": "Notre",
+    "titleAccent": "Communauté"
   }
 }

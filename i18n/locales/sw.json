@@ -31,19 +31,23 @@
       "day": "Jumapili",
       "title": "Ibada ya Jumapili",
       "desc": "Ibada, sala na mhubiri. Tafsiri kwa Kideni, Kiingereza, Kiswahili na Kihispania.",
-      "f1": "Muziki wa Moja kwa Moja", "f2": "Mafundisho ya Biblia", "f3": "Sala"
+      "f1": "Muziki wa Moja kwa Moja",
+      "f2": "Mafundisho ya Biblia",
+      "f3": "Sala"
     },
     "wednesday": {
       "day": "Jumatano",
       "title": "Sala & Mafunzo ya Biblia",
       "desc": "Mkutano wa katikati ya wiki unaozingatia sala na kusoma Biblia kwa kina.",
-      "f1": "Sala", "f2": "Mafunzo ya Biblia"
+      "f1": "Sala",
+      "f2": "Mafunzo ya Biblia"
     },
     "friday": {
       "day": "Ijumaa",
       "title": "Mkutano wa Vijana",
       "desc": "Mkutano wa kila mwezi na burudani, ibada na ushirikiano mkubwa kwa vijana.",
-      "f1": "Muziki", "f2": "Shughuli"
+      "f1": "Muziki",
+      "f2": "Shughuli"
     },
     "livestream": "Huwezi kuja kibinafsi? Tutazame moja kwa moja kwenye Facebook — kila Jumapili saa 4:30",
     "livestreamBtn": "Nenda Facebook"
@@ -54,16 +58,37 @@
     "titleAccent": "Kuonyesha Nguvu Zake",
     "verse": "Marko 12:30 — Mpende Bwana Mungu wako kwa moyo wako wote",
     "values": {
-      "love": { "title": "Upendo wa Mungu", "desc": "Tunaamini Mungu anayempenda kila mtu bila kujali historia yake." },
-      "power": { "title": "Nguvu Zake", "desc": "Tunapata na kutangaza nguvu za Mungu — uponyaji na miujiza." },
-      "intl": { "title": "Kimataifa", "desc": "Watu kutoka zaidi ya mataifa 10. Lugha 4 katika ibada zetu." },
-      "connected": { "title": "Maisha Yanayounganika", "desc": "Tunaunganisha watu na Mungu na wao kwa wao katika wito wao." }
+      "love": {
+        "title": "Upendo wa Mungu",
+        "desc": "Tunaamini Mungu anayempenda kila mtu bila kujali historia yake."
+      },
+      "power": {
+        "title": "Nguvu Zake",
+        "desc": "Tunapata na kutangaza nguvu za Mungu — uponyaji na miujiza."
+      },
+      "intl": {
+        "title": "Kimataifa",
+        "desc": "Watu kutoka zaidi ya mataifa 10. Lugha 4 katika ibada zetu."
+      },
+      "connected": {
+        "title": "Maisha Yanayounganika",
+        "desc": "Tunaunganisha watu na Mungu na wao kwa wao katika wito wao."
+      }
     },
     "visionLabel": "Maono Yetu",
     "vision": {
-      "v1": { "label": "Unganisha", "desc": "Watu na Mungu na wao kwa wao" },
-      "v2": { "label": "Wapa Nguvu", "desc": "Kuishi katika wito wao wa Kimungu" },
-      "v3": { "label": "Fikia", "desc": "Ndani na nje ya nchi kwa injili" }
+      "v1": {
+        "label": "Unganisha",
+        "desc": "Watu na Mungu na wao kwa wao"
+      },
+      "v2": {
+        "label": "Wapa Nguvu",
+        "desc": "Kuishi katika wito wao wa Kimungu"
+      },
+      "v3": {
+        "label": "Fikia",
+        "desc": "Ndani na nje ya nchi kwa injili"
+      }
     }
   },
   "events": {
@@ -130,12 +155,30 @@
     "beliefsLabel": "Imani",
     "beliefsTitle": "Tunachokiamini",
     "beliefsTitleAccent": "",
-    "b1": { "title": "Mamlaka ya Biblia", "desc": "Tunaamini Biblia ni Neno la Mungu lililotokana na msukumo wake na lisilo na makosa — kiongozi chetu cha imani na maisha." },
-    "b2": { "title": "Wokovu kwa Neema", "desc": "Wokovu ni zawadi ya Mungu kwa wote wanaomwamini — si kitu tunachostahili, bali tunachopokea." },
-    "b3": { "title": "Nguvu za Roho Mtakatifu", "desc": "Tunaamini katika kazi ya Roho Mtakatifu leo — na ishara, miujiza na karama za kiroho." },
-    "b4": { "title": "Mwili wa Kristo", "desc": "Kanisa si jengo bali jumuiya — Mwili wa Kristo duniani." },
-    "b5": { "title": "Kurudi kwa Yesu", "desc": "Tunaishi kwa kutazamia kurudi kwa Yesu kwa kuonekana, kimwili kuanzisha ufalme wake." },
-    "b6": { "title": "Dhamira & Injili", "desc": "Tumeitwa kushiriki injili ndani na nje ya nchi — kwa mataifa yote." }
+    "b1": {
+      "title": "Mamlaka ya Biblia",
+      "desc": "Tunaamini Biblia ni Neno la Mungu lililotokana na msukumo wake na lisilo na makosa — kiongozi chetu cha imani na maisha."
+    },
+    "b2": {
+      "title": "Wokovu kwa Neema",
+      "desc": "Wokovu ni zawadi ya Mungu kwa wote wanaomwamini — si kitu tunachostahili, bali tunachopokea."
+    },
+    "b3": {
+      "title": "Nguvu za Roho Mtakatifu",
+      "desc": "Tunaamini katika kazi ya Roho Mtakatifu leo — na ishara, miujiza na karama za kiroho."
+    },
+    "b4": {
+      "title": "Mwili wa Kristo",
+      "desc": "Kanisa si jengo bali jumuiya — Mwili wa Kristo duniani."
+    },
+    "b5": {
+      "title": "Kurudi kwa Yesu",
+      "desc": "Tunaishi kwa kutazamia kurudi kwa Yesu kwa kuonekana, kimwili kuanzisha ufalme wake."
+    },
+    "b6": {
+      "title": "Dhamira & Injili",
+      "desc": "Tumeitwa kushiriki injili ndani na nje ya nchi — kwa mataifa yote."
+    }
   },
   "sermons": {
     "sectionLabel": "Mahubiri",
@@ -172,10 +215,22 @@
     "timeVal": "18:00 – 20:00",
     "place": "Mahali",
     "placeVal": "Kirkevej 10, Brønderslev",
-    "f1": { "title": "Ibada", "desc": "Muziki wa moja kwa moja na sifa" },
-    "f2": { "title": "Jumuiya", "desc": "Marafiki wa maisha yote" },
-    "f3": { "title": "Mafundisho", "desc": "Mafundisho yanayotegemea Biblia" },
-    "f4": { "title": "Shughuli", "desc": "Burudani, michezo na matukio" }
+    "f1": {
+      "title": "Ibada",
+      "desc": "Muziki wa moja kwa moja na sifa"
+    },
+    "f2": {
+      "title": "Jumuiya",
+      "desc": "Marafiki wa maisha yote"
+    },
+    "f3": {
+      "title": "Mafundisho",
+      "desc": "Mafundisho yanayotegemea Biblia"
+    },
+    "f4": {
+      "title": "Shughuli",
+      "desc": "Burudani, michezo na matukio"
+    }
   },
   "contact": {
     "sectionLabel": "Wasiliana",
@@ -191,9 +246,18 @@
     "addressVal": "Kirkevej 10, 9700 Brønderslev",
     "facebook": "Facebook",
     "meetingLabel": "Nyakati za Mikutano",
-    "t1": { "day": "Jumapili", "time": "10:30 – 12:30" },
-    "t2": { "day": "Jumatano", "time": "18:30 – 20:00" },
-    "t3": { "day": "Ijumaa (kila mwezi)", "time": "18:00 – 20:00" },
+    "t1": {
+      "day": "Jumapili",
+      "time": "10:30 – 12:30"
+    },
+    "t2": {
+      "day": "Jumatano",
+      "time": "18:30 – 20:00"
+    },
+    "t3": {
+      "day": "Ijumaa (kila mwezi)",
+      "time": "18:00 – 20:00"
+    },
     "formTitle": "Tuma Ujumbe",
     "name": "Jina",
     "namePlaceholder": "Jina lako",
@@ -208,19 +272,104 @@
     "error": "Kitu fulani kilienda vibaya. Tafadhali jaribu tena."
   },
   "admin": {
-    "login": { "title": "Ingia", "password": "Nenosiri", "submit": "Ingia", "submitting": "Inaingia…", "error": "Nenosiri si sahihi. Tafadhali jaribu tena." },
-    "dashboard": { "title": "Dashibodi", "subtitle": "Karibu kwenye paneli ya utawala ya BIAK", "eventsLabel": "Matukio", "sermonsLabel": "Mahubiri", "announcementsLabel": "Matangazo", "settingsLabel": "Mipangilio", "seedBtn": "Unda Matukio ya Mara kwa Mara", "seedSuccess": "Matukio yameundwa!", "seedError": "Hitilafu katika kuunda matukio." },
-    "events": { "title": "Matukio", "subtitle": "Unda na usimamie matukio yanayokuja", "newBtn": "Tukio Jipya", "editTitle": "Hariri Tukio", "createTitle": "Tukio Jipya", "titleField": "Kichwa", "desc": "Maelezo", "date": "Tarehe", "category": "Aina", "startTime": "Muda wa kuanza", "endTime": "Muda wa kumalizia", "location": "Mahali", "imageUrl": "URL ya Picha", "update": "Sasisha", "create": "Unda", "confirmDelete": "Je, una uhakika unataka kufuta tukio hili?" },
-    "sermons": { "title": "Mahubiri", "subtitle": "Simamia mahubiri na hotuba", "newBtn": "Hotuba Mpya", "speaker": "Mhubiri", "speakerPlaceholder": "Mchungaji Martin Mutale", "videoUrl": "URL ya Video", "imageUrl": "URL ya Picha", "editTitle": "Hariri Hotuba", "createTitle": "Hotuba Mpya", "update": "Sasisha", "create": "Unda", "confirmDelete": "Futa hotuba hii?" },
-    "announcements": { "title": "Matangazo", "subtitle": "Matangazo ya sasa kwa mkutano", "newBtn": "Tangazo Jipya", "content": "Maudhui", "active": "Inafanya kazi (inaonyeshwa kwenye tovuti)", "activeLabel": "Inafanya kazi", "inactiveLabel": "Haifanyi kazi", "editTitle": "Hariri", "createTitle": "Mpya", "update": "Sasisha", "create": "Unda", "confirmDelete": "Futa tangazo hili?" },
-    "settings": { "title": "Mipangilio", "subtitle": "Mipangilio ya kanisa na mfumo", "security": "Kikao & Usalama", "securityDesc": "Umeingia kama msimamizi. Kikao chako kimesimbwa kwa njia fiche na kiko salama.", "logout": "Toka", "churchInfo": "Maelezo ya Kanisa", "links": "Viungo vya Haraka", "openSite": "Fungua tovuti", "fbPage": "Ukurasa wa Facebook" },
-    "common": { "cancel": "Ghairi", "saving": "Inahifadhi…", "delete": "Futa", "edit": "Hariri", "noItems": "Hakuna bado.", "error": "Kitu fulani kilienda vibaya." }
+    "login": {
+      "title": "Ingia",
+      "password": "Nenosiri",
+      "submit": "Ingia",
+      "submitting": "Inaingia…",
+      "error": "Nenosiri si sahihi. Tafadhali jaribu tena."
+    },
+    "dashboard": {
+      "title": "Dashibodi",
+      "subtitle": "Karibu kwenye paneli ya utawala ya BIAK",
+      "eventsLabel": "Matukio",
+      "sermonsLabel": "Mahubiri",
+      "announcementsLabel": "Matangazo",
+      "settingsLabel": "Mipangilio",
+      "seedBtn": "Unda Matukio ya Mara kwa Mara",
+      "seedSuccess": "Matukio yameundwa!",
+      "seedError": "Hitilafu katika kuunda matukio."
+    },
+    "events": {
+      "title": "Matukio",
+      "subtitle": "Unda na usimamie matukio yanayokuja",
+      "newBtn": "Tukio Jipya",
+      "editTitle": "Hariri Tukio",
+      "createTitle": "Tukio Jipya",
+      "titleField": "Kichwa",
+      "desc": "Maelezo",
+      "date": "Tarehe",
+      "category": "Aina",
+      "startTime": "Muda wa kuanza",
+      "endTime": "Muda wa kumalizia",
+      "location": "Mahali",
+      "imageUrl": "URL ya Picha",
+      "update": "Sasisha",
+      "create": "Unda",
+      "confirmDelete": "Je, una uhakika unataka kufuta tukio hili?"
+    },
+    "sermons": {
+      "title": "Mahubiri",
+      "subtitle": "Simamia mahubiri na hotuba",
+      "newBtn": "Hotuba Mpya",
+      "speaker": "Mhubiri",
+      "speakerPlaceholder": "Mchungaji Martin Mutale",
+      "videoUrl": "URL ya Video",
+      "imageUrl": "URL ya Picha",
+      "editTitle": "Hariri Hotuba",
+      "createTitle": "Hotuba Mpya",
+      "update": "Sasisha",
+      "create": "Unda",
+      "confirmDelete": "Futa hotuba hii?"
+    },
+    "announcements": {
+      "title": "Matangazo",
+      "subtitle": "Matangazo ya sasa kwa mkutano",
+      "newBtn": "Tangazo Jipya",
+      "content": "Maudhui",
+      "active": "Inafanya kazi (inaonyeshwa kwenye tovuti)",
+      "activeLabel": "Inafanya kazi",
+      "inactiveLabel": "Haifanyi kazi",
+      "editTitle": "Hariri",
+      "createTitle": "Mpya",
+      "update": "Sasisha",
+      "create": "Unda",
+      "confirmDelete": "Futa tangazo hili?"
+    },
+    "settings": {
+      "title": "Mipangilio",
+      "subtitle": "Mipangilio ya kanisa na mfumo",
+      "security": "Kikao & Usalama",
+      "securityDesc": "Umeingia kama msimamizi. Kikao chako kimesimbwa kwa njia fiche na kiko salama.",
+      "logout": "Toka",
+      "churchInfo": "Maelezo ya Kanisa",
+      "links": "Viungo vya Haraka",
+      "openSite": "Fungua tovuti",
+      "fbPage": "Ukurasa wa Facebook"
+    },
+    "common": {
+      "cancel": "Ghairi",
+      "saving": "Inahifadhi…",
+      "delete": "Futa",
+      "edit": "Hariri",
+      "noItems": "Hakuna bado.",
+      "error": "Kitu fulani kilienda vibaya."
+    }
   },
   "common": {
     "loading": "Inapakia…",
     "noResults": "Hakuna matokeo yaliyopatikana.",
-    "theme": { "light": "Mwanga", "dark": "Giza", "youth": "Vijana" },
-    "lang": { "da": "Dansk", "en": "English", "fr": "Français", "sw": "Swahili" }
+    "theme": {
+      "light": "Mwanga",
+      "dark": "Giza",
+      "youth": "Vijana"
+    },
+    "lang": {
+      "da": "Dansk",
+      "en": "English",
+      "fr": "Français",
+      "sw": "Swahili"
+    }
   },
   "footer": {
     "desc": "Jumuiya ya Kikristo yenye nguvu huko Brønderslev na watu kutoka duniani kote.",
@@ -228,5 +377,10 @@
     "contactTitle": "Wasiliana",
     "copyright": "BIAK — Bethany International Apostolic Kingdom",
     "backToTop": "Juu"
+  },
+  "featured": {
+    "label": "Kutoka Kanisani",
+    "title": "Jamii",
+    "titleAccent": "Yetu"
   }
 }

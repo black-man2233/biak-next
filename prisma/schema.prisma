@@ -51,6 +51,26 @@ model ChurchInfo {
   updatedAt DateTime @updatedAt
 }
 
+model SlideImage {
+  id        String   @id @default(cuid())
+  url       String
+  caption   String?
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+}
+
+model FeaturedCard {
+  id          String   @id @default(cuid())
+  title       String
+  subtitle    String?
+  description String?
+  imageUrl    String?
+  icon        String?
+  order       Int      @default(0)
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+}
+
 model Sermon {
   id          String   @id @default(cuid())
   title       String
