@@ -7,6 +7,8 @@
       :desc="isYouth ? $t('contact.heroDescYouth') : $t('contact.heroDesc')"
     />
 
+    <HomeSlideshow v-if="slides.length" :slides="slides" />
+
     <section class="py-24 md:py-32 bg-warm">
       <div class="max-w-7xl mx-auto px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
@@ -182,6 +184,9 @@ const { t } = useI18n()
 useHead({ title: computed(() => `${t('contact.sectionLabel')} — BIAK`) })
 
 const route = useRoute()
+
+const { data: slidesData } = await useFetch('/api/slides?page=contact')
+const slides = computed(() => (slidesData.value as any[]) ?? [])
 const isYouth = computed(() => route.query.context === 'youth')
 
 const times = computed(() => [

@@ -7,6 +7,8 @@
       :desc="$t('sermons.heroDesc')"
     />
 
+    <HomeSlideshow v-if="slides.length" :slides="slides" />
+
     <!-- Search -->
     <section class="sticky top-20 z-30 bg-warm/95 backdrop-blur border-b border-warm-100 py-3">
       <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center gap-3 flex-wrap">
@@ -82,7 +84,12 @@ import { Mic, Play, Search } from 'lucide-vue-next'
 const { t, locale } = useI18n()
 useHead({ title: computed(() => `${t('sermons.sectionLabel')} — BIAK`) })
 
-const { data, pending } = await useFetch('/api/sermons')
+const [sermonsRes, slidesRes] = await Promise.all([
+  useFetch('/api/sermons'),
+  useFetch('/api/slides?page=sermons'),
+])
+const { data, pending } = sermonsRes
+const slides = computed(() => (slidesRes.data.value as any[]) ?? [])
 const search = ref('')
 
 const filteredSermons = computed(() => {

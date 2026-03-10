@@ -45,23 +45,26 @@
       <div class="p-4 border-t border-warm-100">
         <!-- Language switcher -->
         <div class="flex items-center gap-1.5 mb-2 px-2">
-          <span class="text-xs text-warm-400 mr-1">Sprog</span>
+          <span class="text-xs mr-1" style="color:var(--text-light)">Sprog</span>
           <button v-for="l in adminLocales" :key="l.code" @click="setLocale(l.code)"
-            :class="['px-2 py-1 rounded-md text-xs font-medium transition-all border',
-              locale === l.code ? 'border-terra-400 bg-terra-50 text-terra-600' : 'border-transparent text-warm-400 hover:bg-warm-100']">
+            class="px-2 py-1 rounded-md text-xs font-medium transition-all border"
+            :style="locale === l.code
+              ? 'border-color:var(--primary);background:var(--bg-secondary);color:var(--primary)'
+              : 'border-color:transparent;color:var(--text-light)'">
             {{ l.label }}
           </button>
         </div>
-        <!-- Theme switcher -->
+        <!-- Theme switcher (light/dark only in admin) -->
         <div class="flex items-center gap-1.5 mb-3 px-2">
-          <span class="text-xs text-warm-400 mr-1">Tema</span>
-          <button v-for="t in themes" :key="t" @click="setTheme(t)"
+          <span class="text-xs mr-1" style="color:var(--text-light)">Tema</span>
+          <button v-for="t in adminThemes" :key="t" @click="setTheme(t)"
             :title="t"
-            :class="['w-7 h-7 rounded-lg flex items-center justify-center text-xs transition-all border',
-              theme === t ? 'border-terra-400 bg-terra-50 text-terra-600' : 'border-transparent text-warm-400 hover:bg-warm-100']">
+            class="w-7 h-7 rounded-lg flex items-center justify-center text-xs transition-all border"
+            :style="theme === t
+              ? 'border-color:var(--primary);background:var(--bg-secondary);color:var(--primary)'
+              : 'border-color:transparent;color:var(--text-light)'">
             <Sun v-if="t === 'light'" class="w-3.5 h-3.5" />
-            <Moon v-else-if="t === 'dark'" class="w-3.5 h-3.5" />
-            <Zap v-else class="w-3.5 h-3.5" />
+            <Moon v-else class="w-3.5 h-3.5" />
           </button>
         </div>
         <NuxtLink to="/" class="admin-sidebar-link text-warm-400 mb-1">
@@ -87,12 +90,13 @@
 </template>
 
 <script setup lang="ts">
-import { LayoutDashboard, Calendar, Mic, Bell, Settings, LogOut, ExternalLink, Image, Sun, Moon, Zap, GalleryHorizontal, LayoutGrid, Users } from 'lucide-vue-next'
+import { LayoutDashboard, Calendar, Mic, Bell, Settings, LogOut, ExternalLink, Image, Sun, Moon, GalleryHorizontal, LayoutGrid, Users } from 'lucide-vue-next'
 
 const route = useRoute()
-const { theme, themes, setTheme } = useTheme()
+const { theme, setTheme } = useTheme()
 const { locale, setLocale } = useI18n()
 const adminLocales = [{ code: 'da', label: 'DA' }, { code: 'en', label: 'EN' }]
+const adminThemes = ['light', 'dark'] as const
 
 async function logout() {
   await $fetch('/api/auth/logout', { method: 'POST' })

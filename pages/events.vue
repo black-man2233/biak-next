@@ -7,6 +7,8 @@
       :desc="$t('events.heroDesc')"
     />
 
+    <HomeSlideshow v-if="slides.length" :slides="slides" />
+
     <!-- Filter bar -->
     <section class="sticky top-20 z-30 bg-warm/95 backdrop-blur border-b border-warm-100 py-3">
       <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center gap-2 flex-wrap">
@@ -84,7 +86,12 @@ import { Calendar, Clock, MapPin } from 'lucide-vue-next'
 const { t, locale } = useI18n()
 useHead({ title: computed(() => `${t('events.sectionLabel')} — BIAK`) })
 
-const { data, pending } = await useFetch('/api/events')
+const [eventsRes, slidesRes] = await Promise.all([
+  useFetch('/api/events'),
+  useFetch('/api/slides?page=events'),
+])
+const { data, pending } = eventsRes
+const slides = computed(() => (slidesRes.data.value as any[]) ?? [])
 
 const categories = computed(() => [
   { value: 'all',     label: t('events.filterAll') },

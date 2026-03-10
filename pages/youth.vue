@@ -60,6 +60,8 @@
       </div>
     </section>
 
+    <HomeSlideshow v-if="slides.length" :slides="slides" />
+
     <!-- Info + Feature cards -->
     <section class="py-24 md:py-32 bg-warm">
       <div class="max-w-7xl mx-auto px-6 lg:px-8">
@@ -155,6 +157,9 @@ import { ArrowRight, Calendar, Clock, MapPin, Music, Users, BookOpen, Star, Chev
 
 const { t } = useI18n()
 useHead({ title: computed(() => `${t('youth.sectionLabel')} — BIAK`) })
+
+const { data: slidesData } = await useFetch('/api/slides?page=youth')
+const slides = computed(() => (slidesData.value as any[]) ?? [])
 
 const meetingInfo = computed(() => [
   { icon: Calendar, label: t('youth.when'),  value: t('youth.whenVal') },
