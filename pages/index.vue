@@ -77,7 +77,7 @@ const [eventsRes, annRes, sermonsRes, infoRes, slidesRes, featuredRes] = await P
   useFetch('/api/announcements'),
   useFetch('/api/sermons'),
   useFetch('/api/church-info'),
-  useFetch('/api/slides'),
+  useFetch('/api/slides?page=home'),
   useFetch('/api/featured-cards'),
 ])
 

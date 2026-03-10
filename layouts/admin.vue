@@ -30,6 +30,9 @@
         <NuxtLink to="/admin/featured-cards" class="admin-sidebar-link" :class="{ active: route.path === '/admin/featured-cards' }">
           <LayoutGrid class="w-4 h-4" /> Fremhævede kort
         </NuxtLink>
+        <NuxtLink to="/admin/leaders" class="admin-sidebar-link" :class="{ active: route.path === '/admin/leaders' }">
+          <Users class="w-4 h-4" /> Ledere
+        </NuxtLink>
         <NuxtLink to="/admin/church-info" class="admin-sidebar-link" :class="{ active: route.path === '/admin/church-info' }">
           <Image class="w-4 h-4" /> Kirkeindhold
         </NuxtLink>
@@ -84,7 +87,7 @@
 </template>
 
 <script setup lang="ts">
-import { LayoutDashboard, Calendar, Mic, Bell, Settings, LogOut, ExternalLink, Image, Sun, Moon, Zap, GalleryHorizontal, LayoutGrid } from 'lucide-vue-next'
+import { LayoutDashboard, Calendar, Mic, Bell, Settings, LogOut, ExternalLink, Image, Sun, Moon, Zap, GalleryHorizontal, LayoutGrid, Users } from 'lucide-vue-next'
 
 const route = useRoute()
 const { theme, themes, setTheme } = useTheme()

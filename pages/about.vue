@@ -115,6 +115,39 @@
       </div>
     </section>
 
+    <!-- Slideshow (about page slides) -->
+    <HomeSlideshow v-if="aboutSlides.length" :slides="aboutSlides" />
+
+    <!-- Leaders -->
+    <section v-if="activeLeaders.length" class="py-24 md:py-32" style="background:var(--bg)">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div ref="leadersHeaderEl" :class="['reveal text-center mb-16', leadersHeaderVisible && 'visible']">
+          <span class="section-label justify-center mb-4">{{ $t('about.leadersLabel') }}</span>
+          <h2 class="font-serif font-bold text-3xl sm:text-4xl mt-3" style="color:var(--text)">
+            {{ $t('about.leadersTitle') }} <span style="color:var(--accent)">{{ $t('about.leadersTitleAccent') }}</span>
+          </h2>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            v-for="(leader, i) in activeLeaders"
+            :key="leader.id"
+            :class="['reveal text-center', leadersHeaderVisible && 'visible']"
+            :style="{ transitionDelay: `${i * 100}ms` }"
+          >
+            <div class="w-36 h-36 rounded-full overflow-hidden mx-auto mb-5 ring-4 ring-[var(--border)]">
+              <img v-if="leader.imageUrl" :src="leader.imageUrl" :alt="leader.name" class="w-full h-full object-cover object-top" />
+              <div v-else class="w-full h-full flex items-center justify-center" style="background:var(--bg-secondary)">
+                <UserCircleIcon class="w-16 h-16" style="color:var(--text-light)" />
+              </div>
+            </div>
+            <h3 class="font-serif font-bold text-xl mb-1" style="color:var(--text)">{{ leader.name }}</h3>
+            <p class="text-sm font-medium mb-3" style="color:var(--accent)">{{ leader.role }}</p>
+            <p v-if="leader.bio" class="text-sm leading-relaxed max-w-xs mx-auto" style="color:var(--text-mid)">{{ leader.bio }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Pastors -->
     <PastorsSection />
 
@@ -124,10 +157,17 @@
 </template>
 
 <script setup lang="ts">
-import { BookOpen, Heart, Zap, Users, Star, Globe, ChevronDown } from 'lucide-vue-next'
+import { BookOpen, Heart, Zap, Users, Star, Globe, ChevronDown, UserCircle as UserCircleIcon } from 'lucide-vue-next'
 const { t } = useI18n()
 
 useHead({ title: computed(() => `${t('about.sectionLabel')} — BIAK`) })
+
+const [leadersRes, slidesRes] = await Promise.all([
+  useFetch('/api/leaders'),
+  useFetch('/api/slides?page=about'),
+])
+const activeLeaders = computed(() => ((leadersRes.data.value as any[]) ?? []).filter((l: any) => l.isActive))
+const aboutSlides   = computed(() => (slidesRes.data.value as any[]) ?? [])
 
 const showNations = ref(false)
 const showLangs = ref(false)
@@ -165,6 +205,7 @@ const beliefs = [
 const { el: storyEl, isVisible: storyVisible } = useReveal()
 const { el: statsEl, isVisible: statsVisible } = useReveal()
 const { el: beliefsHeaderEl, isVisible: beliefsHeaderVisible } = useReveal()
+const { el: leadersHeaderEl, isVisible: leadersHeaderVisible } = useReveal()
 
 const beliefEls = ref<Element[]>([])
 const beliefVisible = ref(beliefs.map(() => false))
