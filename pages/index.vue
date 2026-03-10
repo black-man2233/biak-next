@@ -1,10 +1,17 @@
 <template>
   <div>
-    <!-- 1. Full-screen slideshow with hero text -->
-    <Slideshow
-      :hero-badge="churchInfo.hero_badge"
-      :slideshow-images="churchInfo.slideshow_images"
-    />
+    <!-- 1. Hero -->
+    <PageHero
+      :label="churchInfo.hero_badge || $t('hero.badge')"
+      :title="$t('hero.title')"
+      :title-accent="$t('hero.titleAccent')"
+      :desc="$t('hero.desc')"
+    >
+      <div class="flex flex-col sm:flex-row gap-4">
+        <NuxtLink to="/about" class="btn-gold">{{ $t('hero.ctaLearn') }}</NuxtLink>
+        <NuxtLink to="/contact" class="btn-outline">{{ $t('hero.ctaLive') }}</NuxtLink>
+      </div>
+    </PageHero>
 
     <!-- 2. Quick service info strip — always visible, no reveal -->
     <div class="bg-cream border-b border-[var(--border)]">
@@ -62,6 +69,8 @@
 </template>
 
 <script setup lang="ts">
+useHead({ title: 'BIAK — Brønderslev International Apostolsk Kirke' })
+
 const [eventsRes, annRes, sermonsRes, infoRes] = await Promise.all([
   useFetch('/api/events'),
   useFetch('/api/announcements'),

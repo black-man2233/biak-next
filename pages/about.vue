@@ -1,25 +1,11 @@
 <template>
   <div>
-    <!-- Page Hero -->
-    <section class="bg-terra-900 pt-32 pb-20 relative overflow-hidden">
-      <div class="absolute inset-0 pointer-events-none">
-        <div class="absolute top-1/2 left-1/4 -translate-y-1/2 w-[500px] h-[500px] rounded-full opacity-10"
-          style="background: radial-gradient(ellipse, #c9a84c 0%, transparent 70%)" />
-      </div>
-      <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-500/30 to-transparent" />
-      <div class="relative max-w-7xl mx-auto px-6 lg:px-8">
-          <span class="section-label !text-gold-400 mb-4" style="--section-color:#c9a84c; animation: fadeIn 0.5s ease both">{{ $t('about.sectionLabel') }}</span>
-          <h1 class="font-serif font-bold text-white text-4xl sm:text-5xl md:text-6xl mt-3 max-w-3xl leading-tight" style="animation: fadeUp 0.8s 0.1s ease both">
-            {{ $t('about.heroTitle') }}<br />
-            <span style="background: linear-gradient(135deg, #e8c76a, #c9a84c); -webkit-background-clip: text; background-clip: text; color: transparent">
-              {{ $t('about.heroTitleAccent') }}
-            </span>
-          </h1>
-          <p class="text-white/60 text-base sm:text-lg mt-6 max-w-xl leading-relaxed" style="animation: fadeUp 0.8s 0.25s ease both">
-            {{ $t('about.heroDesc') }}
-          </p>
-      </div>
-    </section>
+    <PageHero
+      :label="$t('about.sectionLabel')"
+      :title="$t('about.heroTitle')"
+      :title-accent="$t('about.heroTitleAccent')"
+      :desc="$t('about.heroDesc')"
+    />
 
     <!-- Story -->
     <section class="py-24 md:py-32 bg-warm">

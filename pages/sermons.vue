@@ -1,23 +1,14 @@
 <template>
   <div>
-    <!-- Hero -->
-    <section class="bg-terra-900 pt-32 pb-20 relative overflow-hidden">
-      <div class="absolute inset-0 pointer-events-none">
-        <div class="absolute bottom-0 left-1/3 w-[400px] h-[300px] rounded-full opacity-10"
-          style="background: radial-gradient(ellipse, #c9a84c 0%, transparent 70%)" />
-      </div>
-      <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-500/30 to-transparent" />
-      <div class="relative max-w-7xl mx-auto px-6 lg:px-8">
-        <span class="section-label !text-gold-400 mb-4" style="--section-color:#c9a84c; animation: fadeIn 0.5s ease both">Prædikener</span>
-        <h1 class="font-serif font-bold text-white text-4xl sm:text-5xl mt-3 leading-tight" style="animation: fadeUp 0.8s 0.1s ease both">
-          Lyt &amp; Lær — <span style="background: linear-gradient(135deg, #e8c76a, #c9a84c); -webkit-background-clip: text; background-clip: text; color: transparent">Guds Ord</span>
-        </h1>
-        <p class="text-white/60 mt-4 max-w-md" style="animation: fadeUp 0.8s 0.25s ease both">Prædikener, undervisning og taler fra vores gudstjenester og møder.</p>
-      </div>
-    </section>
+    <PageHero
+      label="Prædikener"
+      title="Lyt & Lær —"
+      title-accent="Guds Ord"
+      desc="Prædikener, undervisning og taler fra vores gudstjenester og møder."
+    />
 
     <!-- Search & filter -->
-    <section class="sticky top-16 z-30 bg-warm/95 backdrop-blur border-b border-warm-100 py-3">
+    <section class="sticky top-20 z-30 bg-warm/95 backdrop-blur border-b border-warm-100 py-3">
       <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center gap-3 flex-wrap">
         <div class="relative flex-1 min-w-[180px] max-w-xs">
           <Search class="absolute left-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-warm-300" />

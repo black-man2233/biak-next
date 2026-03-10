@@ -1,5 +1,5 @@
 <template>
-  <section class="relative min-h-screen flex items-center overflow-hidden">
+  <section class="relative min-h-screen flex items-center overflow-hidden pt-20">
 
     <!-- Background slides -->
     <div class="absolute inset-0">
@@ -30,7 +30,7 @@
     </div>
 
     <!-- Main content -->
-    <div class="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 pt-32 pb-20 text-center">
+    <div class="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 pt-8 pb-20 text-center">
 
       <!-- Badge -->
       <div class="inline-flex items-center gap-2.5 px-5 py-2 rounded-full border border-[var(--accent)]/30 bg-[var(--accent)]/10 mb-10"
