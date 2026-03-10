@@ -40,6 +40,15 @@
 
       <!-- Footer -->
       <div class="p-4 border-t border-warm-100">
+        <!-- Language switcher -->
+        <div class="flex items-center gap-1.5 mb-2 px-2">
+          <span class="text-xs text-warm-400 mr-1">Sprog</span>
+          <button v-for="l in adminLocales" :key="l.code" @click="setLocale(l.code)"
+            :class="['px-2 py-1 rounded-md text-xs font-medium transition-all border',
+              locale === l.code ? 'border-terra-400 bg-terra-50 text-terra-600' : 'border-transparent text-warm-400 hover:bg-warm-100']">
+            {{ l.label }}
+          </button>
+        </div>
         <!-- Theme switcher -->
         <div class="flex items-center gap-1.5 mb-3 px-2">
           <span class="text-xs text-warm-400 mr-1">Tema</span>
@@ -79,6 +88,8 @@ import { LayoutDashboard, Calendar, Mic, Bell, Settings, LogOut, ExternalLink, I
 
 const route = useRoute()
 const { theme, themes, setTheme } = useTheme()
+const { locale, setLocale } = useI18n()
+const adminLocales = [{ code: 'da', label: 'DA' }, { code: 'en', label: 'EN' }]
 
 async function logout() {
   await $fetch('/api/auth/logout', { method: 'POST' })

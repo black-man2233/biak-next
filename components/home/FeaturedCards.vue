@@ -12,8 +12,8 @@
         <div
           v-for="(card, i) in cards"
           :key="card.id"
-          :ref="el => cardEls[i] = el as Element"
-          :class="['reveal card overflow-hidden group', cardVisible[i] && 'visible', `delay-${Math.min(i,3) * 100 + 100}`]"
+          :class="['reveal card overflow-hidden group', headerVisible && 'visible']"
+          :style="{ transitionDelay: `${i * 120}ms` }"
         >
           <!-- Image or icon header -->
           <div class="h-44 overflow-hidden relative flex items-center justify-center"
@@ -59,15 +59,4 @@ const iconMap: Record<string, any> = {
 }
 
 const { el: headerEl, isVisible: headerVisible } = useReveal()
-const cardEls = ref<Element[]>([])
-const cardVisible = ref<boolean[]>([])
-onMounted(() => {
-  cardEls.value.forEach((el, i) => {
-    if (!el) return
-    const obs = new IntersectionObserver(([e]) => {
-      if (e.isIntersecting) { cardVisible.value[i] = true; obs.disconnect() }
-    }, { threshold: 0.1 })
-    obs.observe(el)
-  })
-})
 </script>

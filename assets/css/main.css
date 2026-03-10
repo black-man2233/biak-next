@@ -723,8 +723,25 @@ h1, h2, h3, h4 { font-family: 'Lora', Georgia, serif; }
 [data-theme="youth"] .text-warm-200,
 [data-theme="youth"] .text-warm-300 { color: var(--text-light) !important; }
 
-/* ── Admin panel — always light, override youth overrides ── */
-[data-admin] { background-color: #faf8f6 !important; }
+/* ── Admin panel — always light, reset ALL CSS variables ── */
+[data-admin] {
+  --bg:           #fdf9f3 !important;
+  --bg-card:      #ffffff !important;
+  --bg-secondary: #f5f0e8 !important;
+  --text:         #2d1f14 !important;
+  --text-mid:     #7c6a5a !important;
+  --text-light:   #a89888 !important;
+  --primary:      #8b4513 !important;
+  --primary-dark: #62300d !important;
+  --accent:       #c9a84c !important;
+  --accent-light: #e8c76a !important;
+  --border:       #e8ddd0 !important;
+  --border-mid:   #d4c4b0 !important;
+  --hero-from:    #3b1d09 !important;
+  --hero-to:      #2d1f14 !important;
+  background-color: #fdf9f3 !important;
+  color: #2d1f14 !important;
+}
 [data-admin] .bg-warm  { background-color: #faf8f6 !important; }
 [data-admin] .bg-cream { background-color: #f5f0e8 !important; }
 [data-admin] .bg-white { background-color: #ffffff !important; }
