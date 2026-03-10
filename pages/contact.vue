@@ -102,13 +102,13 @@
                     <p class="text-terra-900 font-medium">Kirkevej 10, 9700 Brønderslev</p>
                   </div>
                 </div>
-                <a href="https://facebook.com/biakdk" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 group">
+                <a href="https://facebook.com/Biakirke" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 group">
                   <div class="w-10 h-10 rounded-xl flex items-center justify-center bg-terra-50 group-hover:bg-terra-100 transition-colors">
                     <Globe class="w-4.5 h-4.5 text-terra-600" />
                   </div>
                   <div>
                     <p class="text-xs text-warm-400 uppercase tracking-wide font-semibold">Facebook</p>
-                    <p class="text-terra-900 font-medium group-hover:text-terra-600 transition-colors">facebook.com/biakdk</p>
+                    <p class="text-terra-900 font-medium group-hover:text-terra-600 transition-colors">facebook.com/Biakirke</p>
                   </div>
                 </a>
                 <a href="https://www.youtube.com/@biakyoutube" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 group">

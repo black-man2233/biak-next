@@ -57,6 +57,7 @@ model Sermon {
   speaker     String
   date        DateTime
   videoUrl    String?
+  imageUrl    String?
   description String?
   createdAt   DateTime @default(now())
 }

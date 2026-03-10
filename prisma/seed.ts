@@ -74,7 +74,7 @@ async function main() {
     { key: "address", value: "Kirkevej 10, 9700 Brønderslev, Denmark" },
     { key: "email", value: "info@biak.dk" },
     { key: "phone", value: "+45 26 16 14 39" },
-    { key: "facebook", value: "https://www.facebook.com/biakdk" },
+    { key: "facebook", value: "https://www.facebook.com/Biakirke" },
     { key: "sunday_service_time", value: "10:30 – 12:30" },
     { key: "wednesday_time", value: "18:30 – 20:00" },
   ];

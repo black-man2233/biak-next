@@ -69,7 +69,7 @@
           <span class="text-sm">{{ $t('services.livestream') }}</span>
         </div>
         <div class="flex items-center gap-3">
-          <a href="https://facebook.com/biakdk" target="_blank" rel="noopener noreferrer"
+          <a href="https://facebook.com/Biakirke" target="_blank" rel="noopener noreferrer"
             class="text-sm font-semibold transition-colors flex items-center gap-1.5 group hover:opacity-80"
             style="color:var(--accent)">
             {{ $t('services.livestreamBtn') }}

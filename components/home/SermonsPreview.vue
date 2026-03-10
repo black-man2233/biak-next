@@ -21,53 +21,61 @@
         <p class="text-sm" style="color:var(--text-mid)">{{ $t('sermons.noSermonsHome') }}</p>
       </div>
 
-      <!-- Sermon cards -->
+      <!-- Cards -->
       <div v-else class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div
+        <a
           v-for="(sermon, i) in sermons.slice(0, 3)"
           :key="sermon.id"
+          :href="sermon.videoUrl ?? '#'"
+          :target="sermon.videoUrl ? '_blank' : undefined"
+          rel="noopener noreferrer"
           :ref="el => cardEls[i] = el as Element"
-          :class="['reveal card group overflow-hidden', cardVisible[i] && 'visible', `delay-${i * 100 + 100}`]"
+          :class="['reveal card group overflow-hidden block', cardVisible[i] && 'visible', `delay-${i * 100 + 100}`]"
         >
-          <!-- Gradient header bar -->
-          <div class="h-2" :style="`background: linear-gradient(90deg, ${gradients[i % 3][0]}, ${gradients[i % 3][1]})`" />
-
-          <div class="p-6">
-            <!-- Date -->
-            <div class="flex items-center gap-2 mb-4 text-xs" style="color:var(--text-mid)">
-              <Calendar class="w-3.5 h-3.5 flex-shrink-0" style="color:var(--border-mid)" />
+          <!-- Thumbnail or gradient fallback -->
+          <div class="relative h-44 overflow-hidden" style="background:var(--hero-from)">
+            <img v-if="sermon.imageUrl" :src="sermon.imageUrl" :alt="sermon.title"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+            <div v-else class="absolute inset-0 flex items-center justify-center"
+              :style="`background: linear-gradient(135deg, ${gradients[i % 3][0]}, ${gradients[i % 3][1]})`">
+              <Mic class="w-8 h-8 text-white/40" />
+            </div>
+            <!-- Play overlay -->
+            <div v-if="sermon.videoUrl"
+              class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div class="w-12 h-12 rounded-full flex items-center justify-center" style="background:var(--accent)">
+                <Play class="w-5 h-5 text-white ml-0.5" />
+              </div>
+            </div>
+            <!-- Date badge -->
+            <div class="absolute top-3 left-3 text-[10px] font-bold px-2.5 py-1 rounded-full"
+              style="background:rgba(0,0,0,0.55); color:var(--accent-light); backdrop-filter:blur(4px)">
               {{ fmtDate(sermon.date) }}
             </div>
+          </div>
 
-            <h3 class="font-serif font-bold text-base mb-1 leading-snug group-hover:opacity-80 transition-opacity" style="color:var(--text)">
+          <div class="p-5">
+            <h3 class="font-serif font-bold text-sm leading-snug group-hover:opacity-70 transition-opacity line-clamp-2 mb-1" style="color:var(--text)">
               {{ sermon.title }}
             </h3>
-            <p class="text-xs font-semibold mb-3 uppercase tracking-wide" style="color:var(--accent)">{{ sermon.speaker }}</p>
-            <p v-if="sermon.description" class="text-sm leading-relaxed line-clamp-2 mb-4" style="color:var(--text-mid)">
+            <p v-if="sermon.speaker" class="text-xs font-semibold uppercase tracking-wide mb-2" style="color:var(--accent)">
+              {{ sermon.speaker }}
+            </p>
+            <p v-if="sermon.description" class="text-xs leading-relaxed line-clamp-2" style="color:var(--text-mid)">
               {{ sermon.description }}
             </p>
-
-            <div class="pt-4 border-t" style="border-color:var(--border)">
-              <a v-if="sermon.videoUrl" :href="sermon.videoUrl" target="_blank" rel="noopener noreferrer"
-                class="inline-flex items-center gap-2 text-xs font-semibold transition-colors hover:opacity-70"
-                style="color:var(--primary)">
-                <Play class="w-3.5 h-3.5" />
-                {{ $t('sermons.watchVideo') }}
-              </a>
-              <span v-else class="text-xs" style="color:var(--text-light)">{{ $t('sermons.noVideo') }}</span>
-            </div>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-import { Calendar, Mic, ArrowRight, Play } from 'lucide-vue-next'
+import { Mic, ArrowRight, Play } from 'lucide-vue-next'
 
 defineProps<{
-  sermons: Array<{ id: string; title: string; speaker: string; date: string; description: string | null; videoUrl: string | null }>
+  sermons: Array<{ id: string; title: string; speaker: string; date: string; description: string | null; videoUrl: string | null; imageUrl: string | null }>
 }>()
 
 const gradients = [
@@ -77,7 +85,7 @@ const gradients = [
 ]
 
 function fmtDate(d: string) {
-  return new Date(d).toLocaleDateString('da-DK', { day: 'numeric', month: 'long', year: 'numeric' })
+  return new Date(d).toLocaleDateString('da-DK', { day: 'numeric', month: 'short', year: 'numeric' })
 }
 
 const { el: headerEl, isVisible: headerVisible } = useReveal()

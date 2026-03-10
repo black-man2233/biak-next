@@ -28,7 +28,13 @@
       "WebFetch(domain:www.biak.dk)",
       "Bash(git pull:*)",
       "Bash(wc:*)",
-      "Bash(npm ls:*)"
+      "Bash(npm ls:*)",
+      "WebFetch(domain:www.youtube.com)",
+      "WebFetch(domain:consent.youtube.com)",
+      "WebSearch",
+      "Bash(cat:*)",
+      "Bash(mkdir -p /home/archabuser/projects/biak-next/prisma/migrations/20260310000001_sermon_image_url && cat > /home/archabuser/projects/biak-next/prisma/migrations/20260310000001_sermon_image_url/migration.sql << 'EOF'\n-- AlterTable\nALTER TABLE \"Sermon\" ADD COLUMN \"imageUrl\" TEXT;\nEOF)",
+      "Bash(chmod +x:*)"
     ]
   }
 }

@@ -13,6 +13,7 @@ export default defineEventHandler(async (event) => {
         date: body.date ? new Date(body.date) : undefined,
         description: body.description ?? '',
         videoUrl: body.videoUrl ?? null,
+        imageUrl: body.imageUrl ?? null,
       },
     })
   }

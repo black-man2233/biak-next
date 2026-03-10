@@ -17,7 +17,7 @@
             {{ $t('footer.desc') }}
           </p>
           <div class="flex items-center gap-3 mt-5">
-            <a href="https://facebook.com/biakdk" target="_blank" rel="noopener noreferrer"
+            <a href="https://facebook.com/Biakirke" target="_blank" rel="noopener noreferrer"
               class="w-9 h-9 rounded-full flex items-center justify-center border border-[var(--border)] hover:border-[var(--primary)] hover:text-[var(--primary)] text-[var(--text-mid)] transition-colors">
               <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
             </a>

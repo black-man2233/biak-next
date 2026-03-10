@@ -48,8 +48,8 @@
       </div>
     </div>
 
-    <!-- 4. Featured: latest sermon video + image cards -->
-    <FeaturedSection :sermons="sermons" :events="events" />
+    <!-- 4. Latest sermons (imported via admin from YouTube) -->
+    <SermonsPreview :sermons="sermons" />
 
     <!-- 5. Services & meeting times -->
     <ServicesSection />
@@ -57,11 +57,11 @@
     <!-- 6. Mission & vision -->
     <MissionSection />
 
-    <!-- 7. Events preview -->
-    <EventsPreview :events="events" />
-
-    <!-- 8. Pastors -->
+    <!-- 7. Pastors -->
     <PastorsSection />
+
+    <!-- 8. Upcoming events -->
+    <EventsPreview :events="events" />
 
     <!-- 9. CTA -->
     <CTASection />
