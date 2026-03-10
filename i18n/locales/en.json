@@ -215,21 +215,26 @@
     "timeVal": "6:00 PM – 8:00 PM",
     "place": "Location",
     "placeVal": "Kirkevej 10, Brønderslev",
+    "featuresHint": "Click a box to read more",
     "f1": {
       "title": "Worship",
-      "desc": "Live music and praise"
+      "desc": "Live music and praise",
+      "detail": "Our worship time is the heart of every meeting. We sing with all our hearts and invite God's presence into the room — whether you've sung before or not."
     },
     "f2": {
       "title": "Community",
-      "desc": "Friends for life"
+      "desc": "Friends for life",
+      "detail": "Here you meet young people from many different backgrounds and nations. We eat, laugh and build friendships that go far beyond the meeting evening."
     },
     "f3": {
       "title": "Teaching",
-      "desc": "Bible-based teaching"
+      "desc": "Bible-based teaching",
+      "detail": "Every gathering includes relevant and practical teaching from the Bible — delivered in a way that makes sense for young people today."
     },
     "f4": {
       "title": "Activities",
-      "desc": "Fun, sports and events"
+      "desc": "Fun, sports and events",
+      "detail": "Beyond the monthly meetings, we arrange trips, sports evenings, summer camps and spontaneous activities — because there's more to life than four walls."
     }
   },
   "contact": {
@@ -269,7 +274,15 @@
     "send": "Send Message",
     "sending": "Sending…",
     "success": "Thank you for your message! We will get back to you as soon as possible.",
-    "error": "Something went wrong. Please try again."
+    "error": "Something went wrong. Please try again.",
+    "youthLeaderTitle": "Youth Leader, BIAK",
+    "youthMeetingTime": "Monthly Friday meetings, 6:00 PM – 8:00 PM",
+    "youthSignupLabel": "Join the youth group",
+    "youthSignupDesc": "Send us a message via the form and Cyrus will contact you as soon as possible.",
+    "formTitleYouth": "Write to Cyrus",
+    "heroTitleYouth": "Contact",
+    "heroAccentYouth": "BIAK Youth",
+    "heroDescYouth": "Questions about the youth group? Contact our youth leader Cyrus directly."
   },
   "admin": {
     "login": {

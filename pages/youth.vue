@@ -27,12 +27,12 @@
           <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-6"
             style="background: var(--bg-secondary); border: 1px solid var(--accent); color: var(--accent); animation: fadeIn 0.5s ease both">
             <span class="w-1.5 h-1.5 rounded-full animate-pulse" style="background: var(--accent)" />
-            Ungdom
+            {{ $t('youth.sectionLabel') }}
           </span>
 
           <h1 class="font-serif font-bold text-white leading-[1.05] mt-3"
             style="font-size: clamp(2.5rem, 7vw, 5.5rem); animation: fadeUp 0.7s 0.1s ease both">
-            Unge med <br />
+            {{ $t('youth.heroTitle') }} <br />
             <span style="
               background: linear-gradient(135deg, var(--accent-light), var(--accent), var(--primary-dark), var(--accent));
               background-size: 300% 300%;
@@ -40,20 +40,20 @@
               background-clip: text;
               color: transparent;
               animation: gradient-pan 4s ease infinite;
-            ">Ild i Hjertet</span>
+            ">{{ $t('youth.heroTitleAccent') }}</span>
           </h1>
 
           <p class="text-white/60 text-lg mt-6 max-w-lg leading-relaxed" style="animation: fadeUp 0.7s 0.25s ease both">
-            BIAK Ungdom er et sted for unge mennesker at mødes, dyrke fællesskab, tilbede og vokse i troen.
+            {{ $t('youth.heroDesc') }}
           </p>
 
           <div class="flex flex-col sm:flex-row gap-4 mt-10" style="animation: fadeUp 0.7s 0.38s ease both">
             <NuxtLink to="/contact?context=youth" class="btn-gold">
-              Kom og Mød Os
+              {{ $t('youth.ctaJoin') }}
               <ArrowRight class="w-4 h-4" />
             </NuxtLink>
             <NuxtLink to="/about" class="btn-outline">
-              Lær Os At Kende
+              {{ $t('hero.ctaLearn') }}
             </NuxtLink>
           </div>
         </div>
@@ -67,13 +67,13 @@
 
           <!-- Info text + meeting details -->
           <div ref="infoEl" :class="['reveal', infoVisible && 'visible']">
-            <span class="section-label mb-4">Om BIAK Ungdom</span>
+            <span class="section-label mb-4">{{ $t('youth.infoLabel') }}</span>
             <h2 class="font-serif font-bold text-3xl sm:text-4xl text-terra-900 mt-3 mb-6 leading-tight">
-              Et Sted Du <span class="text-gold-600">Hører Til</span>
+              {{ $t('youth.infoTitle') }} <span class="text-gold-600">{{ $t('youth.infoTitleAccent') }}</span>
             </h2>
             <div class="space-y-4 text-warm-500 leading-relaxed">
-              <p>Vi mødes én gang om måneden til ungdomsmøde — med tilbedelse, undervisning, sjov og stærkt fællesskab. Du behøver ikke have erfaring med kristendom. Du er velkommen, som du er.</p>
-              <p>Ungdomsgruppen ledes af engagerede unge ledere, der brænder for at se unge vækste i deres tro og identitet.</p>
+              <p>{{ $t('youth.info1') }}</p>
+              <p>{{ $t('youth.info2') }}</p>
             </div>
 
             <!-- Meeting info — staggered reveal -->
@@ -81,8 +81,8 @@
               <div
                 v-for="(info, i) in meetingInfo"
                 :key="info.label"
-                :ref="el => infoEls[i] = el as Element"
-                :class="['reveal flex items-center gap-3 text-sm', infoElsVisible[i] && 'visible', `delay-${i * 100 + 100}`]"
+                :class="['reveal flex items-center gap-3 text-sm', infoVisible && 'visible']"
+                :style="{ transitionDelay: `${i * 120 + 100}ms` }"
               >
                 <div class="w-9 h-9 rounded-xl flex items-center justify-center bg-terra-50 flex-shrink-0">
                   <component :is="info.icon" class="w-4 h-4 text-terra-600" />
@@ -99,17 +99,17 @@
           <div ref="featEl" :class="['reveal delay-200', featVisible && 'visible']">
             <div class="grid grid-cols-2 gap-4">
               <div
-                v-for="feat in features"
-                :key="feat.title"
+                v-for="(feat, fi) in features"
+                :key="fi"
                 class="relative rounded-2xl p-5 text-center cursor-pointer select-none transition-all duration-300 overflow-hidden border-2"
                 :class="[
-                  expandedFeature === feat.title
+                  expandedFeature === fi
                     ? 'shadow-lg'
                     : 'border-[var(--border)] hover:shadow-lg'
                 ]"
-                :style="expandedFeature === feat.title ? `border-color: var(--accent)` : ''"
+                :style="expandedFeature === fi ? `border-color: var(--accent)` : ''"
                 style="background: rgba(255,255,255,0.85); backdrop-filter: blur(8px)"
-                @click="toggleFeature(feat.title)"
+                @click="toggleFeature(fi)"
               >
                 <!-- Gradient orb behind icon -->
                 <div class="absolute top-0 right-0 w-20 h-20 rounded-full opacity-10 pointer-events-none"
@@ -124,7 +124,7 @@
 
                 <!-- Expanded detail -->
                 <Transition name="slide-expand">
-                  <div v-if="expandedFeature === feat.title"
+                  <div v-if="expandedFeature === fi"
                     class="mt-3 pt-3 border-t border-[var(--border)] text-left relative z-10">
                     <p class="text-terra-700 text-xs leading-relaxed">{{ feat.detail }}</p>
                   </div>
@@ -134,12 +134,12 @@
                 <div class="mt-2 flex justify-center relative z-10">
                   <ChevronDown
                     class="w-3.5 h-3.5 transition-transform duration-300"
-                    :class="expandedFeature === feat.title ? 'rotate-180' : ''"
-                    :style="expandedFeature === feat.title ? 'color: var(--accent)' : 'color: var(--border-mid)'" />
+                    :class="expandedFeature === fi ? 'rotate-180' : ''"
+                    :style="expandedFeature === fi ? 'color: var(--accent)' : 'color: var(--border-mid)'" />
                 </div>
               </div>
             </div>
-            <p class="text-center text-xs text-warm-300 mt-3">Klik på en boks for at læse mere</p>
+            <p class="text-center text-xs text-warm-300 mt-3">{{ $t('youth.featuresHint') }}</p>
           </div>
         </div>
       </div>
@@ -153,69 +153,31 @@
 <script setup lang="ts">
 import { ArrowRight, Calendar, Clock, MapPin, Music, Users, BookOpen, Star, ChevronDown } from 'lucide-vue-next'
 
-useHead({ title: 'Ungdom — BIAK' })
+const { t } = useI18n()
+useHead({ title: computed(() => `${t('youth.sectionLabel')} — BIAK`) })
 
-const meetingInfo = [
-  { icon: Calendar, label: 'Hvornår', value: 'Månedlige fredagsmøder' },
-  { icon: Clock,    label: 'Tid',     value: '18:00 – 20:00' },
-  { icon: MapPin,   label: 'Sted',    value: 'Kirkevej 10, Brønderslev' },
-]
+const meetingInfo = computed(() => [
+  { icon: Calendar, label: t('youth.when'),  value: t('youth.whenVal') },
+  { icon: Clock,    label: t('youth.time'),  value: t('youth.timeVal') },
+  { icon: MapPin,   label: t('youth.place'), value: t('youth.placeVal') },
+])
 
-const features = [
-  {
-    icon: Music,
-    title: 'Tilbedelse',
-    desc: 'Levende musik og lovsang',
-    detail: 'Vores tilbedelsestid er hjertet i hvert møde. Vi synger med hele hjertet og inviterer Guds nærvær ind i rummet — uanset om du har sunget før eller ej.',
-    from: '#7c3aed',
-    to: '#6d28d9',
-  },
-  {
-    icon: Users,
-    title: 'Fællesskab',
-    desc: 'Venner for livet',
-    detail: 'Her møder du unge fra mange forskellige baggrunde og nationer. Vi spiser, griner og bygger venskaber, der rækker langt ud over mødeaftenen.',
-    from: '#c9a84c',
-    to: '#a8842a',
-  },
-  {
-    icon: BookOpen,
-    title: 'Undervisning',
-    desc: 'Bibelbaseret undervisning',
-    detail: 'Hver samling indeholder relevant og praksisnær undervisning fra Bibelen — leveret på en måde, der giver mening for unge i dag.',
-    from: '#8b4513',
-    to: '#62300d',
-  },
-  {
-    icon: Star,
-    title: 'Aktiviteter',
-    desc: 'Sjov, sport og events',
-    detail: 'Ud over de månedlige møder arrangerer vi ture, sportsaftener, sommerlejre og spontane aktiviteter — for der er mere ved livet end fire vægge.',
-    from: '#7c3aed',
-    to: '#c9a84c',
-  },
-]
+const features = computed(() => [
+  { icon: Music,    title: t('youth.f1.title'), desc: t('youth.f1.desc'), detail: t('youth.f1.detail'), from: '#7c3aed', to: '#6d28d9' },
+  { icon: Users,    title: t('youth.f2.title'), desc: t('youth.f2.desc'), detail: t('youth.f2.detail'), from: '#c9a84c', to: '#a8842a' },
+  { icon: BookOpen, title: t('youth.f3.title'), desc: t('youth.f3.desc'), detail: t('youth.f3.detail'), from: '#8b4513', to: '#62300d' },
+  { icon: Star,     title: t('youth.f4.title'), desc: t('youth.f4.desc'), detail: t('youth.f4.detail'), from: '#7c3aed', to: '#c9a84c' },
+])
 
-const expandedFeature = ref<string | null>(null)
-function toggleFeature(title: string) {
-  expandedFeature.value = expandedFeature.value === title ? null : title
+const expandedFeature = ref<number | null>(null)
+function toggleFeature(i: number) {
+  expandedFeature.value = expandedFeature.value === i ? null : i
 }
 
 const { el: heroEl, isVisible: heroVisible } = useReveal()
 const { el: infoEl, isVisible: infoVisible } = useReveal()
 const { el: featEl, isVisible: featVisible } = useReveal()
 
-const infoEls = ref<Element[]>([])
-const infoElsVisible = ref([false, false, false])
-onMounted(() => {
-  infoEls.value.forEach((el, i) => {
-    if (!el) return
-    const obs = new IntersectionObserver(([e]) => {
-      if (e.isIntersecting) { infoElsVisible.value[i] = true; obs.disconnect() }
-    }, { threshold: 0.1 })
-    obs.observe(el)
-  })
-})
 </script>
 
 <style scoped>

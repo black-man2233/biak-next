@@ -1,10 +1,10 @@
 <template>
   <div>
     <PageHero
-      label="Kalender"
-      title="Kommende"
-      title-accent="Events"
-      desc="Mød os til gudstjenester, bøn, ungdomsmøder og meget mere."
+      :label="$t('events.sectionLabel')"
+      :title="$t('events.heroTitle')"
+      :title-accent="$t('events.titleAccent')"
+      :desc="$t('events.heroDesc')"
     />
 
     <!-- Filter bar -->
@@ -30,7 +30,7 @@
 
         <div v-else-if="!filteredEvents.length" class="card p-16 text-center">
           <Calendar class="w-10 h-10 text-warm-200 mx-auto mb-3" />
-          <p class="text-warm-400 text-sm">Ingen events fundet i denne kategori.</p>
+          <p class="text-warm-400 text-sm">{{ $t('events.noEvents') }}</p>
         </div>
 
         <div v-else class="space-y-4">
@@ -81,32 +81,37 @@
 <script setup lang="ts">
 import { Calendar, Clock, MapPin } from 'lucide-vue-next'
 
-useHead({ title: 'Events — BIAK' })
+const { t, locale } = useI18n()
+useHead({ title: computed(() => `${t('events.sectionLabel')} — BIAK`) })
 
 const { data, pending } = await useFetch('/api/events')
 
-const categories = [
-  { value: 'all', label: 'Alle' },
-  { value: 'service', label: 'Gudstjeneste' },
-  { value: 'prayer', label: 'Bøn' },
-  { value: 'youth', label: 'Unge' },
-  { value: 'general', label: 'Generelt' },
-]
+const categories = computed(() => [
+  { value: 'all',     label: t('events.filterAll') },
+  { value: 'service', label: t('events.filterService') },
+  { value: 'prayer',  label: t('events.filterPrayer') },
+  { value: 'youth',   label: t('events.filterYouth') },
+  { value: 'general', label: t('events.filterGeneral') },
+])
 const activeCategory = ref('all')
 
 const filteredEvents = computed(() => {
-  const evts = data.value ?? []
+  const evts = (data.value ?? []) as any[]
   if (activeCategory.value === 'all') return evts
   return evts.filter((e: any) => e.category === activeCategory.value)
 })
 
 function catLabel(cat: string) {
-  return { service: 'Gudstjeneste', prayer: 'Bøn', youth: 'Unge', general: 'Generelt' }[cat] ?? cat
+  const map: Record<string, string> = {
+    service: t('events.catService'), prayer: t('events.catPrayer'),
+    youth: t('events.catYouth'), general: t('events.catGeneral'),
+  }
+  return map[cat] ?? cat
 }
 function catStyle(cat: string) {
   return { service: 'bg-terra-100 text-terra-700', prayer: 'bg-warm-100 text-warm-600', youth: 'bg-gold-100 text-gold-700', general: 'bg-gray-100 text-gray-600' }[cat] ?? 'bg-gray-100 text-gray-600'
 }
-function fmtMonth(d: string) { return new Date(d).toLocaleDateString('da-DK', { month: 'short' }) }
-function fmtDay(d: string)   { return new Date(d).getDate() }
-function fmtWeekday(d: string) { return new Date(d).toLocaleDateString('da-DK', { weekday: 'long' }) }
+function fmtMonth(d: string)   { return new Date(d).toLocaleDateString(locale.value, { month: 'short' }) }
+function fmtDay(d: string)     { return new Date(d).getDate() }
+function fmtWeekday(d: string) { return new Date(d).toLocaleDateString(locale.value, { weekday: 'long' }) }
 </script>

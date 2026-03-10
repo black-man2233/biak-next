@@ -215,21 +215,26 @@
     "timeVal": "18h00 – 20h00",
     "place": "Lieu",
     "placeVal": "Kirkevej 10, Brønderslev",
+    "featuresHint": "Cliquez sur une boîte pour en savoir plus",
     "f1": {
       "title": "Adoration",
-      "desc": "Musique live et louanges"
+      "desc": "Musique live et louanges",
+      "detail": "Notre temps d'adoration est le cœur de chaque réunion. Nous chantons de tout notre cœur et invitons la présence de Dieu — que vous ayez chanté avant ou non."
     },
     "f2": {
       "title": "Communauté",
-      "desc": "Amis pour la vie"
+      "desc": "Amis pour la vie",
+      "detail": "Vous rencontrez ici des jeunes de nombreux horizons et nations différents. Nous mangeons, rions et construisons des amitiés qui vont bien au-delà de la soirée."
     },
     "f3": {
       "title": "Enseignement",
-      "desc": "Enseignement basé sur la Bible"
+      "desc": "Enseignement basé sur la Bible",
+      "detail": "Chaque rassemblement comprend un enseignement pratique de la Bible — présenté d'une façon qui fait sens pour les jeunes d'aujourd'hui."
     },
     "f4": {
       "title": "Activités",
-      "desc": "Plaisir, sport et événements"
+      "desc": "Plaisir, sport et événements",
+      "detail": "Au-delà des réunions mensuelles, nous organisons des sorties, soirées sportives, camps d'été et activités spontanées."
     }
   },
   "contact": {
@@ -269,7 +274,15 @@
     "send": "Envoyer le Message",
     "sending": "Envoi…",
     "success": "Merci pour votre message ! Nous vous répondrons dans les plus brefs délais.",
-    "error": "Une erreur est survenue. Veuillez réessayer."
+    "error": "Une erreur est survenue. Veuillez réessayer.",
+    "youthLeaderTitle": "Leader Jeunesse, BIAK",
+    "youthMeetingTime": "Réunions mensuelles le vendredi, 18h00 – 20h00",
+    "youthSignupLabel": "Rejoindre le groupe jeunesse",
+    "youthSignupDesc": "Envoyez-nous un message via le formulaire et Cyrus vous contactera dès que possible.",
+    "formTitleYouth": "Écrire à Cyrus",
+    "heroTitleYouth": "Contacter",
+    "heroAccentYouth": "BIAK Jeunesse",
+    "heroDescYouth": "Des questions sur le groupe jeunesse ? Contactez directement notre responsable Cyrus."
   },
   "admin": {
     "login": {

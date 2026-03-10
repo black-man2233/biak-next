@@ -36,7 +36,8 @@
       "Bash(mkdir -p /home/archabuser/projects/biak-next/prisma/migrations/20260310000001_sermon_image_url && cat > /home/archabuser/projects/biak-next/prisma/migrations/20260310000001_sermon_image_url/migration.sql << 'EOF'\n-- AlterTable\nALTER TABLE \"Sermon\" ADD COLUMN \"imageUrl\" TEXT;\nEOF)",
       "Bash(chmod +x:*)",
       "Bash(mkdir:*)",
-      "Bash(npm show:*)"
+      "Bash(npm show:*)",
+      "Bash(mkdir -p /home/archabuser/projects/biak-next/prisma/migrations/20260310000003_slides_page_leaders && cat > /home/archabuser/projects/biak-next/prisma/migrations/20260310000003_slides_page_leaders/migration.sql << 'EOF'\nALTER TABLE \"SlideImage\" ADD COLUMN \"page\" TEXT NOT NULL DEFAULT 'home';\n\nCREATE TABLE \"Leader\" \\(\n  \"id\"        TEXT    NOT NULL PRIMARY KEY,\n  \"name\"      TEXT    NOT NULL,\n  \"role\"      TEXT    NOT NULL,\n  \"bio\"       TEXT,\n  \"imageUrl\"  TEXT,\n  \"order\"     INTEGER NOT NULL DEFAULT 0,\n  \"isActive\"  BOOLEAN NOT NULL DEFAULT true,\n  \"createdAt\" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP\n\\);\nEOF)"
     ]
   }
 }

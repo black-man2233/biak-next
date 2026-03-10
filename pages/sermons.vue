@@ -1,18 +1,18 @@
 <template>
   <div>
     <PageHero
-      label="Prædikener"
-      title="Lyt & Lær —"
-      title-accent="Guds Ord"
-      desc="Prædikener, undervisning og taler fra vores gudstjenester og møder."
+      :label="$t('sermons.sectionLabel')"
+      :title="$t('sermons.heroTitle')"
+      :title-accent="$t('sermons.heroTitleAccent')"
+      :desc="$t('sermons.heroDesc')"
     />
 
-    <!-- Search & filter -->
+    <!-- Search -->
     <section class="sticky top-20 z-30 bg-warm/95 backdrop-blur border-b border-warm-100 py-3">
       <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center gap-3 flex-wrap">
         <div class="relative flex-1 min-w-[180px] max-w-xs">
           <Search class="absolute left-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-warm-300" />
-          <input v-model="search" placeholder="Søg prædikener…" class="w-full pl-9 pr-3 py-1.5 text-sm bg-warm-100 border border-warm-200 rounded-full focus:outline-none focus:ring-2 focus:ring-terra-300" />
+          <input v-model="search" :placeholder="$t('sermons.search')" class="w-full pl-9 pr-3 py-1.5 text-sm bg-warm-100 border border-warm-200 rounded-full focus:outline-none focus:ring-2 focus:ring-terra-300" />
         </div>
       </div>
     </section>
@@ -26,7 +26,7 @@
 
         <div v-else-if="!filteredSermons.length" class="card p-16 text-center">
           <Mic class="w-10 h-10 text-warm-200 mx-auto mb-3" />
-          <p class="text-warm-400 text-sm">Ingen prædikener fundet.</p>
+          <p class="text-warm-400 text-sm">{{ $t('sermons.empty') }}</p>
         </div>
 
         <div v-else class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -35,17 +35,13 @@
             :key="sermon.id"
             class="card group overflow-hidden hover:shadow-lg transition-shadow"
           >
-            <!-- Thumbnail / placeholder -->
             <div class="h-44 overflow-hidden relative bg-terra-900 flex items-center justify-center">
               <img v-if="sermon.imageUrl" :src="sermon.imageUrl" :alt="sermon.title" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 absolute inset-0" />
               <div v-else class="absolute inset-0 bg-gradient-to-br from-terra-800 to-terra-900" />
-              <!-- Play button overlay -->
               <a
                 v-if="sermon.videoUrl"
-                :href="sermon.videoUrl"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="relative z-10 w-12 h-12 rounded-full bg-white/20 hover:bg-gold-500/80 backdrop-blur-sm flex items-center justify-center transition-colors group/play"
+                :href="sermon.videoUrl" target="_blank" rel="noopener noreferrer"
+                class="relative z-10 w-12 h-12 rounded-full bg-white/20 hover:bg-gold-500/80 backdrop-blur-sm flex items-center justify-center transition-colors"
                 @click.stop
               >
                 <Play class="w-5 h-5 text-white ml-0.5" />
@@ -53,7 +49,6 @@
               <div v-else class="relative z-10 w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
                 <Mic class="w-5 h-5 text-white/50" />
               </div>
-              <!-- Date badge -->
               <div class="absolute top-3 left-3 bg-terra-900/70 backdrop-blur-sm text-gold-400 text-[10px] font-bold px-2.5 py-1 rounded-full">
                 {{ fmtDate(sermon.date) }}
               </div>
@@ -66,14 +61,12 @@
               <div class="flex items-center gap-2 pt-4 border-t border-warm-100">
                 <a
                   v-if="sermon.videoUrl"
-                  :href="sermon.videoUrl"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  :href="sermon.videoUrl" target="_blank" rel="noopener noreferrer"
                   class="flex items-center gap-1.5 text-xs text-terra-600 hover:text-terra-800 font-semibold transition-colors"
                 >
-                  <Play class="w-3 h-3" /> Se video
+                  <Play class="w-3 h-3" /> {{ $t('sermons.watchVideo') }}
                 </a>
-                <span v-else class="text-warm-300 text-xs">Ingen video</span>
+                <span v-else class="text-warm-300 text-xs">{{ $t('sermons.noVideo') }}</span>
               </div>
             </div>
           </div>
@@ -86,7 +79,8 @@
 <script setup lang="ts">
 import { Mic, Play, Search } from 'lucide-vue-next'
 
-useHead({ title: 'Prædikener — BIAK' })
+const { t, locale } = useI18n()
+useHead({ title: computed(() => `${t('sermons.sectionLabel')} — BIAK`) })
 
 const { data, pending } = await useFetch('/api/sermons')
 const search = ref('')
@@ -103,6 +97,6 @@ const filteredSermons = computed(() => {
 })
 
 function fmtDate(d: string) {
-  return new Date(d).toLocaleDateString('da-DK', { day: 'numeric', month: 'short', year: 'numeric' })
+  return new Date(d).toLocaleDateString(locale.value, { day: 'numeric', month: 'short', year: 'numeric' })
 }
 </script>

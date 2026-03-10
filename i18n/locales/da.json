@@ -212,21 +212,26 @@
     "timeVal": "18:00 – 20:00",
     "place": "Sted",
     "placeVal": "Kirkevej 10, Brønderslev",
+    "featuresHint": "Klik på en boks for at læse mere",
     "f1": {
       "title": "Tilbedelse",
-      "desc": "Levende musik og lovsang"
+      "desc": "Levende musik og lovsang",
+      "detail": "Vores tilbedelsestid er hjertet i hvert møde. Vi synger med hele hjertet og inviterer Guds nærvær ind i rummet — uanset om du har sunget før eller ej."
     },
     "f2": {
       "title": "Fællesskab",
-      "desc": "Venner for livet"
+      "desc": "Venner for livet",
+      "detail": "Her møder du unge fra mange forskellige baggrunde og nationer. Vi spiser, griner og bygger venskaber, der rækker langt ud over mødeaftenen."
     },
     "f3": {
       "title": "Undervisning",
-      "desc": "Bibelbaseret undervisning"
+      "desc": "Bibelbaseret undervisning",
+      "detail": "Hver samling indeholder relevant og praksisnær undervisning fra Bibelen — leveret på en måde, der giver mening for unge i dag."
     },
     "f4": {
       "title": "Aktiviteter",
-      "desc": "Sjov, sport og events"
+      "desc": "Sjov, sport og events",
+      "detail": "Ud over de månedlige møder arrangerer vi ture, sportsaftener, sommerlejre og spontane aktiviteter — for der er mere ved livet end fire vægge."
     }
   },
   "announcements": {
@@ -269,7 +274,15 @@
     "send": "Send Besked",
     "sending": "Sender…",
     "success": "Tak for din besked! Vi vender tilbage hurtigst muligt.",
-    "error": "Noget gik galt. Prøv igen."
+    "error": "Noget gik galt. Prøv igen.",
+    "youthLeaderTitle": "Ungdomsleder, BIAK",
+    "youthMeetingTime": "Månedlige fredagsmøder, 18:00 – 20:00",
+    "youthSignupLabel": "Tilmeld dig ungdomsgruppen",
+    "youthSignupDesc": "Send os en besked via formularen, så kontakter Cyrus dig hurtigst muligt.",
+    "formTitleYouth": "Skriv til Cyrus",
+    "heroTitleYouth": "Kontakt",
+    "heroAccentYouth": "BIAK Ungdom",
+    "heroDescYouth": "Har du spørgsmål om ungdomsgruppen? Kontakt vores ungdomsleder Cyrus direkte."
   },
   "admin": {
     "login": {

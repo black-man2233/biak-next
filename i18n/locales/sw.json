@@ -215,21 +215,26 @@
     "timeVal": "18:00 – 20:00",
     "place": "Mahali",
     "placeVal": "Kirkevej 10, Brønderslev",
+    "featuresHint": "Bonyeza sanduku kusoma zaidi",
     "f1": {
       "title": "Ibada",
-      "desc": "Muziki wa moja kwa moja na sifa"
+      "desc": "Muziki wa moja kwa moja na sifa",
+      "detail": "Wakati wetu wa ibada ni moyo wa kila mkutano. Tunaimba kwa moyo wote na kukaribisha uwepo wa Mungu — iwe umewahi kuimba au la."
     },
     "f2": {
       "title": "Jumuiya",
-      "desc": "Marafiki wa maisha yote"
+      "desc": "Marafiki wa maisha yote",
+      "detail": "Hapa unakutana na vijana kutoka asili na mataifa mengi. Tunakula, tunacheka na kujenga urafiki unaoendelea mbali zaidi ya usiku wa mkutano."
     },
     "f3": {
       "title": "Mafundisho",
-      "desc": "Mafundisho yanayotegemea Biblia"
+      "desc": "Mafundisho yanayotegemea Biblia",
+      "detail": "Kila mkusanyiko una mafundisho ya vitendo kutoka Biblia — yanayotolewa kwa njia inayofaa kwa vijana wa leo."
     },
     "f4": {
       "title": "Shughuli",
-      "desc": "Burudani, michezo na matukio"
+      "desc": "Burudani, michezo na matukio",
+      "detail": "Zaidi ya mikutano ya kila mwezi, tunapanga safari, masaa ya michezo, kambi za majira ya joto na shughuli za hiari."
     }
   },
   "contact": {
@@ -269,7 +274,15 @@
     "send": "Tuma Ujumbe",
     "sending": "Inatuma…",
     "success": "Asante kwa ujumbe wako! Tutajibu haraka iwezekanavyo.",
-    "error": "Kitu fulani kilienda vibaya. Tafadhali jaribu tena."
+    "error": "Kitu fulani kilienda vibaya. Tafadhali jaribu tena.",
+    "youthLeaderTitle": "Kiongozi wa Vijana, BIAK",
+    "youthMeetingTime": "Mikutano ya kila mwezi Ijumaa, 18:00 – 20:00",
+    "youthSignupLabel": "Jiunge na kikundi cha vijana",
+    "youthSignupDesc": "Tutumie ujumbe kupitia fomu na Cyrus atawasiliana nawe haraka iwezekanavyo.",
+    "formTitleYouth": "Andika kwa Cyrus",
+    "heroTitleYouth": "Wasiliana na",
+    "heroAccentYouth": "Vijana BIAK",
+    "heroDescYouth": "Maswali kuhusu kikundi cha vijana? Wasiliana na kiongozi wetu Cyrus moja kwa moja."
   },
   "admin": {
     "login": {

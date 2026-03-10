@@ -5,13 +5,20 @@ export default defineEventHandler(async (event) => {
 
   if (method === 'PUT' || method === 'PATCH') {
     const body = await readBody(event)
-    return prisma.slideImage.update({
+    return prisma.leader.update({
       where: { id },
-      data: { url: body.url, caption: body.caption ?? null, page: body.page ?? undefined, order: body.order ?? undefined },
+      data: {
+        name: body.name,
+        role: body.role,
+        bio: body.bio ?? null,
+        imageUrl: body.imageUrl ?? null,
+        isActive: body.isActive ?? undefined,
+        order: body.order ?? undefined,
+      },
     })
   }
   if (method === 'DELETE') {
-    await prisma.slideImage.delete({ where: { id } })
+    await prisma.leader.delete({ where: { id } })
     return { ok: true }
   }
 })

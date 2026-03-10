@@ -56,6 +56,18 @@ model SlideImage {
   url       String
   caption   String?
   order     Int      @default(0)
+  page      String   @default("home")
+  createdAt DateTime @default(now())
+}
+
+model Leader {
+  id        String   @id @default(cuid())
+  name      String
+  role      String
+  bio       String?
+  imageUrl  String?
+  order     Int      @default(0)
+  isActive  Boolean  @default(true)
   createdAt DateTime @default(now())
 }
 
